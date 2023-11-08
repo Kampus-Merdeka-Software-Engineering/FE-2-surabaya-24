@@ -1,0 +1,228 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@400;500;700&family=Poppins:ital,wght@0,200;0,300;0,500;0,600;1,700&display=swap');
+
+*{
+    font-family: 'Grandstander', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 4rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Variables */
+:root{
+    --main-color:#4A6409;
+    --button-color:#D0862D;
+    --second-color:#96AD39;
+    --bg-color:#F9F6F1;
+}
+
+section{
+    padding: 50px 100px;
+}
+
+img{
+    width: 100%;
+}
+
+body{
+    color: black;
+    background-color: var(--bg-color);
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    height: 59px;
+    top:0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 100px;
+    /* transition: 0.5s linear; */
+    background-color: #ffffff;
+}
+
+.logo img{
+    width: 90px;
+}
+
+.navbar{
+    display: flex;
+    display: contents;
+}
+
+.navbar a {
+    padding: 8px 25px;
+    color: var(--second-color);
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'inter', sans-serif;
+    font-weight: bold; 
+}
+
+
+.navbar a:hover{
+    background: var(--main-color);
+    color: #FFFF;
+    border-radius: 0.2rem;
+    transition: 0.2 all linear;
+}
+
+#menu-icon{
+    color: var(--second-color);
+    font-size: 24px;
+    z-index: 100001;
+    cursor: pointer;
+    display: none;
+}
+/* NavBar END */
+
+/* Section Description "What is TeavoU?" START */
+.desc{
+    width: 100%;
+    min-height: 100vh;
+    background: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.desc-text h2{
+font-size: 3.4rem;
+color: var(--main-color);
+text-transform: none;
+letter-spacing: 0px;
+margin-top:67px;
+}
+
+.desc-text h2> span{
+    color: var(--button-color);
+}
+
+.desc-text p{
+    width: 599px;
+    color: black;
+    text-align: justify;
+    font-family: 'Inter';
+    font-size: 1.35rem;
+    font-style: normal;
+    line-height: normal;
+    margin-top: 20px;
+}
+
+.desc-more>button{
+    margin-top: 62px;
+    font-family: 'grandstander';
+    font-size: 24px;
+    color: white;
+    background: var(--button-color);
+    width: 125px;
+    height: 45px;
+    border-radius: 12px;
+    flex-shrink: 0;
+    border: none;
+    padding: 0;
+}
+
+.foto{
+    display: flex;
+    position: absolute;
+    justify-content: flex-start;
+    float: right;
+    justify-items: right;
+}
+
+.desc-img-1{
+    margin-top: 21px;
+    width: 224.457px;
+    height: 267.818px;
+    flex-shrink: 0;
+    margin-bottom: 15.94px;
+    margin-right: 7.01px;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: none;
+}
+
+.product> .buttons{
+    width: 271px;
+    height: 81px;
+    border: none;
+    margin-bottom: 0;
+}
+
+/* Section TeavoU Product START */
+.product{
+    font-size: 28px;
+    color: var(--main-color);
+}
+
+.product-text h2{
+    margin-top: 83px;
+    
+}
+
+.product-text h2>span{
+    color: var(--button-color);
+}
+
+.menu-1{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 91px;
+    margin-bottom: 99px;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.content{
+    width: 245px;
+    height: 454px;
+    box-sizing: border-box;   
+    float: left;
+    text-align: justify;
+    border-radius: 11px 11px 11px 11px;
+    background: white;
+    box-shadow: 0px 3.4186px 3.4186px 0px rgba(0, 0, 0, 0.25), 4.27324px 0px 3.4186px 0px rgba(0, 0, 0, 0.25);
+    transition: .4s;
+    font-family: 'Inter';
+    font-size: 12px;
+}
+
+.content>img{
+    align-items: center;
+}
+
+.content>h5{
+    justify-content: center;
+    font-size: 20px;
+    margin: 18px;
+}
+
+.content>button{
+    margin-top: 16px;
+    font-family: 'grandstander';
+    font-size: 24px;
+    color: white;
+    background: var(--button-color);
+    width: 91px;
+    height: 26px;
+    border-radius: 15px;
+    flex-shrink: 0;
+    border: none;
+    padding: 0;
+}
