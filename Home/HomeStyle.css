@@ -145,7 +145,7 @@ header{
 .best{
     width: 100%;
     min-height: 100vh;
-    background: #FFFF;
+    background: var(--bg-color);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -212,21 +212,18 @@ header{
     background-color: var(--button-color);
 }
 
-/* They Spill The Tea */
-
+/* Spill They Tea */
 
 .spill{
     width: 100%;
     min-height: 100vh;
-    background: #FFFF;
+    background: var(--bg-color);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(377px, 1fr));
+    grid-template-columns: repeat(auto-fit,minmax(17rem,auto));
     align-items: center;
     gap: 1.5rem;
-    justify-content: space-around
 }
 
 .spill-text {
@@ -234,6 +231,7 @@ header{
     place-items: center;
     text-align: center;
     height: 100%;
+    margin-top: 1rem;
 }
 
 .spill-text h2{
@@ -241,38 +239,31 @@ header{
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 2rem;
-    margin: 1rem 0 1.4rem;
+    margin: 0 0 1.4rem;
 }
 
-/* Card Spill*/
-
-.card_spill img{
-    border-radius: 100%;
-    width: 117px;
-    height: 117px;
-    margin-left: 125px;
-    margin-top: 80px;
+/* Styles for showSlide_spill */
+.showSlide_spill {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
 }
 
-.card_spill h4{
-    font-family: 'inter',sans-serif;
-    font-size: 15px;
-    margin-left: 125px;
-    margin-top: 10px;
+.slide_spill {
+    display: none;
+    width: 100%;
 }
 
-.card_spill h6{
-    font-family: 'inter',sans-serif;
-    font-size: 11px;
-    margin-left: 125px;
-    margin-top: 10px;
-    position: absolute;
-        transform: translateX(-50%) translateY(-50%); 
+.slide_spill.active-spill { 
+    display: flex;
+    justify-content: center;
 }
 
+.slide_spill .card-spill {
+    display: flex; /* Menambahkan display flex untuk memastikan gambar ditampilkan secara bersamaan */
+}
 
-
-.card{
+.text-card{
     box-shadow: 0 8px 8px 0 rgba(0,0,0,0.3);
     transition: 0.3s;
     width: 377px;
@@ -283,8 +274,18 @@ header{
     display: flex;
     justify-content: center;
     align-items: center; 
+}
 
-    background: #FFFF;
+.text-card p{
+    font-family: 'inter', sans-serif;
+    font-size: 15px;
+    text-align: center; 
+}
+
+.card-body{
+    width: 100%;
+    min-height: 100vh;
+    background: var(--bg-color);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -293,36 +294,88 @@ header{
     gap: 1.5rem;
 }
 
-.card p {
-    font-family: 'inter', sans-serif;
+.card-body img {
+    border-radius: 100%;
+    width: 117px;
+    height: 117px;
+    margin-left: 125px;
+    margin-top: 80px;
+}
+.card-body h6{
+    font-family: 'inter',sans-serif;
     font-size: 15px;
-    text-align: center;  
+    margin-left: 130px;
+    margin-top: 10px;
 }
 
-/* Style the Slideshow Container */
-.slideshow-container {
-    max-width: 100%;
+.dots_spill {
     position: relative;
-    overflow: hidden;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0 1.4rem;
+    margin-top: -10rem;
 }
 
-/* Hide the images by default */
-.mySlides-fade {
-    display: none;
-    float: left;
-}
+.dot_spill {
+    height: 10px;
 
-/* Style the dots/bullets */
-.dotspill {
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
+    width: 10px;
+    margin: 0 5px;
     border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
+    background-color: #888;
+    cursor: pointer;
 }
 
-.active1 {
+.active-dot {
     background-color: var(--button-color);
 }
+
+/* Festival */
+.festival{
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.festival img {
+    width: 474px;
+    height: 508px;
+    position: absolute;
+    right: 0;
+    border-radius: 20px 0 0 20px;
+}
+
+
+
+.bg_fes h3{
+    font-family: inter;
+    font-style: initial;
+    font-size: 30px;
+    color: var(--main-color);
+    padding-top: 80px;
+    padding-left: 100px;
+    background-color: var(--bg-color);
+}
+
+.bg_fes h5{
+    font-family: inter;
+    font-style: initial;
+    font-size: 15px;
+    padding-top: 10px;
+    padding-left: 100px;
+    color: var(--button-color);    
+}
+
+.bg_fes p {
+    font-family: 'inter', sans-serif;
+    font-style: initial;
+    font-size: 15px;
+    padding-top: 10px;
+    padding-left: 100px;
+    max-width: calc(100% - 524px); /* Ukuran gambar + padding yang diberikan (474px + 50px padding kiri) */
+    margin-right: 24px; /* Memberikan jarak dari tepi gambar */
+    text-align: justify; /* Menjadikan teks menjadi justify content */
+}
+
