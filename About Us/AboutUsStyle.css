@@ -1,0 +1,381 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@400;500;700&family=Poppins:ital,wght@0,200;0,300;0,500;0,600;1,700&display=swap');
+
+*{
+    font-family: 'Grandstander', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 4rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Variables */
+:root{
+    --main-color:#4A6409;
+    --button-color:#D0862D;
+    --second-color:#96AD39;
+    --bg-color:#F9F6F1;
+}
+
+section{
+    padding: 50px 100px;
+}
+
+img{
+    width: 100%;
+}
+
+body{
+    color: black;
+    background-color: var(--bg-color);
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    height: 59px;
+    top:0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 100px;
+    /* transition: 0.5s linear; */
+    background-color: #ffffff;
+}
+
+.logo img{
+    width: 90px;
+}
+
+.navbar{
+    display: flex;
+    display: contents;
+}
+
+.navbar a {
+    padding: 8px 25px;
+    color: var(--second-color);
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'inter', sans-serif;
+    font-weight: bold; 
+}
+
+
+.navbar a:hover{
+    background: var(--main-color);
+    color: #FFFF;
+    border-radius: 0.2rem;
+    transition: 0.2 all linear;
+}
+
+#menu-icon{
+    color: var(--second-color);
+    font-size: 24px;
+    z-index: 100001;
+    cursor: pointer;
+    display: none;
+}
+/* Home */
+.home{
+    width: 100%;
+    min-height: 100vh;
+    background: #FFFF;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(17rem,auto));
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.home-img{
+    height: 615px;
+    width: 745px;
+    position: absolute;
+    top: 155px;
+    right: 70px;
+    z-index: 0;
+}
+
+.shape{
+    background-color: var(--main-color);
+    width: 391px;
+    height: 634px;
+    margin-left: 70px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+}
+
+.home-GreenTea{
+    height: 615px;
+    width: 745px;
+    position: absolute;
+    bottom: 2px;
+    left: -30px;
+    z-index: 0;
+    width: 117px;
+    height: 140px;
+}
+
+.home-text h1{
+    font-size: 3.4rem;
+    color: var(--main-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.home-text p{
+    font-size: 0.938rem;
+    color: black;
+    margin: 0.5rem 0 1.4rem;
+    font-family: inter;
+}
+
+/* Best Products */
+.best{
+    width: 100%;
+    min-height: 100vh;
+    background: var(--bg-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    grid-template-columns: repeat(auto-fit,minmax(17rem,auto));
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.best-text {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+.best-text h2{
+    color: var(--main-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 2rem;
+    margin: 10rem 0 1.4rem;
+}
+
+/* Styles for slideshow */
+.slideshow {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slide {
+    display: none;
+    width: 100%; 
+}
+
+.slide.active {
+    display: flex; 
+    justify-content: center; 
+}
+
+.slide img {
+    max-width: 33.33%; 
+}
+
+.dots {
+    position: relative;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0 1.4rem;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: #888;
+    cursor: pointer;
+}
+
+.active-dot {
+    background-color: var(--button-color);
+}
+
+/* Spill They Tea */
+
+.spill{
+    width: 100%;
+    min-height: 100vh;
+    background: var(--bg-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    grid-template-columns: repeat(auto-fit,minmax(17rem,auto));
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.spill-text {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    height: 100%;
+    margin-top: 1rem;
+}
+
+.spill-text h2{
+    color: var(--main-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 2rem;
+    margin: 0 0 1.4rem;
+}
+
+/* Styles for showSlide_spill */
+.showSlide_spill {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slide_spill {
+    display: none;
+    width: 100%;
+}
+
+.slide_spill.active-spill { 
+    display: flex;
+    justify-content: center;
+}
+
+.slide_spill .card-spill {
+    display: flex; /* Menambahkan display flex untuk memastikan gambar ditampilkan secara bersamaan */
+}
+
+.text-card{
+    box-shadow: 0 8px 8px 0 rgba(0,0,0,0.3);
+    transition: 0.3s;
+    width: 377px;
+    height: 181px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.text-card p{
+    font-family: 'inter', sans-serif;
+    font-size: 15px;
+    text-align: center; 
+}
+
+.card-body{
+    width: 100%;
+    min-height: 100vh;
+    background: var(--bg-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    grid-template-columns: repeat(auto-fit,minmax(17rem,auto));
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.card-body img {
+    border-radius: 100%;
+    width: 117px;
+    height: 117px;
+    margin-left: 125px;
+    margin-top: 80px;
+}
+.card-body h6{
+    font-family: 'inter',sans-serif;
+    font-size: 15px;
+    margin-left: 130px;
+    margin-top: 10px;
+}
+
+.dots_spill {
+    position: relative;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0 1.4rem;
+    margin-top: -10rem;
+}
+
+.dot_spill {
+    height: 10px;
+
+    width: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: #888;
+    cursor: pointer;
+}
+
+.active-dot {
+    background-color: var(--button-color);
+}
+
+/* Festival */
+.festival{
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.festival img {
+    width: 474px;
+    height: 508px;
+    position: absolute;
+    right: 0;
+    border-radius: 20px 0 0 20px;
+}
+
+
+
+.bg_fes h3{
+    font-family: inter;
+    font-style: initial;
+    font-size: 30px;
+    color: var(--main-color);
+    padding-top: 80px;
+    padding-left: 100px;
+    background-color: var(--bg-color);
+}
+
+.bg_fes h5{
+    font-family: inter;
+    font-style: initial;
+    font-size: 15px;
+    padding-top: 10px;
+    padding-left: 100px;
+    color: var(--button-color);    
+}
+
+.bg_fes p {
+    font-family: 'inter', sans-serif;
+    font-style: initial;
+    font-size: 15px;
+    padding-top: 10px;
+    padding-left: 100px;
+    max-width: calc(100% - 524px); /* Ukuran gambar + padding yang diberikan (474px + 50px padding kiri) */
+    margin-right: 24px; /* Memberikan jarak dari tepi gambar */
+    text-align: justify; /* Menjadikan teks menjadi justify content */
+}
+
