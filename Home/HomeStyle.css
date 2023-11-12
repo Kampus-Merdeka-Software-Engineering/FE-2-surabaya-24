@@ -67,7 +67,6 @@ header{
     font-weight: bold; 
 }
 
-
 .navbar a:hover{
     background: var(--main-color);
     color: #FFFF;
