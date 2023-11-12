@@ -67,12 +67,30 @@ header{
     font-weight: bold; 
 }
 
-
 .navbar a:hover{
     background: var(--main-color);
     color: #FFFF;
     border-radius: 0.2rem;
     transition: 0.2 all linear;
+}
+
+.active_nav{
+    background: var(--main-color);
+    color: #FFFF;
+    border-radius: 0.2rem;
+    transition: 0.2 all linear;
+    background-size: auto;
+
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'inter', sans-serif;
+    font-weight: bold; 
+    padding: 8px 2px;
+}
+
+.active_nav a{
+    color: #ffffff;
 }
 
 #menu-icon{
@@ -83,6 +101,7 @@ header{
     display: none;
 }
 /* NavBar END */
+
 
 /* Section Description "What is TeavoU?" START */
 .desc{
@@ -131,12 +150,10 @@ margin-top:67px;
     padding: 0;
 }
 
-.foto{
-    display: flex;
-    position: absolute;
-    justify-content: flex-start;
-    float: right;
-    justify-items: right;
+.desc-more>button:hover{
+    background: #ffffff;
+    color: var(--button-color);
+    transition: 0.2 all linear;
 }
 
 .desc-img-1{
@@ -148,19 +165,38 @@ margin-top:67px;
     margin-right: 7.01px;
 }
 
-.buttons{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    border: none;
+.but img{
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
 }
 
-.product> .buttons{
-    width: 271px;
-    height: 81px;
-    border: none;
-    margin-bottom: 0;
+.buttons{
+    display: flex;
+    justify-content: center;
+    margin-top: 58px;
+    background: #ffffff;
+    width: 100%;
 }
+
+.buttons button{
+    border: none;
+    background: #ffffff;
+    font: 'grandstander';
+    font-size: 20px;
+    color: #4A6409;
+    font-weight: bolder;
+    padding: 20px;
+    width: fit-content;
+    margin: 0;
+}
+
+.buttons button:hover{
+    background: #96AD39;
+    color: var(--bg-color);
+    transition: 0.2 all linear;
+}
+
 
 /* Section TeavoU Product START */
 .product{
@@ -208,7 +244,8 @@ margin-top:67px;
     transition: 0.2 all linear;
 }
 
-.menu-1{
+/* menu tehnya */
+.menu{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -236,24 +273,39 @@ margin-top:67px;
 
 .content>img{
     align-items: center;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 15px;
 }
 
 .content>h5{
-    justify-content: center;
+    align-items: center;
+    margin: 10px;
     font-size: 20px;
-    margin: 18px;
 }
 
-.content>button{
+.content p{
+    padding: 10px;
+}
+
+.content button{
     margin-top: 16px;
     font-family: 'grandstander';
-    font-size: 24px;
+    font-size: 12px;
     color: white;
     background: var(--button-color);
     width: 91px;
     height: 26px;
-    border-radius: 15px;
+    border-radius: 7px;
     flex-shrink: 0;
     border: none;
-    padding: 0;
+    padding: 10px;
+    text-align: center;
+    margin: 20px 20px;
+}
+
+.content button:hover{
+    background: #ffffff;
+    color: var(--button-color);
+    transition: 0.2 all linear;
 }
