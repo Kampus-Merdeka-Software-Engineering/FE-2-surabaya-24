@@ -75,6 +75,25 @@ header{
     transition: 0.2 all linear;
 }
 
+.active_nav{
+    background: var(--main-color);
+    color: #FFFF;
+    border-radius: 0.2rem;
+    transition: 0.2 all linear;
+    background-size: auto;
+
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'inter', sans-serif;
+    font-weight: bold; 
+    padding: 8px 2px;
+}
+
+.active_nav a{
+    color: #ffffff;
+}
+
 #menu-icon{
     color: var(--second-color);
     font-size: 24px;
@@ -334,48 +353,52 @@ header{
 
 /* Festival */
 .festival{
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center;
+    height: 430px;
+    background-color: #ffffff;
+    margin-top: 100px;
+    box-shadow: 8px 0 8px 0 rgba(0,0,0,0.7);
 }
 
 .festival img {
     width: 474px;
-    height: 508px;
+    height: 505px;
     position: absolute;
-    right: 0;
-    border-radius: 20px 0 0 20px;
+    margin-left: 775px;
+    margin-top: -90px;
+    border-radius: 5px 0 0 5px;
 }
 
-
-
-.bg_fes h3{
+.festival h3{
     font-family: inter;
     font-style: initial;
     font-size: 30px;
     color: var(--main-color);
-    padding-top: 80px;
-    padding-left: 100px;
-    background-color: var(--bg-color);
+    /* padding-top: 80px;
+    padding-left: 50px; */
+
 }
 
-.bg_fes h5{
-    font-family: inter;
-    font-style: initial;
-    font-size: 15px;
-    padding-top: 10px;
-    padding-left: 100px;
-    color: var(--button-color);    
-}
-
-.bg_fes p {
+.festival h5{
     font-family: 'inter', sans-serif;
     font-style: initial;
     font-size: 15px;
-    padding-top: 10px;
-    padding-left: 100px;
+    /* padding-top: 10px;
+    padding-left: 55px; */
+    color: var(--button-color);    
+}
+
+.festival p {
+    font-family: 'inter', sans-serif;
+    font-style: initial;
+    font-size: 15px;
+    /* padding-top: 10px;
+    padding-left: 55px; */
     max-width: calc(100% - 524px); /* Ukuran gambar + padding yang diberikan (474px + 50px padding kiri) */
     margin-right: 24px; /* Memberikan jarak dari tepi gambar */
     text-align: justify; /* Menjadikan teks menjadi justify content */
 }
+
+
+
+
 

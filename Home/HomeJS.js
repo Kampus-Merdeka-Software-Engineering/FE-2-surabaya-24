@@ -51,9 +51,6 @@ const slideInterval = setInterval(() => {
     showSlide_spill(currentSlideSpillProduct + 1);
 }, 3000);
 
-// Jika ada potensi untuk menghentikan slideshow, gunakan clearInterval
-// clearInterval(slideInterval);
-
 
 
 
