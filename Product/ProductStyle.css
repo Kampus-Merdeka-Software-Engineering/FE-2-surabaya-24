@@ -177,6 +177,36 @@ margin-top:67px;
     color: var(--button-color);
 }
 
+.p-buttons{
+    width: 100%;
+    position: flex;
+    display: flex;
+    flex-wrap: wrap;  
+    margin: 30px 100px 30px 30px;   
+    
+}
+
+.p-buttons button {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #96AD39;
+    margin-right: 50px;
+
+    align-content: center;
+    align-items: center;
+    background-position: center;
+    background-position-x: center;
+    position: center;
+
+    background-color: #ffffff;
+    border-color: #F9F6F1;
+    border-radius: 15%;
+    width: 250px;
+    height: 50px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0,3);
+}
+
 .menu-1{
     display: flex;
     flex-wrap: wrap;
