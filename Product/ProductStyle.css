@@ -156,6 +156,62 @@ margin-top:67px;
     transition: 0.2 all linear;
 }
 
+/* tutor yutub */
+.grid{
+    display: flex; 
+    gap: 7px;  
+    float: right;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.column-1 img{
+    border-radius: 5px;
+    float: right;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.image-1 img{
+    width: 224.457px;
+    height: 267.818px;
+    flex-shrink: 0;
+    margin-top: 20px;
+}
+
+.image-2 img{
+    width: 198.951px;
+    height: 230.834px;
+    flex-shrink: 0;
+    margin-top: 15px;
+}
+
+.column-2 img{
+    border-radius: 5px;
+    float: right;
+    justify-content: flex-start;
+    margin-top: 30px;
+}
+
+.image-3 img{
+    width: 227.008px;
+    height: 279.934px;
+    flex-shrink: 0;
+    margin-top: 52px;
+}
+
+.image-4 img{
+    width: 224.457px;
+    height: 267.818px;
+    flex-shrink: 0;
+    margin-top: 18px;
+}
+
+/* coba sendiri */
 .desc-img-1{
     margin-top: 21px;
     width: 224.457px;
