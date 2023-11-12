@@ -183,7 +183,7 @@ margin-top:67px;
     display: flex;
     flex-wrap: wrap;  
     margin: 30px 100px 30px 30px;   
-    
+    justify-content: center;  
 }
 
 .p-buttons button {
@@ -192,12 +192,6 @@ margin-top:67px;
     text-align: center;
     color: #96AD39;
     margin-right: 50px;
-
-    align-content: center;
-    align-items: center;
-    background-position: center;
-    background-position-x: center;
-    position: center;
 
     background-color: #ffffff;
     border-color: #F9F6F1;
