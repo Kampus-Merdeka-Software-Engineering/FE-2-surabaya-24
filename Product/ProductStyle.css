@@ -67,12 +67,30 @@ header{
     font-weight: bold; 
 }
 
-
 .navbar a:hover{
     background: var(--main-color);
     color: #FFFF;
     border-radius: 0.2rem;
     transition: 0.2 all linear;
+}
+
+.active_nav{
+    background: var(--main-color);
+    color: #FFFF;
+    border-radius: 0.2rem;
+    transition: 0.2 all linear;
+    background-size: auto;
+
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'inter', sans-serif;
+    font-weight: bold; 
+    padding: 8px 2px;
+}
+
+.active_nav a{
+    color: #ffffff;
 }
 
 #menu-icon{
@@ -83,6 +101,7 @@ header{
     display: none;
 }
 /* NavBar END */
+
 
 /* Section Description "What is TeavoU?" START */
 .desc{
@@ -131,14 +150,68 @@ margin-top:67px;
     padding: 0;
 }
 
-.foto{
-    display: flex;
-    position: absolute;
-    justify-content: flex-start;
-    float: right;
-    justify-items: right;
+.desc-more>button:hover{
+    background: #ffffff;
+    color: var(--button-color);
+    transition: 0.2 all linear;
 }
 
+/* tutor yutub */
+.grid{
+    display: flex; 
+    gap: 7px;  
+    float: right;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.column-1 img{
+    border-radius: 5px;
+    float: right;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.image-1 img{
+    width: 224.457px;
+    height: 267.818px;
+    flex-shrink: 0;
+    margin-top: 20px;
+}
+
+.image-2 img{
+    width: 198.951px;
+    height: 230.834px;
+    flex-shrink: 0;
+    margin-top: 15px;
+}
+
+.column-2 img{
+    border-radius: 5px;
+    float: right;
+    justify-content: flex-start;
+    margin-top: 30px;
+}
+
+.image-3 img{
+    width: 227.008px;
+    height: 279.934px;
+    flex-shrink: 0;
+    margin-top: 52px;
+}
+
+.image-4 img{
+    width: 224.457px;
+    height: 267.818px;
+    flex-shrink: 0;
+    margin-top: 18px;
+}
+
+/* coba sendiri */
 .desc-img-1{
     margin-top: 21px;
     width: 224.457px;
@@ -148,19 +221,38 @@ margin-top:67px;
     margin-right: 7.01px;
 }
 
-.buttons{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    border: none;
+.but img{
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
 }
 
-.product> .buttons{
-    width: 271px;
-    height: 81px;
-    border: none;
-    margin-bottom: 0;
+.buttons{
+    display: flex;
+    justify-content: center;
+    margin-top: 58px;
+    background: #ffffff;
+    width: 100%;
 }
+
+.buttons button{
+    border: none;
+    background: #ffffff;
+    font: 'grandstander';
+    font-size: 20px;
+    color: #4A6409;
+    font-weight: bolder;
+    padding: 20px;
+    width: fit-content;
+    margin: 0;
+}
+
+.buttons button:hover{
+    background: #96AD39;
+    color: var(--bg-color);
+    transition: 0.2 all linear;
+}
+
 
 /* Section TeavoU Product START */
 .product{
@@ -183,7 +275,7 @@ margin-top:67px;
     display: flex;
     flex-wrap: wrap;  
     margin: 30px 100px 30px 30px;   
-    
+    justify-content: center;  
 }
 
 .p-buttons button {
@@ -193,21 +285,23 @@ margin-top:67px;
     color: #96AD39;
     margin-right: 50px;
 
-    align-content: center;
-    align-items: center;
-    background-position: center;
-    background-position-x: center;
-    position: center;
-
-    background-color: #ffffff;
-    border-color: #F9F6F1;
-    border-radius: 15%;
+    background: var(--bg-color);
+    border-color: var(--bg-color);
+    border-radius: 20px;
     width: 250px;
     height: 50px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0,3);
 }
 
-.menu-1{
+.p-buttons button:hover {
+    background: var(--button-color);
+    color: var(--bg-color);
+    border-radius: 20px;
+    transition: 0.2 all linear;
+}
+
+/* menu tehnya */
+.menu{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -235,24 +329,39 @@ margin-top:67px;
 
 .content>img{
     align-items: center;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 15px;
 }
 
 .content>h5{
-    justify-content: center;
+    align-items: center;
+    margin: 10px;
     font-size: 20px;
-    margin: 18px;
 }
 
-.content>button{
+.content p{
+    padding: 10px;
+}
+
+.content button{
     margin-top: 16px;
     font-family: 'grandstander';
-    font-size: 24px;
+    font-size: 12px;
     color: white;
     background: var(--button-color);
     width: 91px;
     height: 26px;
-    border-radius: 15px;
+    border-radius: 7px;
     flex-shrink: 0;
     border: none;
-    padding: 0;
+    padding: 10px;
+    text-align: center;
+    margin: 20px 20px;
+}
+
+.content button:hover{
+    background: #ffffff;
+    color: var(--button-color);
+    transition: 0.2 all linear;
 }
