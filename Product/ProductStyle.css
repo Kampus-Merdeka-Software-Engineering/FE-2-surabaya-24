@@ -21,7 +21,7 @@
 }
 
 section{
-    padding: 50px 100px;
+    padding: 50px 30px 50px 100px;
 }
 
 img{
@@ -106,7 +106,7 @@ header{
 /* Section Description "What is TeavoU?" START */
 .desc{
     width: 100%;
-    min-height: 100vh;
+    height: 117vh;
     background: white;
     background-repeat: no-repeat;
     background-size: cover;
@@ -174,6 +174,7 @@ margin-top:67px;
     float: right;
     justify-content: flex-start;
     margin-top: 10px;
+    
 }
 
 .image-1 img{
@@ -230,12 +231,15 @@ margin-top:67px;
 .buttons{
     display: flex;
     justify-content: center;
-    margin-top: 58px;
+    /* margin-top: 58px; */
     background: #ffffff;
     width: 100%;
+    align-items: center;
+    margin: 58px 30px 30px 0px;
 }
 
 .buttons button{
+    display: flex;
     border: none;
     background: #ffffff;
     font: 'grandstander';
@@ -245,6 +249,7 @@ margin-top:67px;
     padding: 20px;
     width: fit-content;
     margin: 0;
+    align-items: center;
 }
 
 .buttons button:hover{
@@ -262,8 +267,7 @@ margin-top:67px;
 }
 
 .product-text h2{
-    margin-top: 30px;
-    
+    margin-top: 83px;
 }
 
 .product-text h2>span{
@@ -388,4 +392,36 @@ margin-top:67px;
     background: var(--main-color);
     color: var(--bg-color);
     transition: 0.2 all linear;
+}
+
+/* Feedback */
+.feedback{
+    width: 1067px;
+    height: 247px;
+    flex-shrink: 0;
+    display: block;
+    border-radius: 20px;
+    background: #AFBF67;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-feedback{
+    position: relative;
+    width: 656px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #FFF;
+}
+
+.feedback p{
+    color: #FFF;
+    text-align: center;
+    font-family: 'Inter';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
