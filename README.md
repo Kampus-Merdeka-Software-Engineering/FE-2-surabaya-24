@@ -5,4 +5,4 @@ Section Surabaya [FE Group 24] :
 3. Nisrina Nurhasna
 4. I Gusti Agung Diah Arishma Okayani
 5. Rifqi Nur Permadi
-6. Balqis Ramadhillahgi
+6. Balqis Ramadhani
