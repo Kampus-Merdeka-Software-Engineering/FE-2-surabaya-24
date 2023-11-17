@@ -320,30 +320,34 @@ margin-top:67px;
 
 .content{
     width: 245px;
-    height: 454px;
+    height: 400px;
     box-sizing: border-box;   
     float: left;
-    text-align: justify;
     border-radius: 11px 11px 11px 11px;
     background: white;
     box-shadow: 0px 3.4186px 3.4186px 0px rgba(0, 0, 0, 0.25), 4.27324px 0px 3.4186px 0px rgba(0, 0, 0, 0.25);
-    transition: .4s;
-    font-family: 'Inter';
-    font-size: 12px;
+    transition: 0.4s;
+    overflow: hidden; /* Menyembunyikan teks yang lebih panjang dari kotak */
 }
 
-.content>img{
+.content h5{
+    text-align: justify;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.content.expanded {
+    height: auto; /* Mengatur tinggi otomatis saat kartu diperpanjang */
+}
+
+.content img{
     align-items: center;
     width: 100%;
     padding: 2%;
     object-fit: cover;
     margin-bottom: 15px;
-}
-
-.content>h5{
-    text-align: center;
-    margin-bottom: 5px;
-    font-size: 20px;
 }
 
 .content p{
@@ -354,6 +358,8 @@ margin-top:67px;
     white-space: normal;
     overflow: hidden;
     text-overflow: ellipsis;
+    color: #000000;
+    font-size: 14px;
     
     /* word-wrap: normal; */
     /* word-wrap: break-word; */
@@ -372,6 +378,14 @@ margin-top:67px;
     /* text-overflow: clip; */
 }
 
+.content p.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 10; /* Menampilkan maksimal 3 baris */
+    -webkit-box-orient: vertical;
+}
+
 .content button{
     margin-top: 16px;
     font-family: 'grandstander';
@@ -386,13 +400,24 @@ margin-top:67px;
     padding: 10px;
     text-align: center;
     margin: 20px 20px;
+    display: block;
+    margin-top: 16px;
 }
 
-.content button:hover{
+.text-wrapper {
+    max-height: 100px; /* Set a maximum height for the truncated text */
+    overflow: hidden;
+}
+
+.content.expanded .text-wrapper {
+    max-height: none; /* Remove the maximum height when expanded */
+}
+
+/* .content button:hover{
     background: var(--main-color);
     color: var(--bg-color);
     transition: 0.2 all linear;
-}
+} */
 
 /* Feedback */
 .feedback{
