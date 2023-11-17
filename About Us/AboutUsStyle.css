@@ -14,10 +14,10 @@
 
 /* Variables */
 :root{
-    --main-color:#4A6409;
+    --main-color: #96AD39;
     --button-color:#D0862D;
-    --second-color:#96AD39;
-    --bg-color:#F9F6F1;
+    --second-color:#4A6409;
+    --bg-color:#FFFFFF;
 }
 
 section{
@@ -73,6 +73,25 @@ header{
     color: #FFFF;
     border-radius: 0.2rem;
     transition: 0.2 all linear;
+}
+
+.active_nav{
+    background: var(--main-color);
+    color: #FFFF;
+    border-radius: 0.2rem;
+    transition: 0.2 all linear;
+    background-size: auto;
+
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'inter', sans-serif;
+    font-weight: bold; 
+    padding: 8px 2px;
+}
+
+.active_nav a{
+    color: #ffffff;
 }
 
 #menu-icon{

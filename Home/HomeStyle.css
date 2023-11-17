@@ -14,10 +14,10 @@
 
 /* Variables */
 :root{
-    --main-color:#4A6409;
+    --main-color: #96AD39;
     --button-color:#D0862D;
-    --second-color:#96AD39;
-    --bg-color:#F9F6F1;
+    --second-color:#4A6409;
+    --bg-color:#FFFFFF;
 }
 
 section{
