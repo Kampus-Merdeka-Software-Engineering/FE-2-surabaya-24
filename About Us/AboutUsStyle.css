@@ -21,8 +21,7 @@
 }
 
 section{
-    padding: 70px 100px;
-}
+    padding: 50px 100px;}
 
 img{
     width: 100%;
@@ -113,6 +112,7 @@ header{
     grid-template-columns: repeat(auto-fit,minmax(17rem,auto));
     align-items: stretch;
     gap: 1.5rem;
+    background-image: url(/Asset/bgprofilupper.png);
 }
 
 .profileupper-text h1{
@@ -120,19 +120,23 @@ header{
     color: var(--main-color);
     text-transform: uppercase;
     letter-spacing: 2px;
+    padding-top: 50px;
 }
 
 .profileupper-text h1> span{
     color: var(--button-color);
 }
 
-.profileupper-text p{
+.profileupper-text p::after {
     width: 600px;
     font-size: 0.938rem;
     color: black;
-    text-align: justify;
     margin: 0.5rem 0 1.4rem;
     font-family: inter;
+    max-width: max-content;
+    margin-right: 24px;
+    text-align: justify;
+
 }
 
 .profileupper-img-1{
@@ -144,44 +148,97 @@ header{
 }
 
 .profileupper-img-2{
-    height: 0px;
+    height: 50px;
     width: 150px;
     position: absolute;
-    bottom: 20px;
+    bottom: 200px;
     right: 250px;
 }
 
 .profileupper-bubukteh{
-    height: 50px;
     position: absolute;
-    width: 80px;
-    top: 200px;
-    left: 0;
+    bottom: 2px;
+    left: -27px;
+    z-index: 0;
+    width: 117px;
+    height: 140px;
 }
 
 /* section profilecentre "About Us TeavoU" */
-.profilecentre{
+.profilecentre::after {
     content: "";
     display: table;
     clear: both;
 }
-
 .leftcolumn{
     float: left;
     width: 50%;
 }
+
+.grid{
+    display: flex; 
+    gap: 10px;  
+    float: right;
+}
+.column{
+    display: flex;
+    float: right;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.column-1 img{
+    border-radius: 10px;
+    float: left;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.image-1 img{
+    width: 224.457px;
+    height: 267.818px;
+    flex-shrink: 0;
+    margin-top: 20px;
+}
+
+.image-2 img{
+    width: 198.951px;
+    height: 230.834px;
+    flex-shrink: 0;
+    margin-top: 15px;
+}
+
+.column-2 img{
+    border-radius: 5px;
+    float: left;
+    justify-content: flex-start;
+    margin-top: 30px;
+}
+
+.image-3 img{
+    width: 227.008px;
+    height: 279.934px;
+    flex-shrink: 0;
+    margin-top: 52px;
+}
+
+.image-4 img{
+    width: 224.457px;
+    height: 267.818px;
+    flex-shrink: 0;
+    margin-top: 18px;
+}
+
+/* rightcolumn section profilecentre */
 .rightcolumn{
     float: left;
-    width: 25%;
-}
-.profilecentre-img{
-    width: 30%;
-    padding: auto;
+    width: 50%;
 }
 .profilecentrecard {
     background: #FFFF;
     padding: 20px;
-    margin-top: 20px;
+    margin-left: auto;
+    margin-top: 10px;
 }
 .profilecentrecard h3{
     font-size: 2rem;
@@ -190,7 +247,17 @@ header{
 }span{
     color: var(--button-color);
 }
-
+.number1{
+    color: var(--button-color);
+    font-size: 2rem;
+}
+.profilecentrecard span{
+    gap: 1.5rem ;
+}
+.number2{
+    color: var(--main-color);
+    font-size: 2rem;
+}
 /* Section teavou team */
 .TeavoUTeam{
     content: "";
@@ -221,19 +288,22 @@ header{
     color: var(--main-color);
     letter-spacing: 2px;
     padding: 20px;
-    margin-top: 20px   
+    margin-top: 20px;
+    display: flex;
+    float: right;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .TevoUGallery-img{
-    width: 50%;
+    width: 100px;
     padding: auto;
 }
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 700px) {
     .leftcolumn, .rightcolumn {   
       width: 100%;
       padding: 0;
     }
   }
-  
