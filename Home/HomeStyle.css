@@ -540,3 +540,43 @@ header{
     margin-left: -100px;
     margin-top: -484px;
 }
+
+/* Media queries untuk responsif */
+@media only screen and (max-width: 1200px) {
+    .home-img {
+        right: 20px; /* Mengurangi jarak gambar dari tepi pada layar yang lebih kecil */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .home-img {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-bottom: 20px;
+    }
+
+    .shape {
+        position: relative;
+        margin-left: 0;
+    }
+
+    .home-GreenTea {
+        position: relative;
+        left: auto;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .home-text h1 {
+        font-size: 2.5rem; /* Mengurangi ukuran font pada layar yang lebih kecil */
+    }
+
+    .home-text span {
+        font-size: 2.5rem;
+    }
+
+    .home-text p {
+        font-size: 0.9rem;
+    }
+}
