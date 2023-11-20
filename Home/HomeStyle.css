@@ -33,73 +33,64 @@ body{
     background-color: var(--bg-color);
 }
 
-header{
+/* Navbar */
+
+/* Header */
+header {
     position: fixed;
     width: 100%;
     height: 59px;
-    top:0;
+    top: 0;
     right: 0;
     z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 100px;
-    /* transition: 0.5s linear; */
+    padding: 35px 0.9rem;
     background-color: #ffffff;
 }
 
-.logo img{
+.logo img {
     width: 90px;
 }
 
-.navbar{
+.navbar {
     display: flex;
-    display: contents;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1; /* Use flex-grow to make the navbar expand and center */
 }
 
 .navbar a {
-    padding: 8px 25px;
+    padding: 8px 15px;
     color: var(--second-color);
     font-size: 1rem;
     text-transform: uppercase;
     font-weight: 500;
     font-family: 'inter', sans-serif;
-    font-weight: bold; 
+    font-weight: bold;
+    margin: 0 10px;
 }
 
-.navbar a:hover{
+.navbar a:hover {
     background: var(--main-color);
     color: #FFFF;
     border-radius: 0.2rem;
-    transition: 0.2 all linear;
+    transition: 0.2s all linear; /* Add "s" to specify seconds */
 }
 
-.active_nav{
-    background: var(--main-color);
-    color: #FFFF;
-    border-radius: 0.2rem;
-    transition: 0.2 all linear;
-    background-size: auto;
-
-    font-size: 1rem;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-family: 'inter', sans-serif;
-    font-weight: bold; 
-    padding: 8px 2px;
-}
-
-.active_nav a{
-    color: #ffffff;
-}
-
-#menu-icon{
+#menu-icon {
     color: var(--second-color);
     font-size: 24px;
     z-index: 100001;
     cursor: pointer;
     display: none;
 }
+
+
 /* Home */
 .home{
     width: 100%;
@@ -542,13 +533,23 @@ header{
 }
 
 /* Media queries untuk responsif */
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1008px) {
     .home-img {
         right: 20px; /* Mengurangi jarak gambar dari tepi pada layar yang lebih kecil */
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 641px) {
+
+    /* Navbar */
+    .navbar{
+        display: none;
+    }
+
+    .navbar menu{
+        display: block;
+    }
+
     .home-img {
         position: relative;
         top: auto;
