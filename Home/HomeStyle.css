@@ -62,7 +62,7 @@ header {
     list-style: none;
     margin: 0;
     padding: 0;
-    flex-grow: 1; /* Use flex-grow to make the navbar expand and center */
+    flex-grow: 1; 
 }
 
 .navbar a {
@@ -81,6 +81,25 @@ header {
     color: #FFFF;
     border-radius: 0.2rem;
     transition: 0.2s all linear; /* Add "s" to specify seconds */
+}
+
+.active_nav{
+    background: var(--main-color);
+    color: #FFFF;
+    border-radius: 0.2rem;
+    transition: 0.2 all linear;
+    background-size: auto;
+
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'inter', sans-serif;
+    font-weight: bold; 
+    padding: 8px 2px;
+}
+
+.active_nav a{
+    color: #ffffff;
 }
 
 #menu-icon {
@@ -317,17 +336,8 @@ header {
     align-items: center;
   }
 
-/* Best Products */
-.best{
-    width: 100%;
-    min-height: 100vh;
-    background: var(--bg-color);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    grid-template-columns: repeat(auto-fit,minmax(17rem,auto));
-    align-items: center;
-    gap: 1.5rem;
+  /* Best None */
+  .best{
     display: none;
 }
 
@@ -344,49 +354,6 @@ header {
     letter-spacing: 2px;
     font-size: 2rem;
     margin: 10rem 0 1.4rem;
-}
-
-/* Styles for slideshow */
-.slideshow {
-    display: flex;
-    overflow: hidden;
-    width: 100%;
-}
-
-.slide {
-    display: none;
-    width: 100%; 
-}
-
-.slide.active {
-    display: flex; 
-    justify-content: center; 
-}
-
-.slide img {
-    max-width: 33.33%; 
-}
-
-.dots {
-    position: relative;
-    bottom: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin: 3rem 0 1.4rem;
-}
-
-.dot {
-    height: 10px;
-    width: 10px;
-    margin: 0 5px;
-    border-radius: 50%;
-    background-color: #888;
-    cursor: pointer;
-}
-
-.active-dot {
-    background-color: var(--button-color);
 }
 
 /* Spill They Tea */
@@ -619,7 +586,7 @@ header {
     left: 50%; /* Align to the middle horizontally */
     transform: translate(-50%, -50%); /* Center the background */
     width: 110px; /* Cover the entire button */
-    height: 110px; /* Cover the entire button */
+    height: 110px;
     border-radius: 100%;
     border: none;
     outline: none;
@@ -686,16 +653,86 @@ header {
 
 .shapeConten{
     background-color: var(--main-color);
-    height: 518px;
+    height: 40rem;
     width: 40px;
     margin-left: -100px;
     margin-top: -484px;
 }
 
+.bg-fo{
+    background-color: var(--main-color);
+    background-size: cover;
+    height: 20rem;
+    margin-top: 9rem;
+}
+
+.bg-fo img{
+    width: 10rem;
+    height: 10rem;
+    margin-top: 4rem;
+    margin-bottom: 10rem;
+    margin-left: 6rem;
+}
+
+/* Navbar bawah */
+
+.line{
+    background-color: #FFFFFF;
+    height: 1px;
+    width: 80rem;
+    margin: -8rem auto 0;
+}
+
+.navbar-bawah {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    margin: 10px 0 0;
+    padding: 0;
+    flex-grow: 2; 
+    margin-left: 20rem;
+}
+
+.navbar-bawah a {
+    padding: 8px 15px;
+    color: var(--bg-color);
+    font-size: 15px;
+    font-family: 'inter';
+    margin: 0 1.5rem;
+    font-weight: 300;
+}
+
+.navbar-bawah a:hover{
+    color: #CCFF00;
+}
+
 /* Media queries untuk responsif */
 
-@media only screen and (max-width: 550px) {
-    
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 14px; 
+    }
+
+    header {
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+
+    body {
+        font-size: 14px; 
+    }
+
+    header {
+        height: auto;
+    }
+
+    .navbar{
+        display: none;
+    }
+
     #menu-icon {
         color: var(--second-color);
         cursor: pointer;
@@ -704,5 +741,81 @@ header {
         padding: 0;
         flex-grow: 1;
         height: 20px;
+    }
+
+    .grid-container{
+        display: none;
+    }
+
+    /* Best Products */
+    .best{
+        width: 100%;
+        min-height: 100vh;
+        background: var(--bg-color);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        grid-template-columns: repeat(auto-fit,minmax(17rem,auto));
+        align-items: center;
+        gap: 1.5rem;
+        display: contents;
+    }
+    
+    .best-text {
+        display: grid;
+        place-items: center;
+        text-align: center;
+        height: 100%;
+    }
+    
+    .best-text h2{
+        color: var(--main-color);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 2rem;
+        margin: 10rem 0 1.4rem;
+    }
+    
+    /* Styles for slideshow */
+    .slideshow {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+    }
+    
+    .slide {
+        display: none;
+        width: 100%; 
+    }
+    
+    .slide.active {
+        display: flex; 
+        justify-content: center; 
+    }
+    
+    .slide img {
+        max-width: 33.33%; 
+    }
+    
+    .dots {
+        position: relative;
+        bottom: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 3rem 0 1.4rem;
+    }
+    
+    .dot {
+        height: 10px;
+        width: 10px;
+        margin: 0 5px;
+        border-radius: 50%;
+        background-color: #888;
+        cursor: pointer;
+    }
+    
+    .active-dot {
+        background-color: var(--button-color);
     }
 }
