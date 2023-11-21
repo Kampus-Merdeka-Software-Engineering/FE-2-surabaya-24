@@ -245,7 +245,7 @@ header {
     color: #ffffff;
     font-family: 'inter';
     font-size: 10px;
-    max-width: calc(100% - 290px); /* Ukuran gambar + padding yang diberikan (474px + 50px padding kiri) */
+    max-width: calc(100% - 290px);
     text-align: justify;
     padding-top: 1rem;
     padding-left: 2rem;
