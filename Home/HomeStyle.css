@@ -392,7 +392,6 @@ header {
 /* Spill They Tea */
 
 .spill{
-    width: 100%;
     min-height: 100vh;
     background: var(--bg-color);
     background-repeat: no-repeat;
@@ -431,19 +430,20 @@ header {
     width: 100%;
 }
 
-.slide_spill.active-spill { 
+.active-spill { 
     display: flex;
     justify-content: center;
 }
 
-.slide_spill .card-spill {
-    display: flex; /* Menambahkan display flex untuk memastikan gambar ditampilkan secara bersamaan */
+.card-spill {
+    display: flex;
+    gap: 1rem;
 }
 
 .text-card{
-    box-shadow: 0 8px 8px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.3);
     transition: 0.3s;
-    width: 377px;
+    width: 350px;
     height: 181px;
     background-color: #ffffff;
     border-radius: 10px;
@@ -455,7 +455,7 @@ header {
 
 .text-card p{
     font-family: 'inter', sans-serif;
-    font-size: 15px;
+    font-size: 12px;
     text-align: center; 
 }
 
@@ -673,7 +673,7 @@ header {
 .box button{
     width: 100px;
     height: 30px;
-    border-radius: 10px;
+    border-radius: 5px;
     color: #ffffff;
     background-color: var(--button-color);
     outline: none;
