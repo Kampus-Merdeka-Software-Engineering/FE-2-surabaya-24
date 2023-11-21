@@ -144,7 +144,7 @@ header{
     width: 150px;
     position: absolute;
     top: 60px;
-    right: 40px;
+    right: 10px;
 }
 
 .profileupper-img-2{
@@ -152,7 +152,7 @@ header{
     width: 150px;
     position: absolute;
     bottom: 200px;
-    right: 250px;
+    right: 180px;
 }
 
 .profileupper-bubukteh{
@@ -188,7 +188,7 @@ header{
 }
 
 .column-1 img{
-    border-radius: 10px;
+    border-radius: 5px;
     float: left;
     justify-content: flex-start;
     margin-top: 10px;
@@ -237,7 +237,7 @@ header{
 .profilecentrecard {
     background: #FFFF;
     padding: 20px;
-    margin-left: auto;
+    margin-left: 20px;
     margin-top: 10px;
 }
 .profilecentrecard h3{
@@ -263,13 +263,21 @@ header{
     content: "";
     display: table;
     clear: both;
-}
-.TeavoUTeamcard {
     font-size: 2rem;
     color: var(--main-color);
-    letter-spacing: 2px;
-    padding: 20px;
-    margin-top: 20px   
+    /* letter-spacing: 2px; */
+    /* padding: 20px; */
+    /* margin-top: 20px    */
+}
+.TeavoUTeamcard {
+    display: flex;
+    color: black;
+}
+.TeavoUTeamcard > div {
+  /* background-color: #f1f1f1; */
+  margin: 5px;
+  padding: 10px;
+  font-size: 15px;
 }
 
 /* Section teavou gallery */
@@ -301,7 +309,7 @@ header{
 }
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
     .leftcolumn, .rightcolumn {   
       width: 100%;
       padding: 0;
