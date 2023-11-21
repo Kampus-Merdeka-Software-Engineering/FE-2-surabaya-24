@@ -33,7 +33,6 @@ body{
     background-color: var(--bg-color);
 }
 
-/* Navbar */
 
 /* Header */
 header {
@@ -53,6 +52,8 @@ header {
 .logo img {
     width: 90px;
 }
+
+/* Navbar */
 
 .navbar {
     display: flex;
@@ -138,7 +139,6 @@ header {
     font-size: 3.4rem;
     color: var(--main-color);
     text-transform: uppercase;
-    letter-spacing: 2px;
 }
 
 .home-text span{
@@ -158,6 +158,165 @@ header {
     text-align: justify; /* Menjadikan teks menjadi justify content */
 }
 
+/* Best product new */
+.grid-container {
+    display: grid;
+    grid-template-columns: 40rem 30rem;
+    grid-template-rows: 15rem 15rem;
+    gap: 30px;
+    padding: 10px;
+    background-color: none;
+  }
+  
+  .grid-container > div {
+    background-color: rgba(255, 0, 0, 0.8);
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .item1 {
+    grid-row: 3 / 1;
+    background-image: url(/Asset/originTea.svg);
+    background-size: cover;
+  }
+
+  .item1 h3 {
+    color: #F1C644;
+    font-size: 60px;
+    text-shadow: 3px 2px 1px rgb(0, 0, 0);
+    text-align: justify;
+    padding-top: 5rem;
+    padding-left: 2rem;
+  }
+
+  .item1 span {
+    color: #ffffff;
+  }
+
+  .item1 p{
+    color: #ffffff;
+    font-family: 'inter';
+    font-size: 12px;
+    max-width: calc(100% - 400px); /* Ukuran gambar + padding yang diberikan (474px + 50px padding kiri) */
+    text-align: justify;
+    padding-top: 2rem;
+    padding-left: 2rem;
+
+  }
+
+  .label-best{
+    background-color: var(--button-color);
+    width: 7rem;
+    height: 2rem;
+    font-weight: bold;
+    border-radius: 0 10px 10px 0;
+    margin-left: -1rem;
+    margin-top: 5rem;
+    text-align: center;
+    color: #ffffff;
+  
+    /* Add the following lines for centering text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Best 2 */
+
+  .item2 {
+    background-image: url(/Asset/GreanTea.svg);
+    background-size: cover;
+  }
+
+  .item2 h3 {
+    color: #CCFF00;
+    font-size: 30px;
+    text-shadow: 3px 2px 1px rgb(0, 0, 0);
+    text-align: justify;
+    padding-top: 5rem;
+    padding-left: 2rem;
+  }
+
+  .item2 span {
+    color: #ffffff;
+  }
+
+  .item2 p{
+    color: #ffffff;
+    font-family: 'inter';
+    font-size: 10px;
+    max-width: calc(100% - 290px); /* Ukuran gambar + padding yang diberikan (474px + 50px padding kiri) */
+    text-align: justify;
+    padding-top: 1rem;
+    padding-left: 2rem;
+
+  }
+
+  .labe2-best{
+    background-color: var(--button-color);
+    width: 7rem;
+    height: 2rem;
+    font-weight: bold;
+    border-radius: 0 10px 10px 0;
+    margin-left: -1rem;
+    margin-top: -10rem;
+    text-align: center;
+    color: #ffffff;
+  
+    /* Add the following lines for centering text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Best 3 */
+
+  .item3 {
+    background-image: url(/Asset/BlueThaiTea.svg);
+    background-size: cover;
+  }
+
+  .item3 h3 {
+    color: #95E8FF;
+    font-size: 30px;
+    text-shadow: 3px 2px 1px rgb(0, 0, 0);
+    text-align: justify;
+    padding-top: 3rem;
+    padding-left: 20rem;
+  }
+
+  .Tea3 {
+    color: #CCFF00;
+  }
+
+  .item3 p{
+    color: #ffffff;
+    font-family: 'inter';
+    font-size: 10px;
+    max-width: calc(100% - 30px); /* Ukuran gambar + padding yang diberikan (474px + 50px padding kiri) */
+    text-align: justify;
+    padding-top: 1rem;
+    padding-left: 20rem;
+
+  }
+
+  .labe3-best{
+    background-color: var(--button-color);
+    width: 7rem;
+    height: 2rem;
+    font-weight: bold;
+    border-radius: 10px 0 0 10px;
+    margin-left: 24rem;
+    margin-top: -10rem;
+    text-align: center;
+    color: #ffffff;
+  
+    /* Add the following lines for centering text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 /* Best Products */
 .best{
     width: 100%;
@@ -169,6 +328,7 @@ header {
     grid-template-columns: repeat(auto-fit,minmax(17rem,auto));
     align-items: center;
     gap: 1.5rem;
+    display: none;
 }
 
 .best-text {
@@ -533,51 +693,16 @@ header {
 }
 
 /* Media queries untuk responsif */
-@media only screen and (max-width: 1008px) {
-    .home-img {
-        right: 20px; /* Mengurangi jarak gambar dari tepi pada layar yang lebih kecil */
-    }
-}
 
-@media only screen and (max-width: 641px) {
-
-    /* Navbar */
-    .navbar{
-        display: none;
-    }
-
-    .navbar menu{
-        display: block;
-    }
-
-    .home-img {
-        position: relative;
-        top: auto;
-        right: auto;
-        margin-bottom: 20px;
-    }
-
-    .shape {
-        position: relative;
-        margin-left: 0;
-    }
-
-    .home-GreenTea {
-        position: relative;
-        left: auto;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    .home-text h1 {
-        font-size: 2.5rem; /* Mengurangi ukuran font pada layar yang lebih kecil */
-    }
-
-    .home-text span {
-        font-size: 2.5rem;
-    }
-
-    .home-text p {
-        font-size: 0.9rem;
+@media only screen and (max-width: 550px) {
+    
+    #menu-icon {
+        color: var(--second-color);
+        cursor: pointer;
+        display: flex;
+        margin: 0 0 0 130px;
+        padding: 0;
+        flex-grow: 1;
+        height: 20px;
     }
 }
