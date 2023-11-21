@@ -22,7 +22,7 @@
 }
 
 section{
-    padding: 50px 100px;
+  padding: 50px 30px 50px 100px;
 }
 
 img{
@@ -34,111 +34,91 @@ body{
     background-color: var(--bg-color);
 }
 
-header{
-    position: fixed;
-    width: 100%;
-    height: 59px;
-    top:0;
-    right: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px 100px;
-    /* transition: 0.5s linear; */
-    background-color: #ffffff;
+/* Header */
+header {
+  position: fixed;
+  width: 100%;
+  height: 59px;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px 0px 100px;
+  background-color: #ffffff;
 }
 
-.logo img{
+.logo img {
   width: 90px;
 }
 
-.navbar{
-  display: flex;
-  display: contents;
-  justify-content: center; /* Memusatkan navbar secara horizontal */
-  justify-content: center; /* Memusatkan navbar secara horizontal */
-  padding: 0; /* Menghapus padding default pada ul */
-  list-style: none; /* Menghilangkan bullet points pada list */
-}
+/* Navbar */
 
-.navbar li {
-  margin-right :1rem;
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
 }
 
 .navbar a {
-  padding: 8px 25px;
+  padding: 8px 15px;
   color: var(--second-color);
   font-size: 1rem;
   text-transform: uppercase;
   font-weight: 500;
   font-family: 'inter', sans-serif;
-  font-weight: bold; 
+  font-weight: bold;
+  margin: 0 10px;
 }
 
-.navbar a:hover{
+.navbar a:hover {
   background: var(--main-color);
   color: #FFFF;
   border-radius: 0.2rem;
-  transition: 0.2 all linear;
+  transition: 0.2s all linear; 
 }
 
-.active_nav{
-  background: var(--main-color);
-  color: #FFFF;
-  border-radius: 0.2rem;
-  transition: 0.2 all linear;
-  background-size: auto;
-
-  font-size: 1rem;
-  text-transform: uppercase;
-  font-weight: 500;
-  font-family: 'inter', sans-serif;
-  font-weight: bold; 
-  padding: 8px 2px;
-}
-
-.active_nav a{
-  color: #ffffff;
-}
-
-#menu-icon{
+#menu-icon {
   color: var(--second-color);
   font-size: 24px;
   z-index: 100001;
   cursor: pointer;
   display: none;
+  
 }
-/* NavBar END */
-
 
 /* BG Sections Styling */
 .bg-sections {
-  width: 100%;
-  height: 117vh;
+  height: 100vh;
+  width: 100vw;
+  padding-left : 0;
+  padding-right : 0;
   background: white;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  position: relative; /* Add relative positioning */
+  overflow: hidden; 
+  position: relative;
 }
 
-/* Ensure the image fills the container */
-/* BG Sections Styling */
-.bg-sections {
-  position: relative; /* Set container to relative positioning */
-  /* width: 100%;
-  height: 117vh; */
-  object-fit: cover;
+.but img{
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
 }
 
 .buttons{
   display: flex;
   justify-content: center;
-  /* margin-top: 58px; */
-  width: 100%;
-  align-items: center;
-  margin: 58px 30px 30px 0px;
+  transform: translate(0%, -120%);
+  display: flex;
+  justify-content: center;
+  padding: 0px;
 }
 
 .buttons button{
@@ -160,11 +140,9 @@ header{
   color: var(--bg-color);
   transition: 0.2 all linear;
 }
-
-
-
   /* bg Sections Styling */
 
+  
 /* Features Sections Styling */
 .features-sections {
     max-width: 1280px;
@@ -180,7 +158,7 @@ header{
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-bottom : 1rem;
+      padding-bottom : 3rem;
     }
     
   h2 {
@@ -240,7 +218,7 @@ header{
 
 /* Desc1-20-Regular */
 font-family: Inter;
-font-size: 20px;
+font-size: 18px;
 font-style: normal;
 font-weight: 400;
 line-height: 33px; /* 165% */
@@ -278,14 +256,13 @@ line-height: 33px; /* 165% */
 }
 
 
-   /* History2 Sections Styling */
+/* History2 Sections Styling */
    .history2-sections img {
     height: 85%;
     width: 85%;
 
     }
 
-  /* Adjustments for image on the right */
   .history2-sections__container img {
    order: 2; /* Set the image to appear on the right */
    }
