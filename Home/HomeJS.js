@@ -53,25 +53,41 @@ const slideInterval = setInterval(() => {
 
 // Quiz
 
+// Mengubah fungsi openTea menjadi fungsi initQuiz
+function initQuiz() {
+    // Ambil elemen pertama dengan class "tabcontent" dan tampilkan
+    var defaultTab = document.querySelector(".tabcontent");
+    defaultTab.style.display = "block";
+
+    // Tambahkan class "active" pada button pertama dengan class "tablinks"
+    var defaultTabLink = document.querySelector(".tablinks");
+    defaultTabLink.classList.add("active");
+}
+
 function openTea(evt, teaName) {
     // Declare all variables
     var i, tabcontent, tablinks;
-  
+
     // Get all elements with class="tabcontent" and hide them
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
+        tabcontent[i].style.display = "none";
     }
-  
+
     // Get all elements with class="tablinks" and remove the class "active"
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
-  
+
     // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById(teaName).style.display = "block";
     evt.currentTarget.className += " active";
-  }
+}
+
+// Panggil fungsi initQuiz ketika halaman dimuat
+document.addEventListener("DOMContentLoaded", function () {
+    initQuiz();
+});
 
 
