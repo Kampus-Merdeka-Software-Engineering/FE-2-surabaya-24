@@ -450,3 +450,10 @@ margin-top:67px;
     font-weight: 700;
     line-height: normal;
 }
+
+/* Responsive */
+@media(max-width: 600px){
+    .navbar{
+        
+    }
+}
