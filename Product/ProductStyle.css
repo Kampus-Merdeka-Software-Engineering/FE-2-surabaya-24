@@ -423,22 +423,24 @@ margin-top:67px;
 .feedback{
     width: 1067px;
     height: 247px;
-    flex-shrink: 0;
-    display: block;
     border-radius: 20px;
     background: #AFBF67;
     padding: 20px;
-    justify-content: center;
+}
+
+.form{
     align-items: center;
+    justify-content: center;
 }
 
 .input-feedback{
-    position: relative;
     width: 656px;
     height: 48px;
     flex-shrink: 0;
     border-radius: 10px;
     background: #FFF;
+    align-items: center;
+    justify-content: center;
 }
 
 .feedback p{
@@ -449,6 +451,23 @@ margin-top:67px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+}
+
+.star-rating{
+    user-select: none;
+}
+
+.star{
+    font-size: 37px;
+    color: #FFF;
+    align-items: center;
+    background-color: unset;
+    border:none;
+}
+
+.star:hover{
+    cursor: pointer;
+    color: #FFF;
 }
 
 /* Responsive */
