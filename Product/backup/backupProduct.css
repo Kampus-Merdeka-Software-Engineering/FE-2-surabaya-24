@@ -156,7 +156,6 @@ margin-top:67px;
     transition: 0.2 all linear;
 }
 
-/* tutor yutub */
 .grid{
     display: flex; 
     gap: 7px;  
@@ -274,7 +273,7 @@ margin-top:67px;
     color: var(--button-color);
 }
 
-.tab{
+.p-buttons{
     width: 100%;
     position: flex;
     display: flex;
@@ -283,7 +282,7 @@ margin-top:67px;
     justify-content: center;  
 }
 
-.tab button {
+.p-buttons button {
     font-size: 24px;
     font-weight: bold;
     text-align: center;
@@ -298,17 +297,11 @@ margin-top:67px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0,3);
 }
 
-.tab button:hover {
+.p-buttons button:hover {
     background: var(--button-color);
     color: var(--bg-color);
     border-radius: 20px;
     transition: 0.2 all linear;
-}
-
-/* Create an active/current tablink class */
-.tab button.active {
-    background: var(--button-color);
-    color: #FFFFFF;
 }
 
 /* menu tehnya */
@@ -324,7 +317,7 @@ margin-top:67px;
     padding: 10px; 
 }
 
-.tabcontent{
+.content{
     width: 245px;
     height: 400px;
     box-sizing: border-box;   
@@ -336,7 +329,7 @@ margin-top:67px;
     overflow: hidden; /* Menyembunyikan teks yang lebih panjang dari kotak */
 }
 
-.tabcontent h5{
+.content h5{
     text-align: justify;
     font-size: 12px;
     text-align: center;
@@ -344,11 +337,11 @@ margin-top:67px;
     font-size: 18px;
 }
 
-.tabcontent.expanded {
+.content.expanded {
     height: auto; /* Mengatur tinggi otomatis saat kartu diperpanjang */
 }
 
-.tabcontent img{
+.content img{
     align-items: center;
     width: 100%;
     padding: 2%;
@@ -356,7 +349,7 @@ margin-top:67px;
     margin-bottom: 15px;
 }
 
-.tabcontent p{
+.content p{
     padding: 10px;
     font-family: inter;
     max-width: 100%;
@@ -384,7 +377,7 @@ margin-top:67px;
     /* text-overflow: clip; */
 }
 
-.tabcontent p.truncate {
+.content p.truncate {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -392,7 +385,7 @@ margin-top:67px;
     -webkit-box-orient: vertical;
 }
 
-.tabcontent button{
+.content button{
     margin-top: 16px;
     font-family: 'grandstander';
     font-size: 12px;
@@ -415,11 +408,11 @@ margin-top:67px;
     overflow: hidden;
 }
 
-.tabcontent.expanded .text-wrapper {
+.content.expanded .text-wrapper {
     max-height: none; /* Remove the maximum height when expanded */
 }
 
-/* .tabcontent button:hover{
+/* .content button:hover{
     background: var(--main-color);
     color: var(--bg-color);
     transition: 0.2 all linear;
@@ -429,22 +422,30 @@ margin-top:67px;
 .feedback{
     width: 1067px;
     height: 247px;
-    flex-shrink: 0;
-    display: block;
     border-radius: 20px;
     background: #AFBF67;
     padding: 20px;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+}
+
+.form{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 37px;
+    margin-bottom: 23px;
 }
 
 .input-feedback{
-    position: relative;
     width: 656px;
     height: 48px;
     flex-shrink: 0;
     border-radius: 10px;
     background: #FFF;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 
 .feedback p{
@@ -455,4 +456,54 @@ margin-top:67px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.input-feedback [type=text]{
+    width: 500px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: content-box;
+    border: none;
+}
+
+.input-feedback [type='submit']{
+    margin-left: 5px;
+    border-radius: 10px;
+    width: 93px;
+    height: 33px;
+    flex-shrink: 0;
+    border-style: none;
+    background: #D0862D;
+    color: #D0862D;
+    font-family: 'Inter';
+}
+
+.star-rating{
+    user-select: none;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.star{
+    font-size: 37px;
+    color: #FFF;
+    align-items: center;
+    background-color: unset;
+    border:none;
+}
+
+.star:hover{
+    cursor: pointer;
+    color: #D0862D;
+}
+
+/* Responsive */
+@media(max-width: 600px){
+    .navbar{
+        
+    }
 }
