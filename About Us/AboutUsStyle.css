@@ -235,7 +235,7 @@ header{
     width: 50%;
 }
 .profilecentrecard {
-    background: #FFFF;
+    background: #ffffff;
     padding: 20px;
     margin-left: 20px;
     margin-top: 10px;
@@ -247,14 +247,14 @@ header{
 }span{
     color: var(--button-color);
 }
-.number1{
+.numberganjil{
     color: var(--button-color);
     font-size: 2rem;
 }
 .profilecentrecard span{
     gap: 1.5rem ;
 }
-.number2{
+.numbergenap{
     color: var(--main-color);
     font-size: 2rem;
 }
