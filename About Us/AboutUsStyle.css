@@ -269,6 +269,15 @@ header{
     /* padding: 20px; */
     /* margin-top: 20px    */
 }
+.TeavoUTeam h4>span{
+    color: var(--second-color);
+}
+
+.TeavoUTeam h4{
+    color: var(--button-color);
+    font-size: 2rem;
+    margin: 0 0 1.4rem;
+}
 .TeavoUTeamcard {
     display: flex;
     color: black;
@@ -281,31 +290,9 @@ header{
 }
 
 /* Section teavou gallery */
-
-.TeavoUGallery{
-    content: "";
-    display: table;
-    clear: both;
-}
 .column{
     float: left;
     width: 50%;
-}
-.TeavoUGallerycard {
-    font-size: 2rem;
-    color: var(--main-color);
-    letter-spacing: 2px;
-    padding: 20px;
-    margin-top: 20px;
-    display: flex;
-    float: right;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.TevoUGallery-img{
-    width: 100px;
-    padding: auto;
 }
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
@@ -315,3 +302,91 @@ header{
       padding: 0;
     }
   }
+.galleryTeam{
+    min-height: 100vh;
+    background: var(--bg-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    grid-template-columns: repeat(auto-fit,minmax(17rem,auto));
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.galleryTeam-text {
+    display: grid;
+    place-items: left;
+    text-align: left;
+    height: 100%;
+    margin-top: 1rem;
+}
+
+.galleryTeam-text h2>span{
+    color: var(--second-color);
+}
+
+.galleryTeam-text h2{
+    color: var(--button-color);
+    font-size: 2rem;
+    margin: 0 0 1.4rem;
+}
+
+/* Styles for showSlide_galleryTeam */
+.showSlide_galleryTeam {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slide_galleryTeam {
+    display: none;
+    width: 100%;
+}
+
+.active-galleryTeam { 
+    display: flex;
+    justify-content: center;
+}
+
+.card-body{
+    width: 100%;
+    min-height: auto;
+    margin-bottom: 100px;
+    background: var(--bg-color);
+    /* codingan css ini dipake atau ga? */
+    background-repeat: no-repeat;
+    grid-template-columns: repeat(auto-fit,minmax(17rem,auto));
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.card-body img {
+    width: 100%;
+    height: 250px;
+    padding: 10px 10px 10px 10px ;
+    margin-bottom: 100px;
+}
+
+.dots_galleryTeam {
+    position: relative;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0 1.4rem;
+    margin-top: -10rem;
+}
+
+.dot_galleryTeam {
+    height: 10px;
+
+    width: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: #888;
+    cursor: pointer;
+}
+
+.active-dot {
+    background-color: var(--button-color);
+}
