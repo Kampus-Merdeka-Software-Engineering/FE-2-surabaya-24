@@ -117,14 +117,14 @@ header{
 
 .profileupper-text h1{
     font-size: 3.4rem;
-    color: var(--second-color);
+    color: var(--main-color);
     text-transform: uppercase;
     letter-spacing: 2px;
     padding-top: 50px;
 }
 
 .profileupper-text h1> span{
-    color: var(--);
+    color: var(--button-color);
 }
 
 .profileupper-text p::after {
@@ -231,20 +231,20 @@ header{
 
 /* rightcolumn section profilecentre */
 .rightcolumn{
-    float: left;
-    width: 50%;
+    float: right;
+    width: 100%;
 }
 .profilecentrecard {
     background: #ffffff;
-    padding: 20px;
-    margin-left: 20px;
+    padding: 10px;
+    margin-left: 10px;
     margin-top: 10px;
 }
 .profilecentrecard h3{
     font-size: 2rem;
-    color: var(--second-color);
-}
-span{
+    color: var(--main-color);
+    letter-spacing: 2px;
+}span{
     color: var(--button-color);
 }
 .numberganjil{
@@ -282,31 +282,38 @@ span{
     display: flex;
     color: black;
 }
+.TeavoUTeamcard > div {
+  /* background-color: #f1f1f1; */
+  margin: 5px;
+  padding: 10px;
+  font-size: 15px;
+}
 .team-set {
-    margin: 20px;
-    padding: 20px;
+    margin: 5px;
+    padding: 10px;
     font-size: 15px;
     float: left;
   }
   
-.team-set img {
-    width: 150px;
-    height: 70%;
-    align-items: center;
-}
-
-.team-set p {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-}
-
+  .team-set img {
+      width: 150px;
+      height: 100%;
+      align-items: center;
+  }
+  
+  .team-set p {
+      margin-top: 20px;
+      text-align: center;
+      font-family: 'Inter';
+      font-size: 20px;
+      font-style: normal;
+      font-weight: bold;
+      line-height: normal;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+  }
+  
 /* Section teavou gallery */
 .column{
     float: left;
