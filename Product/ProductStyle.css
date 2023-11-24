@@ -151,8 +151,8 @@ margin-top:67px;
 }
 
 .desc-more>button:hover{
-    background: #ffffff;
-    color: var(--button-color);
+    background: var(--second-color);
+    color: var(var(--bg-color));
     transition: 0.2 all linear;
 }
 
@@ -346,16 +346,13 @@ margin-top:67px;
     width: 100%;
     padding: 2%;
     object-fit: cover;
-    margin-bottom: 15px;
 }
 
 .tabcontent h5{
-    text-align: justify;
     font-size: 12px;
     text-align: center;
-    margin-bottom: 5px;
     font-size: 18px;
-    color: var(--main-color);
+    color: var(--second-color);
 }
 
 .tabcontent.expanded {
@@ -364,14 +361,15 @@ margin-top:67px;
 
 .tabcontent p{
     padding: 10px;
-    font-family: inter;
+    font-family: 'inter';
+    text-align: justify;
     max-width: 100%;
     max-height: 100px;
     white-space: normal;
     overflow: hidden;
     text-overflow: ellipsis;
     color: #000000;
-    font-size: 14px;
+    font-size: 12px;
     
     /* word-wrap: normal; */
     /* word-wrap: break-word; */
@@ -399,7 +397,6 @@ margin-top:67px;
 }
 
 .tabcontent button{
-    margin-top: 16px;
     font-family: 'grandstander';
     font-size: 12px;
     color: white;
@@ -414,6 +411,7 @@ margin-top:67px;
     margin: 20px 20px;
     display: block;
     margin-top: 16px;
+    align-items: flex-end;
 }
 
 .text-wrapper {
@@ -432,19 +430,19 @@ margin-top:67px;
 } */
 
 /* Feedback */
-.feedback{
-    width: 1067px;
+.feedback{  /* background hijau feedback */
+    width: 1100px;
     height: 247px;
     border-radius: 20px;
-    margin-top: 100px;
+    margin: auto;
     background: #AFBF67;
     padding: 20px;
-    align-items: center;
-    align-content: centen;
-    justify-content: center;
+    position: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
-.feedback p{
+.feedback-header { /*paragraf 'give us feedback...' + image kanan kiri */
     color: #FFF;
     text-align: center;
     font-family: 'Inter';
@@ -455,13 +453,26 @@ margin-top:67px;
     align-items: center;
     justify-content: center;
     display: flex;
+    margin-top: -20px;
 }
 
-.form{
+.feedback-header > p{ /*paragraf 'give us feedback...' */
+    margin-left: 140px;
+    margin-right: 150px;
+    margin-top: -80px;
+}
+
+.feedback img{ /* img cust kanan kiri */
+    width: 130px;
+    height: 160px;
+    margin-top: 20px;
+}
+
+.form{ 
     align-items: center;
     justify-content: center;
     display: flex;
-    margin-top: 37px;
+    margin-top: -70px;
     margin-bottom: 23px;
 }
 
@@ -474,6 +485,7 @@ margin-top:67px;
     align-items: center;
     justify-content: center;
     display: flex;
+    margin-top: -10px;
 }
 
 
@@ -485,16 +497,25 @@ margin-top:67px;
     border: none;
 }
 
-.input-feedback [type='submit']{
+.input-feedback [type=submit]{
     margin-left: 5px;
     border-radius: 10px;
     width: 93px;
     height: 33px;
+    font-size: 16px;
     flex-shrink: 0;
+    font-weight: bold;
     border-style: none;
     background: #D0862D;
-    color: #D0862D;
+    color: var(--bg-color);
     font-family: 'Inter';
+}
+
+.input-feedback [type=submit]:hover{
+    cursor: pointer;
+    background: var(--second-color);
+    color: var(--bg-color);
+    transition: 0.2 all linear;
 }
 
 .star-rating{
@@ -514,7 +535,7 @@ margin-top:67px;
 
 .star:hover{
     cursor: pointer;
-    color: #D0862D;
+    color: #FFFFFF;
 }
 
 /* Responsive */
