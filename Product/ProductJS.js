@@ -31,7 +31,7 @@ document.addEventListener('click', function (event) {
     const isStar = event.target.classList.contains('star');
 
     if (!isStar) {
-        // Clicked outside the stars, reset to zero
+        // Klik selain star, star auto reset to zero
         current_star_level = 0;
         updateStarRatings();
     }
@@ -47,10 +47,9 @@ allStars.forEach((star, i) => {
 function updateStarRatings() {
     allStars.forEach((star, j) => {
         if (current_star_level >= j + 1) {
-            star.style.color = '#D0862D';
+            star.innerHTML = '★';
         } else {
-            star.style.color = 'white';
+            star.innerHTML = '☆';
         }
     });
 }
-
