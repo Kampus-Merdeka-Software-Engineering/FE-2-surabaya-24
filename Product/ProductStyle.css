@@ -43,8 +43,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 100px;
-    /* transition: 0.5s linear; */
+    padding: 35px 0.9rem;
     background-color: #ffffff;
 }
 
@@ -52,26 +51,32 @@ header{
     width: 90px;
 }
 
-.navbar{
+.navbar {
     display: flex;
-    display: contents;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1; 
 }
 
 .navbar a {
-    padding: 8px 25px;
+    padding: 8px 15px;
     color: var(--second-color);
     font-size: 1rem;
     text-transform: uppercase;
     font-weight: 500;
     font-family: 'inter', sans-serif;
-    font-weight: bold; 
+    font-weight: bold;
+    margin: 0 10px;
 }
 
-.navbar a:hover{
+.navbar a:hover {
     background: var(--main-color);
     color: #FFFF;
     border-radius: 0.2rem;
-    transition: 0.2 all linear;
+    transition: 0.2s all linear; /* Add "s" to specify seconds */
 }
 
 .active_nav{
@@ -93,7 +98,7 @@ header{
     color: #ffffff;
 }
 
-#menu-icon{
+#menu-icon {
     color: var(--second-color);
     font-size: 24px;
     z-index: 100001;
