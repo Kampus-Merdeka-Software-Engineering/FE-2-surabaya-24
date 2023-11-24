@@ -55,33 +55,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // feedback
-const allStars = document.querySelectorAll('.star');
-console.log(allStars);
-let current_star_level = 0;
+// const allStars = document.querySelectorAll('.star');
+// console.log(allStars);
+// allStars.forEach( (star,i))=>{
+//     star.onclick = function(){
+//         let.current_star_level = i + 1;
 
-document.addEventListener('click', function (event) {
-    const isStar = event.target.classList.contains('star');
+//         allStars.forEach(star, j)=> {
+//             if(current_star_level >= j + 1){
+//                 star.innerHTML = '&#9734';
+//             } else{
+//                 star.innerHTML = '&#9734'
+//             }
+//         }
+//     }
+// }
 
-    if (!isStar) {
-        // Klik selain star, star auto reset to zero
-        current_star_level = 0;
-        updateStarRatings();
-    }
-});
 
-allStars.forEach((star, i) => {
-    star.onclick = function () {
-        current_star_level = i + 1;
-        updateStarRatings();
-    };
-});
 
-function updateStarRatings() {
-    allStars.forEach((star, j) => {
-        if (current_star_level >= j + 1) {
-            star.innerHTML = '★';
-        } else {
-            star.innerHTML = '☆';
-        }
-    });
-}
+// feedback
+// const allStars = document.querySelectorAll('.star');
+// console.log(allStars);
+// allStars.forEach( (star,i))=>{
+//     star.onclick = function(){
+//         let.current_star_level = i + 1;
+
+//         allStars.forEach(star, j)=> {
+//             if(current_star_level >= j + 1){
+//                 star.innerHTML = '&#9734';
+//             } else{
+//                 star.innerHTML = '&#9734'
+//             }
+//         }
+//     }
+// }
