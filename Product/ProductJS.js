@@ -1,26 +1,58 @@
+// Mengubah fungsi openTea menjadi fungsi Menu
+function initMenu() {
+  // Semua menu disembunyikan terlebih dahulu
+  var allMenus = document.getElementsByClassName("menu");
+  for (var i = 0; i < allMenus.length; i++) {
+    allMenus[i].style.display = "none";
+  }
+
+  // Semua tablinks kehilangan class "active"
+  var allTabLinks = document.getElementsByClassName("tablinks");
+  for (var i = 0; i < allTabLinks.length; i++) {
+    allTabLinks[i].classList.remove("active");
+  }
+
+  // Tampilkan menu "OriginTeaMenu"
+  var defaultMenu = document.getElementById("OriginTeaMenu");
+  defaultMenu.style.display = "block";
+
+  // Beri class "active" pada tombol "OriginTea"
+  var defaultTabLink = document.querySelector(".tablinks");
+  defaultTabLink.classList.add("active");
+}
+
 // Tab Content pada Menu Product
 function openMenu(evt, menuName) {
-    var i, tabcontent, tablinks;
+  var i, menuContent, tablinks;
 
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
+  menuContent = document.getElementsByClassName("menu");
+  for (i = 0; i < menuContent.length; i++) {
+    menuContent[i].style.display = "none";
+  }
 
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].classList.remove("active");
+  }
 
-    document.getElementById(menuName).style.display = "block";
-    evt.currentTarget.className += " active";
+  document.getElementById(menuName + "Menu").style.display = "block";
+  evt.currentTarget.classList.add("active");
 }
 
 // Read More Product
 function expandText(button) {
-    var content = button.previousElementSibling;
-    content.classList.toggle("expanded");
-    button.innerHTML = content.classList.contains("expanded") ? "Read Less" : "Read More";
+  var content = button.previousElementSibling;
+  content.classList.toggle("expanded");
+  button.innerHTML = content.classList.contains("expanded") ? "Read Less" : "Read More";
 }
+
+// Panggil fungsi initMenu ketika halaman dimuat
+document.addEventListener("DOMContentLoaded", function () {
+  initMenu();
+});
+
+
+
 
 // feedback
 // const allStars = document.querySelectorAll('.star');

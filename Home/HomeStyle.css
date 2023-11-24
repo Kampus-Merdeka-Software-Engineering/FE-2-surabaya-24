@@ -186,6 +186,21 @@ header {
     padding: 10px;
     background-color: none;
   }
+
+  .text-best{
+    display: grid;
+    place-items: center;
+    text-align: center;
+    height: 100%;
+  }
+
+  .text-best h2{
+    color: var(--main-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 2rem;
+    margin: 10rem 0 1.4rem;
+}
   
   .grid-container > div {
     background-color: rgba(255, 0, 0, 0.8);
@@ -565,14 +580,14 @@ header {
 
 /* button on hover */
 .tab button:hover {
-    background-color: var(--bg-color);
+    background-color:#95E8FF;
     border: none;
     outline: none;
 }
 
 /* Create an active/current tablink class */
 .tab button.active {
-    background-color: var(--second-color);
+    background-color: #95E8FF;
     border: none;
     outline: none;
     cursor: pointer;
@@ -590,7 +605,7 @@ header {
     border-radius: 100%;
     border: none;
     outline: none;
-    box-shadow: 2px 2px 8px 2px var(--main-color);
+    box-shadow: 2px 2px 8px 2px #95E8FF;
 }
 
 /* tab content */
@@ -659,19 +674,63 @@ header {
     margin-top: -484px;
 }
 
+/* Footer */
+
 .bg-fo{
     background-color: var(--main-color);
     background-size: cover;
     height: 20rem;
     margin-top: 9rem;
+    position: relative;
 }
 
 .bg-fo img{
     width: 10rem;
     height: 10rem;
     margin-top: 4rem;
-    margin-bottom: 10rem;
+    margin-bottom: 5.5rem;
     margin-left: 6rem;
+}
+
+/* element-fo */
+
+.element-fo {
+    position: absolute;
+    top: 5%;
+    right: 10%; 
+    width: 15rem;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.alamat img,
+.email img,
+.call img {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 5.6rem;
+}
+
+.alamat,
+.call,
+.email {
+    display: flex;
+    align-items: center; /* Vertically center the elements */
+    margin-bottom: -7.5rem;
+}
+
+.alamat h5,
+.call h5,
+.email h5{
+    margin-left: 0.5rem;
+    margin-top: -1.5rem;
+    color: #FFFFFF;
+    font-size: 10px;
+    font-family: 'inter';
+    margin-left: 0.5rem; /* Adjust the margin-left as needed */
 }
 
 /* Navbar bawah */
@@ -679,8 +738,8 @@ header {
 .line{
     background-color: #FFFFFF;
     height: 1px;
-    width: 80rem;
-    margin: -8rem auto 0;
+    width: 75rem;
+    margin: -2rem auto 0;
 }
 
 .navbar-bawah {
@@ -721,12 +780,22 @@ header {
 
 @media only screen and (max-width: 650px) {
 
-    body {
-        font-size: 14px; 
+    header {
+        height: auto;
     }
 
     header {
-        height: auto;
+        position: fixed;
+        width: 100%;
+        height: 59px;
+        top: 0;
+        right: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 35px 0.9rem;
+        background-color: #ffffff;
     }
 
     .navbar{
@@ -737,10 +806,14 @@ header {
         color: var(--second-color);
         cursor: pointer;
         display: flex;
-        margin: 0 0 0 130px;
+        margin: 0 0 0 29rem;
         padding: 0;
         flex-grow: 1;
         height: 20px;
+    }
+
+    .logo{
+        bottom: 20rem;
     }
 
     .grid-container{
@@ -748,6 +821,11 @@ header {
     }
 
     /* Best Products */
+
+    .text-best{
+        display: none;
+      }
+
     .best{
         width: 100%;
         min-height: 100vh;
@@ -818,4 +896,63 @@ header {
     .active-dot {
         background-color: var(--button-color);
     }
+
+/* Home */
+.home{
+    width: 100%;
+    min-height: 28rem;
+}
+
+.home-img{
+    height: 20rem;
+    width: 20rem;
+    position: absolute;
+    top: 10px;
+    margin-top: 25rem;
+    right: 110px;
+    z-index: 0;
+}
+
+.shape{
+    background-color: var(--main-color);
+    width: 15rem;
+    height: auto 20%;
+    margin-left: 70px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+}
+
+.home-GreenTea{
+    position: absolute;
+    bottom: 15rem;
+    left: -15px;
+    z-index: 0;
+    width: 60px;
+    height: 60px;
+}
+
+.home-text h1{
+    font-size: 3.4rem;
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.home-text span{
+    font-size: 3.4rem;
+    color: var(--button-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.home-text p{
+    font-size: 0.938rem;
+    color: black;
+    margin: 1rem 0 1rem;
+    font-family: inter;
+    max-width: calc(18rem - 20px);
+    margin-right: 10px; 
+    text-align: justify;
+}
 }
