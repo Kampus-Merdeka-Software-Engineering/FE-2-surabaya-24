@@ -126,10 +126,10 @@ header {
 }
 
 .home-img{
-    height: 615px;
-    width: 745px;
+    height: 515px;
+    width: 645px;
     position: absolute;
-    top: 155px;
+    top: 225px;
     right: 70px;
     z-index: 0;
 }
@@ -379,7 +379,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    grid-template-columns: repeat(auto-fit,minmax(17rem,auto));
+    grid-template-columns: repeat(auto-fit, minmax(25rem, auto));
     align-items: center;
     gap: 1.5rem;
 }
@@ -674,6 +674,46 @@ header {
     margin-top: -484px;
 }
 
+/* Play Quiz */
+#quiz-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 /* Footer */
 
 .bg-fo{
@@ -734,13 +774,14 @@ header {
     font-weight: normal;
 }
 
+
 /* Navbar bawah */
 
 .line{
     background-color: #FFFFFF;
     height: 1px;
     width: 75rem;
-    margin: -2rem auto 0;
+    margin: -2.3rem auto 0;
 }
 
 .navbar-bawah {
@@ -764,30 +805,39 @@ header {
 }
 
 .navbar-bawah a:hover{
-    color: #CCFF00;
+    color: #e9ff8f;
 }
 
 /* social media */
-.social {
-    display: flex; /* Membuat elemen-elemen berjajar secara horizontal */
-    align-items: center; /* Pusatkan elemen-elemen secara vertikal */
-    justify-content: flex-end; /* Geser elemen ke tepi kanan */
-    margin-top: -8rem;
-}
-
+/* .social {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: -5rem;
+    height: 2rem;
+    gap: 0 -15rem 0 10rem;
+    background-color: #95E8FF;
+} */
+/* 
 .social h5 {
     margin-right: 5px; 
     font-family: 'inter';
     color: #ffffff;
     font-weight: normal;
     font-size: 17px;
+    align-items: center;
+    justify-content: center;
+    gap: -15rem;
 }
 
 .social img {
     width: 20px;
     height: 20px;
     margin-right: 5px;
-}
+    align-items: center;
+    justify-content: center;
+    gap: -15rem;
+} */
 
 
 
@@ -795,7 +845,144 @@ header {
 
 /* Media queries untuk responsif */
 
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 968px) and (min-width:769px) {
+    header {
+        height: auto;
+    }
+
+    header {
+        position: fixed;
+        width: 100%;
+        height: 59px;
+        top: 0;
+        right: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 35px 0.9rem;
+        background-color: #ffffff;
+    }
+
+    .logo{
+        bottom: 20rem;
+    }
+
+    .grid-container{
+        display: none;
+    }
+
+    
+/* Home */
+.home{
+    width: 100%;
+    min-height: 80vh;
+}
+
+.home-img{
+    height: 515px;
+    width: 545px;
+    position: absolute;
+    top: 255px;
+    right: 4rem;
+    z-index: 0;
+}
+
+.shape{
+    width: 291px;
+    height: 634px;
+    margin-left: 70px;
+}
+
+.home-text p{
+    max-width: calc(100% - 324px); /* Ukuran gambar + padding yang diberikan (474px + 50px padding kiri) */
+
+}
+
+    /* Best Products */
+
+    .text-best{
+        display: none;
+      }
+
+    .best{
+        width: 100%;
+        min-height: 100vh;
+        background: var(--bg-color);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        grid-template-columns: repeat(auto-fit,minmax(17rem,auto));
+        align-items: center;
+        gap: 1.5rem;
+        display: contents;
+    }
+    
+    .best-text {
+        display: grid;
+        place-items: center;
+        text-align: center;
+        height: 100%;
+    }
+    
+    .best-text h2{
+        color: var(--main-color);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 2rem;
+        margin: 10rem 0 1.4rem;
+    }
+    
+    /* Styles for slideshow */
+    .slideshow {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+    }
+    
+    .slide {
+        display: none;
+        width: 100%; 
+    }
+    
+    .slide.active {
+        display: flex; 
+        justify-content: center; 
+    }
+    
+    .slide img {
+        max-width: 33.33%; 
+    }
+    
+    .dots {
+        position: relative;
+        bottom: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 3rem 0 1.4rem;
+    }
+    
+    .dot {
+        height: 10px;
+        width: 10px;
+        margin: 0 5px;
+        border-radius: 50%;
+        background-color: #888;
+        cursor: pointer;
+    }
+    
+    .active-dot {
+        background-color: var(--button-color);
+    }
+
+    .spill {
+        grid-template-columns: repeat(auto-fit, minmax(50%, auto));
+     }
+
+}
+
+@media screen and (max-width: 768px) and (min-width:700px) {
     header {
         height: auto;
     }
@@ -971,183 +1158,8 @@ header {
     margin-right: 10px; 
     text-align: justify;
 }
-}
 
-@media only screen and (max-width: 650px) {
-
-    header {
-        height: auto;
-    }
-
-    header {
-        position: fixed;
-        width: 100%;
-        height: 59px;
-        top: 0;
-        right: 0;
-        z-index: 1000;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 35px 0.9rem;
-        background-color: #ffffff;
-    }
-
-    .navbar{
-        display: none;
-    }
-
-    #menu-icon {
-        color: var(--second-color);
-        cursor: pointer;
-        display: flex;
-        margin: 0 0 0 29rem;
-        padding: 0;
-        flex-grow: 1;
-        height: 20px;
-    }
-
-    .logo{
-        bottom: 20rem;
-    }
-
-    .grid-container{
-        display: none;
-    }
-
-    /* Best Products */
-
-    .text-best{
-        display: none;
-      }
-
-    .best{
-        width: 100%;
-        min-height: 100vh;
-        background: var(--bg-color);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        grid-template-columns: repeat(auto-fit,minmax(17rem,auto));
-        align-items: center;
-        gap: 1.5rem;
-        display: contents;
-    }
-    
-    .best-text {
-        display: grid;
-        place-items: center;
-        text-align: center;
-        height: 100%;
-    }
-    
-    .best-text h2{
-        color: var(--main-color);
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-size: 2rem;
-        margin: 10rem 0 1.4rem;
-    }
-    
-    /* Styles for slideshow */
-    .slideshow {
-        display: flex;
-        overflow: hidden;
-        width: 100%;
-    }
-    
-    .slide {
-        display: none;
-        width: 100%; 
-    }
-    
-    .slide.active {
-        display: flex; 
-        justify-content: center; 
-    }
-    
-    .slide img {
-        max-width: 33.33%; 
-    }
-    
-    .dots {
-        position: relative;
-        bottom: 10px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        margin: 3rem 0 1.4rem;
-    }
-    
-    .dot {
-        height: 10px;
-        width: 10px;
-        margin: 0 5px;
-        border-radius: 50%;
-        background-color: #888;
-        cursor: pointer;
-    }
-    
-    .active-dot {
-        background-color: var(--button-color);
-    }
-
-/* Home */
-.home{
-    width: 100%;
-    min-height: 28rem;
-}
-
-.home-img{
-    height: 20rem;
-    width: 20rem;
-    position: absolute;
-    top: 10px;
-    margin-top: 25rem;
-    right: 110px;
-    z-index: 0;
-}
-
-.shape{
-    background-color: var(--main-color);
-    width: 15rem;
-    height: auto 20%;
-    margin-left: 70px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 0;
-}
-
-.home-GreenTea{
-    position: absolute;
-    bottom: 15rem;
-    left: -15px;
-    z-index: 0;
-    width: 60px;
-    height: 60px;
-}
-
-.home-text h1{
-    font-size: 3.4rem;
-    color: var(--main-color);
-    text-transform: uppercase;
-}
-
-.home-text span{
-    font-size: 3.4rem;
-    color: var(--button-color);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.home-text p{
-    font-size: 0.938rem;
-    color: black;
-    margin: 1rem 0 1rem;
-    font-family: inter;
-    max-width: calc(18rem - 20px);
-    margin-right: 10px; 
-    text-align: justify;
-}
+.spill {
+    grid-template-columns: repeat(auto-fit, minmax(50%, auto));
+ }
 }

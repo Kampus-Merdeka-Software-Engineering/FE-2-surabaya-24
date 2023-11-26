@@ -1,0 +1,7 @@
+{
+    "feedbacks": [
+      { "id": 1, "name": "Jacobi Adipici", "review":" Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, adipisci? Accusamus consequatur aliquam mollitia autem commodi est, alias voluptatem, adipisci culpa ipsa fugiat iusto fuga totam delectus iure laboriosam omnis.", "img":"Asset/HumanTea.png"},
+      { "id": 2, "name": "Saka", "review":" Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, adipisci? Accusamus consequatur aliquam mollitia autem commodi est, alias voluptatem, adipisci culpa ipsa fugiat iusto fuga totam delectus iure laboriosam omnis.", "img":"Asset/jin.jpg"},
+      { "id": 3, "name": "Naka", "review":" Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, adipisci? Accusamus consequatur aliquam mollitia autem commodi est, alias voluptatem, adipisci culpa ipsa fugiat iusto fuga totam delectus iure laboriosam omnis.", "img":"Asset/exo.jpg"}
+    ]
+  }

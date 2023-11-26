@@ -1,3 +1,42 @@
+// API Feedbacks
+async function renderFedbacks(){
+    try {
+        const data = await fetch('http://localhost:3000/feedbacks')
+        // feedbackContainer.innerHTML = '<h1>Loading...</h1>';
+        const feedbacks = await data.json();
+
+        const feedbackContainer = document.getElementById('feedbacks-container');
+        
+       const feedbackContent = feedbacks.map((feedback) =>{
+            const feedbackCard = `
+            <div class="card-body">
+                <img src="${feedback.img}" alt="Image 1">
+                <h6>${feedback.name}</h6>
+                <div class="text-card">
+                    <p>
+                        ${feedback.review}
+                    </p>
+                </div>
+            </div>
+        `;
+
+        return feedbackCard;
+
+        });
+
+        feedbackContainer.innerHTML = feedbackContent;
+
+    } catch (err){
+        console.log(err);
+    }
+};
+
+
+
+
+
+
+
 // SlideShow Best Product
 
 // Seleksi semua elemen dengan kelas 'slide' dan 'dot' dari dokumen HTML
@@ -92,6 +131,7 @@ function initQuiz() {
     defaultTabLink.classList.add("active");
 }
 
+
 function openTea(evt, teaName) {
     // Declare all variables
     var i, tabcontent, tablinks;
@@ -118,5 +158,79 @@ document.addEventListener("DOMContentLoaded", function () {
     initQuiz();
 });
 
-// festival
+// Play Quiz
+const questions = [
+    {
+        question: "Apa ibu kota Indonesia?",
+        options: ["Jakarta", "Bandung", "Surabaya", "Medan"],
+        correctAnswer: "Jakarta"
+    },
+    {
+        question: "Berapa hasil dari 5 + 3?",
+        options: ["8", "10", "12", "15"],
+        correctAnswer: "8"
+    }
+];
 
+let currentQuestion = 0;
+let score = 0;
+
+function startQuiz() {
+    showModal();
+    showQuestion();
+}
+
+function showModal() {
+    document.getElementById("quiz-modal").style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById("quiz-modal").style.display = "none";
+}
+
+function showQuestion() {
+    const questionContainer = document.getElementById("question-container");
+    const currentQuestionObj = questions[currentQuestion];
+
+    questionContainer.innerHTML = `
+        <h3>${currentQuestionObj.question}</h3>
+        <ul>
+            ${currentQuestionObj.options.map(option => `<li>${option}</li>`).join('')}
+        </ul>
+    `;
+}
+
+function checkAnswer() {
+    const userAnswer = document.querySelector('input[name="answer"]:checked');
+
+    if (userAnswer) {
+        if (userAnswer.value === questions[currentQuestion].correctAnswer) {
+            score++;
+        }
+
+        currentQuestion++;
+        userAnswer.checked = false;
+
+        if (currentQuestion < questions.length) {
+            showQuestion();
+        } else {
+            displayResult();
+        }
+    } else {
+        alert("Silakan pilih jawaban terlebih dahulu.");
+    }
+}
+
+function displayResult() {
+    closeModal();
+    alert(`Quiz selesai!\nSkor Anda: ${score} dari ${questions.length}`);
+    resetQuiz();
+}
+
+function resetQuiz() {
+    currentQuestion = 0;
+    score = 0;
+}
+
+
+renderFedbacks();
