@@ -217,7 +217,6 @@ header{
     margin-top: 18px;
 }
 
-/* coba sendiri */
 .desc-img-1{
     margin-top: 21px;
     width: 224.457px;
@@ -225,12 +224,6 @@ header{
     flex-shrink: 0;
     margin-bottom: 15.94px;
     margin-right: 7.01px;
-}
-
-.but img{
-    width: 52px;
-    height: 52px;
-    flex-shrink: 0;
 }
 
 .buttons{
@@ -263,6 +256,23 @@ header{
     transition: 0.2 all linear;
 }
 
+.but img{
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+}
+
+#scroll-up img{
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+}
+
+#scroll-down img{
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+}
 
 /* Section TeavoU Product START */
 /* Button Product */

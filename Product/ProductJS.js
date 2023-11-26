@@ -1,3 +1,15 @@
+// ketika tombol What is TeavoU di klik, maka lakukan scroll keatas halaman
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+// ketika tombol TeavoU Product di klik, maka lakukan scroll kebawah halaman (menu Teh)
+function bottomFunction() {
+  document.body.scrollTop = 750;
+  document.documentElement.scrollTop = 750;
+}
+
 // Mengubah fungsi openTea menjadi fungsi Menu
 function initMenu() {
   // Semua menu disembunyikan terlebih dahulu
