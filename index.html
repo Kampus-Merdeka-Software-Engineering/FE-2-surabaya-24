@@ -20,7 +20,7 @@
     <!-- Links -->
     <ul class="navbar">
         <li class="active_nav"><a href="#Home">Home</a></li>
-        <li><a href="AboutUs.html">AboutUs</a></li>
+        <li><a href="AboutUs.html">About Us</a></li>
         <li><a href="Product.html">Product</a></li>
     </ul>
     </header>
@@ -43,7 +43,7 @@
 
     <!-- Best Seller -->
     <section class="best-product">
-        <div class="best-text">
+        <div class="text-best">
             <h2>Products Best Seller</h2>
         </div>
 
@@ -71,6 +71,7 @@
           </div>
     </section>
 
+
     <!-- Products Best Seller -->
     <section class="best" id="best">
         <div class="best-text">
@@ -78,13 +79,13 @@
         </div>
         <div class="slideshow">
             <div class="slide">
-                <img src="Asset/TeaBest.svg" alt="Image 3">
+                <img src="Asset/OriginTeaBest.svg" alt="Image 3">
             </div>
             <div class="slide">
-                <img src="Asset/bestTea.svg" alt="Image 4">
+                <img src="Asset/GreenTeaBest.svg" alt="Image 4">
             </div>
             <div class="slide">
-                <img src="Asset/GreenBest.svg" alt="Image 4">
+                <img src="Asset/BlueThaiBest.svg" alt="Image 4">
             </div>
         </div>
         <div class="dots">
@@ -102,19 +103,9 @@
     </div>
     <div class="showSlide_spill">
         <div class="slide_spill">
-            <div class="card-spill">
-            
-                <div class="card-body">
-                    <img src="Asset/HumanTea.png" alt="Image 1">
-                    <h6>Jacobi Adipici</h6>
-                    <div class="text-card">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, adipisci? Accusamus consequatur aliquam mollitia autem commodi est, alias voluptatem, adipisci culpa ipsa fugiat iusto fuga totam delectus iure laboriosam omnis.
-                        </p>
-                    </div>
-                </div>
+            <div class="card-spill" id="feedbacks-container">
 
-                <div class="card-body">
+                <!-- <div class="card-body">
                     <img src="Asset/HumanTea.png" alt="Image 1">
                     <h6>Jacobi Adipici</h6>
                     <div class="text-card">
@@ -132,7 +123,7 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, adipisci? Accusamus consequatur aliquam mollitia autem commodi est, alias voluptatem, adipisci culpa ipsa fugiat iusto fuga totam delectus iure laboriosam omnis.
                     </p>
                 </div>
-            </div>
+            </div> -->
 
             </div>
         </div>
@@ -243,7 +234,7 @@
             <h4>SweeTea</h4>
             <br>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi velit error aut. Dolor quis blanditiis obcaecati amet. Nobis ipsa obcaecati non, temporibus fugit eos sequi, impedit repellat magnam ex quod.</p>
-        <button class="playQuiz">Play</button>
+            <button class="playQuiz" onclick="startQuiz()">Play</button>
         </div>
     </div>
 
@@ -253,7 +244,7 @@
         <h4>Blue Thai Tea</h4>
         <br>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi velit error aut. Dolor quis blanditiis obcaecati amet. Nobis ipsa obcaecati non, temporibus fugit eos sequi, impedit repellat magnam ex quod.</p>
-        <button class="playQuiz">Play</button>
+        <button class="playQuiz" onclick="startQuiz()">Play</button>
     </div>
     </div>
 
@@ -263,7 +254,15 @@
         <h4>Alga on Ocean</h4>
         <br>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi velit error aut. Dolor quis blanditiis obcaecati amet. Nobis ipsa obcaecati non, temporibus fugit eos sequi, impedit repellat magnam ex quod.</p>
-        <button class="playQuiz">Play</button>
+        <button class="playQuiz" onclick="startQuiz()">Play</button>
+    </div>
+
+    <div id="quiz-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="question-container"></div>
+            <button onclick="checkAnswer()">Submit Answer</button>
+        </div>
     </div>
 
     </div>
@@ -273,34 +272,43 @@
 
 <footer>
     <div class="bg-fo">
-        <img src="Asset/Logo.png" alt="wh-lo">
+        <img src="Asset/whiteLogo.svg" alt="wh-lo">
 
         <div class="element-fo">
             <!-- alamat -->
             <div class="alamat">
-                <!-- logo alamat -->
+                <img src="Asset/map.svg" alt="">
                 <h5>Jl.Cenderawasih No3, Mrican Caturtunggal</h5>
             </div>
 
             <!-- email -->
             <div class="email">
-                <!-- logo email -->
+                <img src="Asset/mail.svg" alt="">
                 <h5>teavou@gmail.com</h5>
             </div>
 
             <!-- call -->
             <div class="call">
-                <!-- logo call -->
+                <img src="Asset/Vector.svg" alt="">
                 <h5>(355) 973-9235</h5>
             </div>
         </div>
 
+            <!-- Line navbar -->
+        <div class="line"></div>
+            <ul class="navbar-bawah">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="About Us.html">AboutUs</a></li>
+                <li><a href="Product.html">Product</a></li>
+            </ul>
+
         <!-- social media -->
-        <div class="social">
-            <!-- instagram -->
-            <!-- twitter -->
-            <!-- facebook -->
-        </div>
+        <!-- <div class="social">
+            <h5>Social Media</h5>
+            <img src="Asset/instagram.svg" alt="instagram">
+            <img src="Asset/twitter.svg" alt="twitter">
+            <img src="Asset/facebook.svg" alt="facebook">
+        </div> -->
     </div>
 </footer>
     

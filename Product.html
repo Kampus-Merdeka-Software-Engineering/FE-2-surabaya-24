@@ -21,7 +21,7 @@
 
         <!-- navbar links -->
         <ul class="navbar">
-            <li><a href="Home.html">Home</a></li>
+            <li><a href="Index.html">Home</a></li>
             <li><a href="AboutUs.html">About Us</a></li>
             <li class="active_nav"><a href="Product.html">Product</a></li>
         </ul>
@@ -62,252 +62,278 @@
 
         <!-- 3 buttons navigate on product page -->
         <div class="buttons">
-            <button class="but"><img src="Asset/image deskripsi teh.svg" alt="">What is TeavoU?</button>
-            <button class="but"><img src="Asset/image sejarah tea.svg" alt="">History of Tea</button>
-            <button class="but"><img src="Asset/image khasiat tea.svg" alt="">TeavoU Product</button>
+            <button onclick="topFunction()" id="scroll-up" title="Top"><img src="Asset/image deskripsi teh.svg" alt="">What is TeavoU?</button>
+            <a href="history.html"><button class="but"><img src="Asset/image sejarah tea.svg" alt="">History of Tea</button></a>
+            <button onclick="bottomFunction()" id="scroll-down" title="Bottom"><img src="Asset/image khasiat tea.svg" alt="">TeavoU Product</button>
         </div>
    </section>
     <!-- Section Description "What is TeavoU?" END -->
 
-   <!-- Section TeavoU Product START-->
-   <section class="product" id="product">
-        <div class="product-text">
-            <h2><span>TeavoU</span>: True Pleasure</h2>
+<!-- Section TeavoU Product START-->
+<section class="product" id="product">
+    <div class="product-text">
+        <h2><span>TeavoU</span>: True Pleasure</h2>
+    </div>
+
+    <!-- product buttons -->
+    <div class="tab">
+        <button class="tablinks" onclick="openMenu(event, 'OriginTea')">OriginTea</button>
+        <button class="tablinks" onclick="openMenu(event, 'SweeTea')">SweeTea</button>
+        <button class="tablinks" onclick="openMenu(event, 'Tisane')">Tisane</button>
+    </div>
+
+    <!-- TeavoU Product or Menu-->
+    <!-- MENU ORIGINTEA -->
+    <div class="menu" id="OriginTeaMenu">
+        <div id="OriginTea" class="tabcontent">
+            <img src="Asset/greentea.png" alt="">
+            <h5>Green Tea</h5>
+            <p class="truncate">Lorem ipsum dolor sit, amet consectetur adipisicing elit...</p>
+            <button class="read" onclick="expandText(this)">Read More</button>
         </div>
 
-        <!-- product buttons -->
-        <div class="p-buttons">
-            <button>Origin Tea</button>
-            <button>SweeTea</button>
-            <button>Tisane</button>
+        <div id="OriginTea" class="tabcontent">
+            <img src="Asset/oolong tea.png" alt="">
+            <h5>Oolong Tea</h5>
+            <div class="text-wrapper">
+                <p class="truncate expanded">Lorem ipsum dolor sit amet consectetur, adipisicing....</p>
+            </div>
+            <button class="read" onclick="expandText(this)">Read More</button>
+        </div>
+
+        <div id="OriginTea" class="tabcontent">
+            <img src="Asset/white tea.png" alt="">
+            <h5>White Tea</h5>
+            <div class="text-wrapper">
+                <p class="truncate expanded">Lorem ipsum dolor sit amet consectetur, adipisicing....</p>
+            </div>
+            <button class="read" onclick="expandText(this)">Read More</button>
+        </div>
+
+        <div id="OriginTea" class="tabcontent">
+            <img src="Asset/black tea.png" alt="">
+            <h5>Black Tea</h5>
+            <div class="text-wrapper">
+                <p class="truncate expanded">Lorem ipsum dolor sit amet consectetur, adipisicing....</p>
+            </div>
+            <button class="read" onclick="expandText(this)">Read More</button>
+        </div>
+
+        <div id="OriginTea" class="tabcontent">
+            <img src="Asset/geinmaicha.png" alt="">
+            <h5>Genmaicha</h5>
+            <p class="truncate">Lorem ipsum dolor sit, amet consectetur adipisicing elit...</p>
+            <button class="read" onclick="expandText(this)">Read More</button>
+        </div>
+
+        <div id="OriginTea" class="tabcontent">
+            <img src="Asset/earl-grey.png" alt="">
+            <h5>Earl Grey</h5>
+            <div class="text-wrapper">
+                <p class="truncate expanded">Lorem ipsum dolor sit amet consectetur, adipisicing....</p>
+            </div>
+            <button class="read" onclick="expandText(this)">Read More</button>
+        </div>
+
+        <div id="OriginTea" class="tabcontent">
+            <img src="Asset/pu-erh.png" alt="">
+            <h5>Pu-erh Tea</h5>
+            <div class="text-wrapper">
+                <p class="truncate expanded">Lorem ipsum dolor sit amet consectetur, adipisicing....</p>
+            </div>
+            <button class="read" onclick="expandText(this)">Read More</button>
+        </div>
+
+        <div id="OriginTea" class="tabcontent">
+            <img src="Asset/masala-chai.png" alt="">
+            <h5>Masala Chai Tea</h5>
+            <div class="text-wrapper">
+                <p class="truncate expanded">Lorem ipsum dolor sit amet consectetur, adipisicing....</p>
+            </div>
+            <button class="read" onclick="expandText(this)">Read More</button>
+        </div>
+    </div>
+
+    <!-- MENU SWEETEA -->
+    <div class="menu" id="SweeTeaMenu">
+        <div id="SweeTea" class="tabcontent">
+            <img src="Asset/tea 1.png" alt="">
+            <h5>Butterfly Pea Elixir</h5>
+            <div class="text-wrapper">
+                <p class="truncate expanded">Lorem ipsum dolor sit amet consectetur, adipisicing....</p>
+            </div>
+            <button class="read" onclick="expandText(this)">Read More</button>
+        </div>
+
+        <div id="SweeTea" class="tabcontent">
+            <img src="Asset/tea 2.png" alt="">
+            <h5>Blue Thai Tea</h5>
+            <div class="text-wrapper">
+                <p class="truncate expanded">Lorem ipsum dolor sit amet consectetur, adipisicing....</p>
+            </div>
+            <button class="read" onclick="expandText(this)">Read More</button>
+        </div>
+
+        <div id="SweeTea" class="tabcontent">
+            <img src="Asset/tea 3.png" alt="">
+            <h5>Alga on Ocean</h5>
+            <div class="text-wrapper">
+                <p class="truncate expanded">Lorem ipsum dolor sit amet consectetur, adipisicing....</p>
+            </div>
+            <button class="read" onclick="expandText(this)">Read More</button>
+        </div>
+
+        <div id="SweeTea" class="tabcontent">
+            <img src="Asset/matcha-bobs.png" alt="">
+            <h5>Matcha Boba</h5>
+            <div class="text-wrapper">
+                <p class="truncate expanded">Lorem ipsum dolor sit amet consectetur, adipisicing....</p>
+            </div>
+            <button class="read" onclick="expandText(this)">Read More</button>
+        </div>
+
+        <div id="SweeTea" class="tabcontent">
+            <img src="Asset/taiwan-milk-tea.png" alt="">
+            <h5>Taiwan Milk Tea</h5>
+            <div class="text-wrapper">
+                <p class="truncate expanded">Lorem ipsum dolor sit amet consectetur, adipisicing....</p>
+            </div>
+            <button class="read" onclick="expandText(this)">Read More</button>
+        </div>
+
+        <div id="SweeTea" class="tabcontent">
+            <img src="Asset/rose-matcha.png" alt="">
+            <h5>Rose Matcha</h5>
+            <div class="text-wrapper">
+                <p class="truncate expanded">Lorem ipsum dolor sit amet consectetur, adipisicing....</p>
+            </div>
+            <button class="read" onclick="expandText(this)">Read More</button>
         </div>
         
-        <!-- TeavoU Product or Menu-->
-         <!-- SweeTea -->
-        <div class="sweetea">
-            <div class="menu">
-                <div class="content">
-                    <img src="Asset/tea 1.png" alt="">
-                    <h5>Butterfly Pea Elixir</h5>
-                    <div class="text-wrapper">
-                        <p class="truncate expanded">Lorem ipsum dolor sit amet consectetur, adipisicing....</p>
-                    </div>
-                    <button class="read" onclick="expandText(this)">Read More</button>
-                </div>
-                <div class="content">
-                    <img src="Asset/tea 2.png" alt="">
-                    <h5>Blue Thai Tea</h5>
-                    <div class="text-wrapper">
-                        <p class="truncate expanded">Lorem ipsum dolor sit amet consectetur, adipisicing....</p>
-                    </div>
-                    <button class="read" onclick="expandText(this)">Read More</button>
-                </div>
-                <div class="content">
-                    <img src="Asset/tea 3.png" alt="">
-                    <h5>Alga on Ocean</h5>
-                    <div class="text-wrapper">
-                        <p class="truncate expanded">Lorem ipsum dolor sit amet consectetur, adipisicing....</p>
-                    </div>
-                    <button class="read" onclick="expandText(this)">Read More</button>
-                </div>
-                <div class="content">
-                    <img src="Asset/tea 1.png" alt="">
-                    <h5>Butterfly Pea Elixir</h5>
-                    <div class="text-wrapper">
-                        <p class="truncate expanded">Lorem ipsum dolor sit amet consectetur, adipisicing....</p>
-                    </div>
-                    <button class="read" onclick="expandText(this)">Read More</button>
+        <div id="SweeTea" class="tabcontent">
+            <img src="Asset/taro-boba.png" alt="">
+            <h5>Taro Boba Tea</h5>
+            <div class="text-wrapper">
+                <p class="truncate expanded">Lorem ipsum dolor sit amet consectetur, adipisicing....</p>
             </div>
-            <div class="menu">
-                <div class="content">
-                    <img src="Asset/tea 2.png" alt="">
-                    <h5>Blue Thai Tea</h5>
-                    <p class="truncate">Lorem ipsum dolor sit, amet consectetur adipisicing elit...</p>
-                    <button class="read" onclick="expandText(this)">Read More</button>
-                </div>
-                <div class="content">
-                    <img src="Asset/tea 3.png" alt="">
-                    <h5>Alga On Ocean</h5>
-                    <div class="text-wrapper">
-                        <p class="truncate expanded">Lorem ipsum dolor sit amet consectetur, adipisicing....</p>
-                    </div>
-                    <button class="read" onclick="expandText(this)">Read More</button>
-                </div>
-                <div class="content">
-                    <img src="Asset/tea 1.png" alt="">
-                    <h5>Butterfly Pea Elixir</h5>
-                    <div class="text-wrapper">
-                        <p class="truncate expanded">Lorem ipsum dolor sit amet consectetur, adipisicing....</p>
-                    </div>
-                    <button class="read" onclick="expandText(this)">Read More</button>
-                </div>
-                <div class="content">
-                    <img src="Asset/tea 2.png" alt="">
-                    <h5>Blue Thai Tea</h5>
-                    <div class="text-wrapper">
-                        <p class="truncate expanded">Lorem ipsum dolor sit amet consectetur, adipisicing....</p>
-                    </div>
-                    <button class="read" onclick="expandText(this)">Read More</button>
-                </div>
-            </div>    
-        </div>
-        <!-- Origin Tea -->
-        <div class="origin">
-            <div class="menu">
-                <div class="content">
-                    <img src="Asset/greentea.png" alt="">
-                    <h5>Green Tea</h5>
-                    <p class="truncate">Lorem ipsum dolor sit, amet consectetur adipisicing elit...</p>
-                    <button class="read" onclick="expandText(this)">Read More</button>
-                </div>
-                <div class="content">
-                    <img src="Asset/oolong tea.png" alt="">
-                    <h5>Oolong Tea</h5>
-                    <div class="text-wrapper">
-                        <p class="truncate expanded">Lorem ipsum dolor sit amet consectetur, adipisicing....</p>
-                    </div>
-                    <button class="read" onclick="expandText(this)">Read More</button>
-                </div>
-                <div class="content">
-                    <img src="Asset/white tea.png" alt="">
-                    <h5>White Tea</h5>
-                    <div class="text-wrapper">
-                        <p class="truncate expanded">Lorem ipsum dolor sit amet consectetur, adipisicing....</p>
-                    </div>
-                    <button class="read" onclick="expandText(this)">Read More</button>
-                </div>
-                <div class="content">
-                    <img src="Asset/black tea.png" alt="">
-                    <h5>Black Tea</h5>
-                    <div class="text-wrapper">
-                        <p class="truncate expanded">Lorem ipsum dolor sit amet consectetur, adipisicing....</p>
-                    </div>
-                    <button class="read" onclick="expandText(this)">Read More</button>
-                </div>
-            </div>
-
-            <div class="menu">
-                <div class="content">
-                    <img src="Asset/greentea.png" alt="">
-                    <h5>Green Tea</h5>
-                    <p class="truncate">Lorem ipsum dolor sit, amet consectetur adipisicing elit...</p>
-                    <button class="read" onclick="expandText(this)">Read More</button>
-                </div>
-                <div class="content">
-                    <img src="Asset/oolong tea.png" alt="">
-                    <h5>Oolong Tea</h5>
-                    <div class="text-wrapper">
-                        <p class="truncate expanded">Lorem ipsum dolor sit amet consectetur, adipisicing....</p>
-                    </div>
-                    <button class="read" onclick="expandText(this)">Read More</button>
-                </div>
-                <div class="content">
-                    <img src="Asset/white tea.png" alt="">
-                    <h5>White Tea</h5>
-                    <div class="text-wrapper">
-                        <p class="truncate expanded">Lorem ipsum dolor sit amet consectetur, adipisicing....</p>
-                    </div>
-                    <button class="read" onclick="expandText(this)">Read More</button>
-                </div>
-                <div class="content">
-                    <img src="Asset/black tea.png" alt="">
-                    <h5>Black Tea</h5>
-                    <div class="text-wrapper">
-                        <p class="truncate expanded">Lorem ipsum dolor sit amet consectetur, adipisicing....</p>
-                    </div>
-                    <button class="read" onclick="expandText(this)">Read More</button>
-                </div>
-            </div>    
-        </div>
-        <!-- Tisane -->
-        <div class="tisane">
-            <div class="menu">
-                <div class="content">
-                    <img src="Asset/Chamomile Tea.png" alt="">
-                    <h5>Chamomile Tea</h5>
-                    <p class="truncate">Lorem ipsum dolor sit, amet consectetur adipisicing elit...</p>
-                    <button class="read" onclick="expandText(this)">Read More</button>
-                </div>
-                <div class="content">
-                    <img src="Asset/Spearmint tea.png" alt="">
-                    <h5>Spearmint Tea</h5>
-                    <div class="text-wrapper">
-                        <p class="truncate expanded">Lorem ipsum dolor sit amet consectetur, adipisicing....</p>
-                    </div>
-                    <button class="read" onclick="expandText(this)">Read More</button>
-                </div>
-                <div class="content">
-                    <img src="Asset/Moringa Tea.png" alt="">
-                    <h5>Moringa Tea</h5>
-                    <div class="text-wrapper">
-                        <p class="truncate expanded">Lorem ipsum dolor sit amet consectetur, adipisicing....</p>
-                    </div>
-                    <button class="read" onclick="expandText(this)">Read More</button>
-                </div>
-                <div class="content">
-                    <img src="Asset/Peppermint Tea.png" alt="">
-                    <h5>Peppermint Tea</h5>
-                    <div class="text-wrapper">
-                        <p class="truncate expanded">Lorem ipsum dolor sit amet consectetur, adipisicing....</p>
-                    </div>
-                    <button class="read" onclick="expandText(this)">Read More</button>
-                </div>
-            </div>
-
-            <div class="menu">
-                <div class="content">
-                    <img src="Asset/lemongrass.png" alt="">
-                    <h5>Lemongrass Tea</h5>
-                    <p class="truncate">Lorem ipsum dolor sit, amet consectetur adipisicing elit...</p>
-                    <button class="read" onclick="expandText(this)">Read More</button>
-                </div>
-                <div class="content">
-                    <img src="Asset/rosella tea.png" alt="">
-                    <h5>Rosella Tea</h5>
-                    <div class="text-wrapper">
-                        <p class="truncate expanded">Lorem ipsum dolor sit amet consectetur, adipisicing....</p>
-                    </div>
-                    <button class="read" onclick="expandText(this)">Read More</button>
-                </div>
-                <div class="content">
-                    <img src="Asset/rosebud.png" alt="">
-                    <h5>Rose Buds Tea</h5>
-                    <div class="text-wrapper">
-                        <p class="truncate expanded">Lorem ipsum dolor sit amet consectetur, adipisicing....</p>
-                    </div>
-                    <button class="read" onclick="expandText(this)">Read More</button>
-                </div>
-                <div class="content">
-                    <img src="Asset/jasmine.png" alt="">
-                    <h5>Jasmine Tea</h5>
-                    <div class="text-wrapper">
-                        <p class="truncate expanded">Lorem ipsum dolor sit amet consectetur, adipisicing....</p>
-                    </div>
-                    <button class="read" onclick="expandText(this)">Read More</button>
-                </div>
-            </div>
+            <button class="read" onclick="expandText(this)">Read More</button>
         </div>
 
-        <!-- Feedback -->
-        <div class="feedback">
+        <div id="SweeTea" class="tabcontent">
+            <img src="Asset/butterfly-pea-boba.png" alt="">
+            <h5>Butterfly Pea Boba</h5>
+            <div class="text-wrapper">
+                <p class="truncate expanded">Lorem ipsum dolor sit amet consectetur, adipisicing....</p>
+            </div>
+            <button class="read" onclick="expandText(this)">Read More</button>
+        </div>
+    </div>
+
+    <!-- MENU TISANE -->
+    <div class="menu" id="TisaneMenu">
+            <div id="Tisane" class="tabcontent">
+                <img src="Asset/Chamomile Tea.png" alt="">
+                <h5>Chamomile Tea</h5>
+                <p class="truncate">Lorem ipsum dolor sit, amet consectetur adipisicing elit...</p>
+                <button class="read" onclick="expandText(this)">Read More</button>
+            </div>
+
+            <div id="Tisane" class="tabcontent">
+                <img src="Asset/Spearmint tea.png" alt="">
+                <h5>Spearmint Tea</h5>
+                <div class="text-wrapper">
+                    <p class="truncate expanded">Lorem ipsum dolor sit amet consectetur, adipisicing....</p>
+                </div>
+                <button class="read" onclick="expandText(this)">Read More</button>
+            </div>
+
+            <div id="Tisane" class="tabcontent">
+                <img src="Asset/Moringa Tea.png" alt="">
+                <h5>Moringa Tea</h5>
+                <div class="text-wrapper">
+                    <p class="truncate expanded">Lorem ipsum dolor sit amet consectetur, adipisicing....</p>
+                </div>
+                <button class="read" onclick="expandText(this)">Read More</button>                
+            </div>
+
+            <div id="Tisane" class="tabcontent">
+                <img src="Asset/Peppermint Tea.png" alt="">
+                <h5>Peppermint Tea</h5>
+                <div class="text-wrapper">
+                    <p class="truncate expanded">Lorem ipsum dolor sit amet consectetur, adipisicing....</p>
+                </div>
+                <button class="read" onclick="expandText(this)">Read More</button>
+            </div>
+
+            <div id="Tisane" class="tabcontent">
+                <img src="Asset/lemongrass.png" alt="">
+                <h5>Lemongrass Tea</h5>
+                <p class="truncate">Lorem ipsum dolor sit, amet consectetur adipisicing elit...</p>
+                <button class="read" onclick="expandText(this)">Read More</button>
+            </div>
+            
+            <div id="Tisane" class="tabcontent">
+                <img src="Asset/rosella tea.png" alt="">
+                <h5>Rosella Tea</h5>
+                <div class="text-wrapper">
+                    <p class="truncate expanded">Lorem ipsum dolor sit amet consectetur, adipisicing....</p>
+                </div>
+                <button class="read" onclick="expandText(this)">Read More</button>
+            </div>
+            
+            <div id="Tisane" class="tabcontent">
+                <img src="Asset/rosebud.png" alt="">
+                <h5>Rose Buds Tea</h5>
+                <div class="text-wrapper">
+                    <p class="truncate expanded">Lorem ipsum dolor sit amet consectetur, adipisicing....</p>
+                </div>
+                <button class="read" onclick="expandText(this)">Read More</button>
+            </div>
+            
+            <div id="Tisane" class="tabcontent">
+                <img src="Asset/jasmine.png" alt="">
+                <h5>Jasmine Tea</h5>
+                <div class="text-wrapper">
+                    <p class="truncate expanded">Lorem ipsum dolor sit amet consectetur, adipisicing....</p>
+                </div>
+                <button class="read" onclick="expandText(this)">Read More</button>
+            </div>
+    </div>
+</section>
+
+    <!-- Feedback -->
+    <section class="feedback">
+        <div class="feedback-header">
+            <div class="kiri-feedback">
+                <img src="Asset/kiri-feedback.png" alt="">
+            </div> <br>
             <p>Give us your feedback on our products</p><br>
-            <div class="form">
-                <form action="" name="feedback-form">
-                    <div class="input-feedback">
-                        <input type="text" name="Type here ..." placeholder="Type here ...">
-                        <input type="submit" value="submit">
-                    </div>
-                </form>
-            </div>
-            <div class="star-rating">
-                <button class="star">&#9734;</button>
-                <button class="star">&#9734;</button>
-                <button class="star">&#9734;</button>
-                <button class="star">&#9734;</button>
-                <button class="star">&#9734;</button>
+            <div class="kanan-feedback">
+                <img src="Asset/kanan-feedback.png" alt="">
             </div>
         </div>
-   </section>
+        <div class="form">
+            <form action="" name="feedback-form">
+                <div class="input-feedback">
+                    <input type="text" name="Type here ..." placeholder="Type here ...">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+        <div class="star-rating">
+            <span onclick="gfg(1)" class="star">★ 
+            </span> 
+            <span onclick="gfg(2)" class="star">★ 
+            </span> 
+            <span onclick="gfg(3)" class="star">★ 
+            </span> 
+            <span onclick="gfg(4)" class="star">★ 
+            </span> 
+            <span onclick="gfg(5)" class="star">★ 
+            </span>
+        </div>
+    </section>
+   
    <!-- Section TeavoU Product END-->
 
    <!-- Section Footer START -->
