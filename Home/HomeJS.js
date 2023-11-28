@@ -1,39 +1,60 @@
-// API Feedbacks
-async function renderFedbacks(){
-    try {
-        const data = await fetch('http://localhost:3000/feedbacks')
-        // feedbackContainer.innerHTML = '<h1>Loading...</h1>';
-        const feedbacks = await data.json();
+// Memuat data dari API
+async function loadData() {
+    const response = await axios.get('http://localhost:3000/feedbacks');
+    return response.data;
+}
 
-        const feedbackContainer = document.getElementById('feedbacks-container');
-        
-       const feedbackContent = feedbacks.map((feedback) =>{
-            const feedbackCard = `
-            <div class="card-body">
-                <img src="${feedback.img}" alt="Image 1">
-                <h6>${feedback.name}</h6>
+// Menghasilkan elemen HTML untuk slide
+function createSlide(slideData) {
+    // Gantikan 'path/to/your/image' dengan URL gambar yang ada di data slide
+    const slide = `
+        <div class="slide_spill active-spill">
+            <div class="img_spill">
+                <img src="path/to/your/image" alt="Gambar Spill">
+            </div>
+            <div class="text_card_spill">
                 <div class="text-card">
                     <p>
-                        ${feedback.review}
+                        ${slideData.text}
                     </p>
                 </div>
+                <div class="Bintang">
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
             </div>
-        `;
+        </div>
+    `;
+    return slide;
+}
 
-        return feedbackCard;
+// Memuat data dari API dan menghasilkan elemen HTML untuk slide
+async function main() {
+    const data = await loadData();
+    const section = document.getElementById('section-spill');
 
-        });
-
-        feedbackContainer.innerHTML = feedbackContent;
-
-    } catch (err){
-        console.log(err);
+    // Menghapus elemen <section> lama jika ada
+    while (section.firstChild) {
+        section.firstChild.remove();
     }
-};
+
+    // Menghasilkan elemen HTML untuk slide
+    data.forEach(slideData => {
+        const slide = createSlide(slideData);
+        section.innerHTML += slide;
+    });
+}
+
+main();
 
 
 
 
+// Best Tea
 
 
 
@@ -231,6 +252,3 @@ function resetQuiz() {
     currentQuestion = 0;
     score = 0;
 }
-
-
-renderFedbacks();

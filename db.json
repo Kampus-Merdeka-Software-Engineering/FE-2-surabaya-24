@@ -1,7 +1,67 @@
 {
-    "feedbacks": [
-      { "id": 1, "name": "Jacobi Adipici", "review":" Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, adipisci? Accusamus consequatur aliquam mollitia autem commodi est, alias voluptatem, adipisci culpa ipsa fugiat iusto fuga totam delectus iure laboriosam omnis.", "img":"Asset/HumanTea.png"},
-      { "id": 2, "name": "Saka", "review":" Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, adipisci? Accusamus consequatur aliquam mollitia autem commodi est, alias voluptatem, adipisci culpa ipsa fugiat iusto fuga totam delectus iure laboriosam omnis.", "img":"Asset/jin.jpg"},
-      { "id": 3, "name": "Naka", "review":" Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, adipisci? Accusamus consequatur aliquam mollitia autem commodi est, alias voluptatem, adipisci culpa ipsa fugiat iusto fuga totam delectus iure laboriosam omnis.", "img":"Asset/exo.jpg"}
-    ]
-  }
+  "feedbacks": [
+    {
+      "id": 1,
+      "name": "Saka",
+      "image": "Asset/people1.svg",
+      "content": "I recently tried this tea, and I must say, it's a delightful blend! The aroma is captivating, and the taste is rich and soothing. The packaging is also elegant. My only suggestion would be to include more detailed brewing instructions for different preferences. Overall, a great product!",
+      "rating": 4
+    },
+    {
+      "id": 2,
+      "name": "Naka",
+      "image": "Asset/people2.svg",
+      "content": "This tea is a true delight! The captivating aroma and rich, soothing taste make every sip a pleasure. The elegant packaging adds to the overall experience. My only suggestion is to provide more detailed brewing instructions. Nevertheless, it's a fantastic product!",
+      "rating": 4
+    },
+    {
+      "id": 3,
+      "name": "Jacobi",
+      "image": "Asset/people3.svg",
+      "content": "Having tried this tea recently, I'm impressed by its delightful blend. The aroma is simply captivating, and the rich, soothing taste is a treat for the senses. The elegant packaging is a bonus. Just a small suggestion to include more detailed brewing instructions. Highly recommended!",
+      "rating": 5
+    },
+    {
+      "id": 4,
+      "name": "Carly",
+      "image": "Asset/people4.svg",
+      "content": "I recently savored this delightful tea, and it truly lives up to its name! The captivating aroma and rich, soothing taste make it a winner. The elegant packaging is a visual treat. Adding more detailed brewing instructions would be my only recommendation. Overall, a fantastic product!",
+      "rating": 5
+    },
+    {
+      "id": 5,
+      "name": "Calista",
+      "image": "Asset/people5.svg",
+      "content": "This tea is a sheer delight! The captivating aroma and rich, soothing taste create a blissful experience. The elegant packaging adds to its charm. My only suggestion would be to include more detailed brewing instructions for various preferences. Nevertheless, a top-notch product!",
+      "rating": 5
+    },
+    {
+      "id": 6,
+      "name": "Mayasari",
+      "image": "Asset/people6.svg",
+      "content": "Recently tried this tea, and it's a delightful blend! The captivating aroma and rich, soothing taste create a symphony of flavors. The elegant packaging is a nice touch. Including more detailed brewing instructions would make it even better. Overall, a great addition to my tea collection!",
+      "rating": 5
+    },
+    {
+      "id": 7,
+      "name": "Elise",
+      "image": "Asset/people7.svg",
+      "content": "This tea is a true gem! The captivating aroma and rich, soothing taste make it a delightful experience. The elegant packaging adds a touch of sophistication. My only suggestion is to include more detailed brewing instructions. Nonetheless, a fantastic product that I'll be enjoying again!",
+      "rating": 4
+    },
+    {
+      "id": 8,
+      "name": "Ivanov",
+      "image": "Asset/people8.svg",
+      "content": "Recently experienced this delightful tea, and it's a winner! The captivating aroma and rich, soothing taste make it a perfect companion for tea time. The elegant packaging adds a touch of class. While thoroughly enjoying it, I thought more detailed brewing instructions could enhance the experience. Overall, a fantastic product!",
+      "rating": 4
+    },
+    {
+      "id": 9,
+      "name": "Johansson",
+      "image": "Asset/people9.svg",
+      "content": "I recently indulged in this exquisite tea, and it left me thoroughly impressed! The captivating aroma and the rich, soothing taste make it a true delight. The packaging is not only elegant but also functional.",
+      "rating": 3
+    }
+  ]
+}
