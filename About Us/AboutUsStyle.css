@@ -21,7 +21,8 @@
 }
 
 section{
-    padding: 50px 100px;}
+    padding: 50px 100px;
+}
 
 img{
     width: 100%;
@@ -53,17 +54,23 @@ header{
 
 .navbar{
     display: flex;
-    display: contents;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1; 
 }
 
 .navbar a {
-    padding: 8px 25px;
+    padding: 8px 15px;
     color: var(--second-color);
     font-size: 1rem;
     text-transform: uppercase;
     font-weight: 500;
     font-family: 'inter', sans-serif;
     font-weight: bold; 
+    margin:0 10px;
 }
 
 
@@ -80,7 +87,6 @@ header{
     border-radius: 0.2rem;
     transition: 0.2 all linear;
     background-size: auto;
-
     font-size: 1rem;
     text-transform: uppercase;
     font-weight: 500;
@@ -106,13 +112,45 @@ header{
     min-height: 100vh;
     background: #FFFF;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-size: contain;
+    background-position: right;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(17rem,auto));
     align-items: stretch;
     gap: 1.5rem;
     background-image: url(/Asset/bgprofilupper.png);
+}
+
+.upperleftcolumn{
+    float: left;
+    width: 100%;
+}
+
+.upperrightcolumn{
+    float: right;
+    width: 100%;
+    /* background-color: brown; */
+}
+
+.uppercolumn{
+    display: flex;
+    float: right;
+    flex-direction: column;
+    gap: 17px;
+    /* background-color: yellowgreen; */
+}
+
+.uppercolumn-1 img{
+    float: left;
+    justify-content: flex-start;
+    /* background: #000; */
+}
+
+.uppercolumn-2 img{
+    float: left;
+    justify-content: flex-start;
+    margin-top: 200px;
+    margin-left: -10px;
 }
 
 .profileupper-text h1{
@@ -124,35 +162,39 @@ header{
 }
 
 .profileupper-text h1> span{
-    color: var(--);
+    color: var(--button-color);
 }
 
-.profileupper-text p::after {
-    width: 600px;
-    font-size: 0.938rem;
+.profileupper-text p {
+    width: auto;
+    font-size: 1.2rem;
     color: black;
     margin: 0.5rem 0 1.4rem;
-    font-family: inter;
+    font-family: 'inter';
     max-width: max-content;
-    margin-right: 24px;
+    margin-right: 50px;
     text-align: justify;
-
 }
 
 .profileupper-img-1{
+    /* background-color: aqua; */
     height: 100px;
     width: 150px;
-    position: absolute;
-    top: 60px;
+    /* position: absolute; */
+    top: 600px;
     right: 10px;
+    flex-shrink: 0;
+    margin-top: 20px;
 }
 
 .profileupper-img-2{
     height: 50px;
     width: 150px;
-    position: absolute;
+    /* position: absolute; */
     bottom: 200px;
     right: 180px;
+    flex-shrink: 0;
+    margin-top: 20px;
 }
 
 .profileupper-bubukteh{
@@ -239,10 +281,12 @@ header{
     padding: 20px;
     margin-left: 20px;
     margin-top: 10px;
+    width: 100%;
 }
 .profilecentrecard h3{
     font-size: 2rem;
     color: var(--second-color);
+    letter-spacing: 2px;
 }
 span{
     color: var(--button-color);
@@ -264,47 +308,32 @@ span{
     display: table;
     clear: both;
     font-size: 2rem;
-    color: var(--main-color);
+    color: var(--second-color);
     /* letter-spacing: 2px; */
     /* padding: 20px; */
     /* margin-top: 20px    */
 }
-.TeavoUTeam h4>span{
-    color: var(--second-color);
-}
 
-.TeavoUTeam h4{
-    color: var(--button-color);
-    font-size: 2rem;
-    margin: 0 0 1.4rem;
-}
 .TeavoUTeamcard {
     display: flex;
+    width: 100%;
+}
+.TeavoUTeamcard-text{
     color: black;
-}
-.team-set {
-    margin: 20px;
-    padding: 20px;
-    font-size: 15px;
-    float: left;
-  }
-  
-.team-set img {
-    width: 150px;
-    height: 70%;
-    align-items: center;
-}
-
-.team-set p {
-    margin-top: 20px;
+    font-size: small;
+    font-style: 'inter';
     text-align: center;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    align-items: center;
-    justify-content: center;
-    display: flex;
+    font-weight: bold;
+}
+.TeavoUTeamcard > div img{
+    /* background-color: #f1f1f1; */
+    padding: 1.3rem;
+}
+.TeavoUTeamcard > div:hover{
+    background: var(--main-color);
+    color: #FFFF;
+    border-radius: 0.2rem;
+    transition: 0.2 all linear;
 }
 
 /* Section teavou gallery */
@@ -313,13 +342,6 @@ span{
     width: 50%;
 }
 
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 750px) {
-    .leftcolumn, .rightcolumn {   
-      width: 100%;
-      padding: 0;
-    }
-  }
 .galleryTeam{
     min-height: 100vh;
     background: var(--bg-color);
@@ -407,4 +429,107 @@ span{
 
 .active-dot {
     background-color: var(--button-color);
+}
+
+ /* Footer Styling */
+/* Footer */
+
+.bg-fo{
+    background-color: var(--main-color);
+    background-size: cover;
+    height: 20rem;
+    margin-top: 9rem;
+    position: relative;
+}
+
+.bg-fo img{
+    width: 10rem;
+    height: 10rem;
+    margin-top: 4rem;
+    margin-bottom: 5.5rem;
+    margin-left: 6rem;
+}
+
+  /* element-fo */
+
+.element-fo {
+    position: absolute;
+    top: 5%;
+    right: 10%; 
+    width: 15rem;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.alamat img,
+.email img,
+.call img {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 5.6rem;
+}
+
+.alamat,
+.call,
+.email {
+    display: flex;
+    align-items: center; /* Vertically center the elements */
+    margin-bottom: -7.5rem;
+}
+
+.alamat h5,
+.call h5,
+.email h5{
+    margin-left: 0.5rem;
+    margin-top: -1.5rem;
+    color: #FFFFFF;
+    font-size: 10px;
+    font-family: 'inter';
+    margin-left: 0.5rem;
+    font-weight: normal;
+}
+
+
+  /* Navbar bawah */
+
+.line{
+    background-color: #FFFFFF;
+    height: 1px;
+    width: 75rem;
+    margin: -2.3rem auto 0;
+}
+
+.navbar-bawah {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    margin: 10px 0 0;
+    padding: 0;
+    flex-grow: 2; 
+    margin-left: 20rem;
+}
+
+.navbar-bawah a {
+    padding: 8px 15px;
+    color: var(--bg-color);
+    font-size: 15px;
+    font-family: 'inter';
+    margin: 0 1.5rem;
+    font-weight: 300;
+}
+
+.navbar-bawah a:hover{
+    color: #e9ff8f;
+}
+   /* Footer Styling */
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 768px) {
+    .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+    }
 }
