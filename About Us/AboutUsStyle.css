@@ -33,18 +33,18 @@ body{
     background-color: var(--bg-color);
 }
 
-header{
+/* Header */
+header {
     position: fixed;
     width: 100%;
     height: 59px;
-    top:0;
+    top: 0;
     right: 0;
     z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 100px;
-    /* transition: 0.5s linear; */
+    padding: 35px 0.9rem;
     background-color: #ffffff;
 }
 
@@ -52,52 +52,67 @@ header{
     width: 90px;
 }
 
-.navbar{
+.navbar {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     list-style: none;
     margin: 0;
     padding: 0;
-    flex-grow: 1; 
+    flex-grow: 1;
 }
 
 .navbar a {
-    padding: 8px 15px;
+    padding: 8px 20px;
     color: var(--second-color);
     font-size: 1rem;
     text-transform: uppercase;
     font-weight: 500;
     font-family: 'inter', sans-serif;
-    font-weight: bold; 
-    margin:0 10px;
+    font-weight: bold;
+    margin: 0 10px;
+    position: relative;
 }
 
-
-.navbar a:hover{
-    background: var(--main-color);
-    color: #FFFF;
-    border-radius: 0.2rem;
-    transition: 0.2 all linear;
+.navbar a:hover {
+    transition: 0.2s all linear;
+    border-bottom: 2px solid var(--button-color);
+    color: var(--button-color);
+    padding: 0;
+    margin: 0;
 }
 
-.active_nav{
-    background: var(--main-color);
-    color: #FFFF;
-    border-radius: 0.2rem;
-    transition: 0.2 all linear;
+.navbar a:hover,
+.active_nav {
+    transition: 0.2s all linear;
     background-size: auto;
+    border-bottom: 2px solid var(--button-color);
     font-size: 1rem;
     text-transform: uppercase;
     font-weight: 500;
     font-family: 'inter', sans-serif;
-    font-weight: bold; 
-    padding: 8px 2px;
+    font-weight: bold;
+    padding: 8px;
+    margin: 0 2rem;
 }
 
-.active_nav a{
-    color: #ffffff;
+.active_nav a {
+    color: var(--button-color);
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background-size: auto;
 }
+
+/* .active_nav a:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5rem;
+    height: 2px;
+    background-color: var(--button-color);
+} */
 
 #menu-icon{
     color: var(--second-color);
@@ -106,6 +121,7 @@ header{
     cursor: pointer;
     display: none;
 }
+
 /* section profileupper "About Us TeavoU" */
 .profileupper{
     width: 100%;
@@ -115,7 +131,7 @@ header{
     background-size: contain;
     background-position: right;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(17rem,auto));
+    grid-template-columns: repeat(auto-fit,minmax(25rem,auto));
     align-items: stretch;
     gap: 1.5rem;
     background-image: url(/Asset/bgprofilupper.png);
@@ -127,9 +143,10 @@ header{
 }
 
 .upperrightcolumn{
+    margin-left: 70px;
     float: right;
     width: 100%;
-    /* background-color: brown; */
+    background-color: brown;
 }
 
 .uppercolumn{
@@ -137,20 +154,22 @@ header{
     float: right;
     flex-direction: column;
     gap: 17px;
-    /* background-color: yellowgreen; */
+    background-color: yellowgreen;
 }
 
 .uppercolumn-1 img{
     float: left;
     justify-content: flex-start;
     /* background: #000; */
+    /* background-color: #888; */
 }
 
 .uppercolumn-2 img{
     float: left;
     justify-content: flex-start;
     margin-top: 200px;
-    margin-left: -10px;
+    /* margin-left: -10px; */
+    background-color: #4A6409;
 }
 
 .profileupper-text h1{
@@ -178,8 +197,8 @@ header{
 
 .profileupper-img-1{
     /* background-color: aqua; */
-    height: 100px;
-    width: 150px;
+    height: 150px;
+    width: 200px;
     /* position: absolute; */
     top: 600px;
     right: 10px;
@@ -188,8 +207,8 @@ header{
 }
 
 .profileupper-img-2{
-    height: 50px;
-    width: 150px;
+    height: 150px;
+    width: 200px;
     /* position: absolute; */
     bottom: 200px;
     right: 180px;
