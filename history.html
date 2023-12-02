@@ -42,9 +42,11 @@
  
      <!-- 3 buttons navigate on product page -->
     <div class="buttons">
-        <button onclick="window.location.href='AboutUs.html'" class="but"><img src="Asset/image deskripsi teh.svg" alt="">What is TeavoU?</button>
+        <button onclick="window.location.href='Product.html'" class="but"><img src="Asset/image deskripsi teh.svg" alt="">What is TeavoU?</button>
         <button onclick="window.location.href='history.html'" class="but"><img src="Asset/image sejarah tea.svg" alt="">History of Tea</button>
-        <button onclick="window.location.href='Product.html'" class="but"><img src="Asset/image khasiat tea.svg" alt="">TeavoU Product</button>
+        <button onclick="redirectToProduct()" class="but">
+          <img src="Asset/image khasiat tea.svg" alt="">TeavoU Product
+        </button>
     </div>
  </section>
   <!-- Section BG Top Section END -->
@@ -108,47 +110,57 @@
         </div>
     </section>
 
-    <footer>
-      <div class="bg-fo">
-          <img src="Asset/whiteLogo.svg" alt="wh-lo">
   
-          <div class="element-fo">
-              <!-- alamat -->
-              <div class="alamat">
-                  <img src="Asset/map.svg" alt="">
-                  <h5>Jl.Cenderawasih No3, Mrican Caturtunggal</h5>
-              </div>
-  
-              <!-- email -->
-              <div class="email">
-                  <img src="Asset/mail.svg" alt="">
-                  <h5>teavou@gmail.com</h5>
-              </div>
-  
-              <!-- call -->
-              <div class="call">
-                  <img src="Asset/Vector.svg" alt="">
-                  <h5>(355) 973-9235</h5>
-              </div>
-          </div>
-  
-              <!-- Line navbar -->
-          <div class="line"></div>
-              <ul class="navbar-bawah">
-                  <li><a href="#Home">Home</a></li>
-                  <li><a href="About Us.html">AboutUs</a></li>
-                  <li><a href="Product.html">Product</a></li>
-              </ul>
-  
-          <!-- social media -->
-          <!-- <div class="social">
-              <h5>Social Media</h5>
-              <img src="Asset/instagram.svg" alt="instagram">
-              <img src="Asset/twitter.svg" alt="twitter">
-              <img src="Asset/facebook.svg" alt="facebook">
-          </div> -->
-      </div>
-  </footer>
+   <!-- Section Footer START -->
+   <footer class="footer">
+    <div class="footer-left">
+        <div class="credit-cards">
+            <img src="Asset/whiteLogo.svg" alt="">
+
+            <div class="footer-media">
+                <a href="#" class="instagram"><img src="Asset/instagram.svg" alt=""></a>
+                <a href="#" class="twitter"><img src="Asset/twitter.svg" alt=""></a>
+                <a href="#" class="facebook"><img src="Asset/facebook.svg" alt=""></a>
+                <a href="#" class="youtube"><img src="Asset/youtube.svg" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-center">
+        <div class="location">
+            <img src="Asset/location.svg" alt="">
+            <p><a href="#"><span>Indonesia</span> DKI Jakarta, Jakarta Selatan</a></p>
+        </div>
+
+        <div class="phone">
+            <img src="Asset/phone.svg" alt="">
+            <p><a href="#">+62 812-3456-7890</a></p>
+        </div>
+
+        <div class="mail">
+            <img src="Asset/mail.svg" alt="">
+            <p><a href="#">support@gmail.com</a></p>
+        </div>
+    </div>
+
+    <div class="footer-right">
+        <p class="footer-about">
+            <span>About</span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget leo id urna laoreet lacinia. Suspendisse non elit at turpis feugiat cursus. Sed in semper tortor. Maecenas vestibulum non justo id tempus. Sed rhoncus nunc ac facilisis.
+        </p>
+    </div>
+
+    <!-- Line navbar -->
+    <div class="line"></div>
+
+    <!-- Copyright -->
+    <div id="copyright">
+        <div class="wrapper">
+            &copy; 2023. <b>TeavoU</b> All Right Reserved.
+        </div>
+    </div>
+</footer>
+<!-- Section Footer END -->
       
       
   

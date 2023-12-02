@@ -18,3 +18,8 @@ function addDissolveAnimation() {
   }
 
   document.addEventListener('DOMContentLoaded', addDissolveAnimation);
+
+
+  function redirectToProduct() {
+    window.location.href = 'Product.html#product';
+  }
