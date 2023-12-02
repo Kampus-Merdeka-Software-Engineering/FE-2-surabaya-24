@@ -619,10 +619,6 @@ footer {
     display: inline-block;
     width: 40px;
     height: 40px;
-    cursor: pointer;
-    border-radius: 50%;
-    font-size: 20px;
-    color: var(--second-color);
     text-align: center;
     line-height: 50px;
     margin-right: 3px;
@@ -638,6 +634,8 @@ footer {
 
 .footer .footer-media a:hover {
     background-color: var(--button-color);
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 .footer .footer-left .credit-cards {
@@ -670,6 +668,7 @@ footer {
 }
 
 .footer .footer-center p span {
+    color: var(--bg-color);
     display: block;
     /* font-weight: normal; */
     font-size: 14px;
