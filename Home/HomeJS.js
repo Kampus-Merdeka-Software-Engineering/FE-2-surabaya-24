@@ -61,7 +61,7 @@ main();
 // SlideShow Best Product
 
 // Seleksi semua elemen dengan kelas 'slide' dan 'dot' dari dokumen HTML
-const slides = document.querySelectorAll('.slide');
+const slides = document.querySelectorAll('.slide')
 const dots = document.querySelectorAll('.dot');
 
 // Inisialisasi variabel untuk melacak indeks slide saat ini

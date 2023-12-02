@@ -20,6 +20,7 @@
 
     <!-- Links -->
     <ul class="navbar">
+        
         <li class="active_nav"><a href="#Home">Home</a></li>
         <li><a href="AboutUs.html">About Us</a></li>
         <li><a href="Product.html">Product</a></li>
@@ -102,6 +103,74 @@
         </div>
     </section>
 
+<!-- Tea Festival -->
+<section class="festival">
+    <img src="Asset/TeaVestival.svg" alt="event">
+    <div class="textFestival">
+    <h3>Tea Festival</h3>
+    <h5>Sunday 20 August</h5>
+    <br>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, ex repellendus! Eligendi debitis quis qui dolores, sit ipsa. Reprehenderit molestias repellat cum fugit atque veniam est recusandae quas eos magnam!</p>
+    <br>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae est, rerum optio esse tenetur consequatur alias magnam ut placeat rem mollitia. Neque necessitatibus blanditiis temporibus, non repellat cum magni omnis.</p>
+    <br>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error sed, architecto quibusdam ab deleniti quisquam omnis aliquam accusamus beatae iste ducimus inventore commodi assumenda veritatis magnam. Illum repellendus odit consequuntur?</p>
+    </div>
+</section>
+
+<!-- Quiz -->
+<section class="quiz">
+    <h2>Quiz Time</h2>
+    <!-- Tab Links -->
+    <div class="tab">
+        <button class="tablinks" onclick="openTea(event, 'tea1')"><img src="Asset/Moringa Tea.png" alt="tea1"></button>
+
+        <button class="tablinks" onclick="openTea(event, 'tea2')"><img src="Asset/rosella tea.png" alt="tea2"></button>
+
+        <button class="tablinks" onclick="openTea(event, 'tea3')"><img src="Asset/taiwan-milk-tea.png" alt="tea3"></button>
+    </div>
+
+    <!-- Tab content -->
+    <div id="tea1" class="tabcontent">
+        <img src="Asset/QuizL1.svg" alt="">
+        <div class="box">
+            <h4>SweeTea</h4>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi velit error aut. Dolor quis blanditiis obcaecati amet. Nobis ipsa obcaecati non, temporibus fugit eos sequi, impedit repellat magnam ex quod.</p>
+            <button class="playQuiz" onclick="startQuiz()">Play</button>
+        </div>
+    </div>
+
+    <div id="tea2" class="tabcontent">
+        <img src="Asset/QuizL2.svg" alt="">
+        <div class="box">
+        <h4>Blue Thai Tea</h4>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi velit error aut. Dolor quis blanditiis obcaecati amet. Nobis ipsa obcaecati non, temporibus fugit eos sequi, impedit repellat magnam ex quod.</p>
+        <button class="playQuiz" onclick="startQuiz()">Play</button>
+    </div>
+    </div>
+
+    <div id="tea3" class="tabcontent">
+        <img src="Asset/QuizL3.svg" alt="">
+        <div class="box">
+        <h4>Alga on Ocean</h4>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi velit error aut. Dolor quis blanditiis obcaecati amet. Nobis ipsa obcaecati non, temporibus fugit eos sequi, impedit repellat magnam ex quod.</p>
+        <button class="playQuiz" onclick="startQuiz()">Play</button>
+    </div>
+
+    <div id="quiz-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="question-container"></div>
+            <button onclick="checkAnswer()">Submit Answer</button>
+        </div>
+    </div>
+
+    </div>
+        <div class="shapeConten"></div>
+</section>
 
 <!-- Review-->
 
@@ -315,117 +384,68 @@
     </div>
 </section>
 
-<!-- Tea Festival -->
-<section class="festival">
-    <img src="Asset/TeaVestival.svg" alt="event">
-    <div class="textFestival">
-    <h3>Tea Festival</h3>
-    <h5>Sunday 20 August</h5>
-    <br>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, ex repellendus! Eligendi debitis quis qui dolores, sit ipsa. Reprehenderit molestias repellat cum fugit atque veniam est recusandae quas eos magnam!</p>
-    <br>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae est, rerum optio esse tenetur consequatur alias magnam ut placeat rem mollitia. Neque necessitatibus blanditiis temporibus, non repellat cum magni omnis.</p>
-    <br>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error sed, architecto quibusdam ab deleniti quisquam omnis aliquam accusamus beatae iste ducimus inventore commodi assumenda veritatis magnam. Illum repellendus odit consequuntur?</p>
-    </div>
+<!-- Feedback -->
+<section id="fedbacks">
+    <h4>
+        Opinion Feedback Arena
+    </h4>
+
+    <p>Your thoughts inspire us. Help us improve by sharing your feedback. Thank you for being part of our journey</p>
+    <button>Feedback</button>
 </section>
 
-<!-- Quiz -->
-<section class="quiz">
-    <h2>Quiz Time</h2>
-    <!-- Tab Links -->
-    <div class="tab">
-        <button class="tablinks" onclick="openTea(event, 'tea1')"><img src="Asset/tea 1.png" alt="tea1"></button>
-
-        <button class="tablinks" onclick="openTea(event, 'tea2')"><img src="Asset/tea 2.png" alt="tea2"></button>
-
-        <button class="tablinks" onclick="openTea(event, 'tea3')"><img src="Asset/tea 3.png" alt="tea3"></button>
-    </div>
-
-    <!-- Tab content -->
-    <div id="tea1" class="tabcontent">
-        <img src="Asset/IconQuiz.png" alt="">
-        <div class="box">
-            <h4>SweeTea</h4>
-            <br>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi velit error aut. Dolor quis blanditiis obcaecati amet. Nobis ipsa obcaecati non, temporibus fugit eos sequi, impedit repellat magnam ex quod.</p>
-            <button class="playQuiz" onclick="startQuiz()">Play</button>
-        </div>
-    </div>
-
-    <div id="tea2" class="tabcontent">
-        <img src="Asset/tea 2.png" alt="">
-        <div class="box">
-        <h4>Blue Thai Tea</h4>
-        <br>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi velit error aut. Dolor quis blanditiis obcaecati amet. Nobis ipsa obcaecati non, temporibus fugit eos sequi, impedit repellat magnam ex quod.</p>
-        <button class="playQuiz" onclick="startQuiz()">Play</button>
-    </div>
-    </div>
-
-    <div id="tea3" class="tabcontent">
-        <img src="Asset/tea 3.png" alt="">
-        <div class="box">
-        <h4>Alga on Ocean</h4>
-        <br>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi velit error aut. Dolor quis blanditiis obcaecati amet. Nobis ipsa obcaecati non, temporibus fugit eos sequi, impedit repellat magnam ex quod.</p>
-        <button class="playQuiz" onclick="startQuiz()">Play</button>
-    </div>
-
-    <div id="quiz-modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <div id="question-container"></div>
-            <button onclick="checkAnswer()">Submit Answer</button>
-        </div>
-    </div>
-
-    </div>
-        <div class="shapeConten"></div>
-</section>
 </main>
 
-<footer>
-    <div class="bg-fo">
-        <img src="Asset/whiteLogo.svg" alt="wh-lo">
+<!-- Footer -->
+<footer class="footer">
+        <div class="footer-left">
+            <div class="credit-cards">
+                <img src="Asset/whiteLogo.svg" alt="">
 
-        <div class="element-fo">
-            <!-- alamat -->
-            <div class="alamat">
-                <img src="Asset/map.svg" alt="">
-                <h5>Jl.Cenderawasih No3, Mrican Caturtunggal</h5>
-            </div>
-
-            <!-- email -->
-            <div class="email">
-                <img src="Asset/mail.svg" alt="">
-                <h5>teavou@gmail.com</h5>
-            </div>
-
-            <!-- call -->
-            <div class="call">
-                <img src="Asset/Vector.svg" alt="">
-                <h5>(355) 973-9235</h5>
+                <div class="footer-media">
+                    <a href="#" class="instagram"><img src="Asset/instagram.svg" alt=""></a>
+                    <a href="#" class="twitter"><img src="Asset/twitter.svg" alt=""></a>
+                    <a href="#" class="facebook"><img src="Asset/facebook.svg" alt=""></a>
+                    <a href="#" class="youtube"><img src="Asset/youtube.svg" alt=""></a>
+                    <!-- masukin media social what's up -->
+                </div>
             </div>
         </div>
 
-            <!-- Line navbar -->
-        <div class="line"></div>
-            <ul class="navbar-bawah">
-                <li><a href="#Home">Home</a></li>
-                <li><a href="About Us.html">AboutUs</a></li>
-                <li><a href="Product.html">Product</a></li>
-            </ul>
+        <div class="footer-center">
+            <div class="location">
+                <img src="Asset/location.svg" alt="">
+                <p><a href="#"><span>Indonesia</span> DKI Jakarta, Jakarta Selatan</a></p>
+            </div>
 
-        <!-- social media -->
-        <!-- <div class="social">
-            <h5>Social Media</h5>
-            <img src="Asset/instagram.svg" alt="instagram">
-            <img src="Asset/twitter.svg" alt="twitter">
-            <img src="Asset/facebook.svg" alt="facebook">
-        </div> -->
-    </div>
-</footer>
+            <div class="phone">
+                <img src="Asset/phone.svg" alt="">
+                <p><a href="#">+62 812-3456-7890</a></p>
+            </div>
+
+            <div class="mail">
+                <img src="Asset/mail.svg" alt="">
+                <p><a href="#">support@gmail.com</a></p>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <p class="footer-about">
+                <span>About</span>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget leo id urna laoreet lacinia. Suspendisse non elit at turpis feugiat cursus. Sed in semper tortor. Maecenas vestibulum non justo id tempus. Sed rhoncus nunc ac facilisis.
+            </p>
+        </div>
+
+        <!-- Line navbar -->
+        <div class="line"></div>
+
+        <!-- Copyright -->
+        <div id="copyright">
+            <div class="wrapper">
+                &copy; 2023. <b>TeavoU</b> All Right Reserved.
+            </div>
+        </div>
+    </footer>
     
     
 
