@@ -343,19 +343,30 @@ header{
     /* padding: 10px;  */
 }
 
-.tabcontent{
+#discount {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    z-index: 1;
+}
+
+.tabcontent {
     width: 245px;
     height: 400px;
-    box-sizing: border-box;   
+    box-sizing: border-box;
     float: left;
     border-radius: 11px 11px 11px 11px;
     background: white;
     box-shadow: 0px 3.4186px 3.4186px 0px rgba(0, 0, 0, 0.25), 4.27324px 0px 3.4186px 0px rgba(0, 0, 0, 0.25);
     transition: 0.4s;
-    overflow: hidden; /* Menyembunyikan teks yang lebih panjang dari kotak */
+    overflow: hidden;
     margin: 20px 20px 20px 20px;
+    position: relative;
+    /* Make sure to set a position value other than the default 'static' */
+    z-index: 0;
+    /* Set a lower z-index value */
 }
-
+ 
 .tabcontent img{
     align-items: center;
     width: 100%;
