@@ -51,13 +51,6 @@ function openMenu(evt, menuName) {
   evt.currentTarget.classList.add("active");
 }
 
-// Read More Product
-function expandText(button) {
-  var content = button.previousElementSibling;
-  content.classList.toggle("expanded");
-  button.innerHTML = content.classList.contains("expanded") ? "Read Less" : "Read More";
-}
-
 // Panggil fungsi initMenu ketika halaman dimuat
 document.addEventListener("DOMContentLoaded", function () {
   initMenu();

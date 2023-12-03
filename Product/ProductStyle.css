@@ -360,10 +360,32 @@ header{
 }
 
 #discount {
-    width: 100px;
-    height: 100px;
+    width:12rem;
+    height: 15rem;
     position: absolute;
     z-index: 1;
+    margin-top:-3.5rem;
+    margin-left: -1.8rem;
+    padding-left: -4rem;
+    /* padding-top: -3rem; */
+}
+
+#DC{
+    font-size: 14px;
+    color: #FFFFFF;
+    font-family: 'Inter';
+    margin-top: -7.5rem;
+    transform: rotate(-40deg);
+    padding-left: 2rem;
+}
+
+#number{
+    font-size: 20px;
+    color: #ffffff;
+    font-family: 'Inter';
+    margin-top: 1rem;
+    transform: rotate(-40deg);
+    padding-left: 1rem;
 }
 
 .tabcontent {
@@ -378,9 +400,7 @@ header{
     overflow: hidden;
     margin: 20px 20px 20px 20px;
     position: relative;
-    /* Make sure to set a position value other than the default 'static' */
     z-index: 0;
-    /* Set a lower z-index value */
 }
  
 .tabcontent img{
@@ -391,10 +411,10 @@ header{
 }
 
 .tabcontent h5{
-    font-size: 12px;
+    font-size: 15px;
     text-align: center;
     font-size: 18px;
-    color: var(--second-color);
+    color: var(--main-color);
 }
 
 .tabcontent.expanded {
@@ -412,7 +432,7 @@ header{
     text-overflow: ellipsis;
     color: #000000;
     font-size: 12px;
-    
+    text-align: center;
     /* word-wrap: normal; */
     /* word-wrap: break-word; */
     /* word-break: keep-all; */
@@ -438,22 +458,33 @@ header{
     -webkit-box-orient: vertical;
 }
 
-.tabcontent button{
-    font-family: 'grandstander';
+.read {
+    font-family: 'inter';
     font-size: 12px;
     color: white;
     background: var(--button-color);
-    width: 91px;
     height: 26px;
-    border-radius: 7px;
+    border-radius: 5px;
     flex-shrink: 0;
     border: none;
     padding: 10px;
     text-align: center;
-    margin: 20px 20px;
-    display: block;
-    margin-top: 16px;
-    align-items: flex-end;
+    margin: 30px 20px 20px auto;
+    /* auto pada margin-right akan menggeser ke kanan */
+    display: flex;
+    /* Menambahkan display: flex agar align-items bekerja */
+    align-items: center;
+    /* Memastikan align-items bekerja dengan baik */
+}
+
+#price {
+    font-family: 'inter';
+    color: var(--second-color);
+    font-size: 20px;
+    text-align: left;
+    float: left;
+    margin-top: -3.2rem;
+    padding: 10px 15px;
 }
 
 .text-wrapper {
@@ -580,6 +611,62 @@ header{
     color: #FFFFFF;
 }
 
+/* Content */
+.grid {
+    display: flex;
+    gap: 7px;
+    float: right;
+    /* background-color: #000000; */
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.column-1 img {
+    border-radius: 5px;
+    float: right;
+    justify-content: flex-start;
+    margin-top: 10px;
+
+}
+
+.image-1 img {
+    width: 224.457px;
+    height: 267.818px;
+    flex-shrink: 0;
+    margin-top: 20px;
+}
+
+.image-2 img {
+    width: 198.951px;
+    height: 230.834px;
+    flex-shrink: 0;
+    margin-top: 15px;
+}
+
+.column-2 img {
+    border-radius: 5px;
+    float: right;
+    justify-content: flex-start;
+    margin-top: 30px;
+}
+
+.image-3 img {
+    width: 227.008px;
+    height: 279.934px;
+    flex-shrink: 0;
+    margin-top: 52px;
+}
+
+.image-4 img {
+    width: 224.457px;
+    height: 267.818px;
+    flex-shrink: 0;
+    margin-top: 18px;
+}
 
 /* FOOTER */
 footer {
