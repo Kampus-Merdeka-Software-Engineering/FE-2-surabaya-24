@@ -33,6 +33,10 @@ body{
     background-color: var(--bg-color);
 }
 
+span{
+    color: var(--button-color);
+}
+
 /* Header */
 header {
     position: fixed;
@@ -135,11 +139,13 @@ header {
     align-items: stretch;
     gap: 1.5rem;
     background-image: url(/Asset/bgprofilupper.png);
+    /* background-color: #4A6409; */
 }
 
 .upperleftcolumn{
     float: left;
     width: 100%;
+    /* background-color: #888; */
 }
 
 .upperrightcolumn{
@@ -177,7 +183,8 @@ header {
     color: var(--second-color);
     text-transform: uppercase;
     letter-spacing: 2px;
-    padding-top: 50px;
+    margin-top: 4.188rem;
+    /* padding-top: 50px; */
 }
 
 .profileupper-text h1> span{
@@ -186,13 +193,13 @@ header {
 
 .profileupper-text p {
     width: auto;
-    font-size: 1.2rem;
+    font-size: 1.35rem;
     color: black;
-    margin: 0.5rem 0 1.4rem;
+    margin: 1.25rem 0 1.4rem;
     font-family: 'inter';
     max-width: max-content;
-    margin-right: 50px;
     text-align: justify;
+    margin-right: 50px;
 }
 
 .profileupper-img-1{
@@ -226,6 +233,10 @@ header {
 }
 
 /* section profilecentre "About Us TeavoU" */
+/* .profilecentre{
+    background-color: #888;
+} */
+
 .profilecentre::after {
     content: "";
     display: table;
@@ -234,12 +245,13 @@ header {
 .leftcolumn{
     float: left;
     width: 50%;
+    /* background-color: #4A6409; */
 }
 
 .grid{
     display: flex; 
     gap: 10px;  
-    float: right;
+    float: left;
 }
 .column{
     display: flex;
@@ -294,36 +306,75 @@ header {
 .rightcolumn{
     float: left;
     width: 50%;
+    background-color: #ffffff;
+    /* display: flex; */
 }
-.profilecentrecard {
-    background: #ffffff;
-    padding: 20px;
-    padding-right: 15%;
-    margin-left: 20px;
-    margin-top: 10px;
-    width: 100%;
-}
-.profilecentrecard h3{
+
+.rightcolumn h3 {
     font-size: 2rem;
     color: var(--second-color);
-    letter-spacing: 2px;
+    padding-bottom: 1rem;
 }
 
-span{
-    color: var(--button-color);
-}
+    /* ABOUT-CARD */
+    .about-card {
+        background: #C7FA89;
+        border-radius: 20px;
+        padding: 1.25rem;
+        margin: 1.25rem;
+        width: 100%;
+    }
+    
+    .about-card h3 > span {
+        color: var(--button-color);
+    }
 
-.numberganjil{
-    color: var(--button-color);
-    font-size: 2rem;
-}
-.profilecentrecard span{
-    gap: 1.5rem ;
-}
-.numbergenap{
-    color: var(--main-color);
-    font-size: 2rem;
-}
+    .about-card p {
+        font-family: "inter";
+        font-size: 14px;
+        line-height: 2;
+        color: black;
+    }
+
+    /* VALUE-CARD */
+    .value-card {
+        padding: 1.25rem;
+        margin: 1.25rem;
+        width: 100%;
+    }
+
+    .value-list {
+        display: inline-block;
+        align-items: center;
+    }
+
+    .value-list div {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        line-height: 1.2;
+        gap: 20px;
+    }
+
+    .value-list h5 {
+        text-align: center;
+        color:var(--button-color);
+        font-size: 60px;
+    } 
+
+    .value-list h5 > span {
+        color: var(--second-color);
+    }
+
+    .value-list p {
+        color: black;
+        font-size: 14px;
+        font-family: "inter";
+        word-spacing: 2px;
+        vertical-align: middle;
+    }
+
+
 /* Section teavou team */
 .TeavoUTeam{
     content: "";
