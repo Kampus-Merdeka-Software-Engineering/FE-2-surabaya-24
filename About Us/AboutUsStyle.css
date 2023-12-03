@@ -146,7 +146,7 @@ header {
     margin-left: 70px;
     float: right;
     width: 100%;
-    background-color: brown;
+    /* background-color: brown; */
 }
 
 .uppercolumn{
@@ -154,7 +154,7 @@ header {
     float: right;
     flex-direction: column;
     gap: 17px;
-    background-color: yellowgreen;
+    /* background-color: yellowgreen; */
 }
 
 .uppercolumn-1 img{
@@ -169,7 +169,7 @@ header {
     justify-content: flex-start;
     margin-top: 200px;
     /* margin-left: -10px; */
-    background-color: #4A6409;
+    /* background-color: #4A6409; */
 }
 
 .profileupper-text h1{
@@ -298,6 +298,7 @@ header {
 .profilecentrecard {
     background: #ffffff;
     padding: 20px;
+    padding-right: 15%;
     margin-left: 20px;
     margin-top: 10px;
     width: 100%;
