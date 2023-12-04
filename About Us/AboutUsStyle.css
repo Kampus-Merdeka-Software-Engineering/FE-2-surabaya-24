@@ -233,6 +233,11 @@ header {
 }
 
 /* section profilecentre "About Us TeavoU" */
+.profilecentre {
+    /* margin: 0; */
+    padding: 0;
+}
+
 .profilecentre::after {
     content: "";
     display: table;
@@ -245,7 +250,7 @@ header {
     display: grid;
     gap: 20px;
     /* background-color: #2196F3; */
-    padding: 10px;
+    padding: 0 10px 10px;
 }
   
 .grid-item {
@@ -321,7 +326,7 @@ header {
     grid-row: 1;
 
     float: left;
-    width: 100%;
+    width: 90%;
   }
 
     .grid-container h3 {
@@ -355,7 +360,7 @@ header {
     grid-row: 2;
 
     float: left;
-    width: 100%;
+    width: 90%;
     background-color: #ffffff;
   }
 
@@ -481,7 +486,7 @@ header {
 }
 
 .galleryTeam{
-    min-height: 100vh;
+    min-height: 70vh;
     background: var(--bg-color);
     background-repeat: no-repeat;
     background-size: cover;
@@ -519,6 +524,7 @@ header {
 .slide_galleryTeam {
     display: none;
     width: 100%;
+    height: 260px; /*masih testing*/
 }
 
 .active-galleryTeam { 
@@ -531,7 +537,6 @@ header {
     min-height: auto;
     margin-bottom: 100px;
     background: var(--bg-color);
-    /* codingan css ini dipake atau ga? */
     background-repeat: no-repeat;
     grid-template-columns: repeat(auto-fit,minmax(17rem,auto));
     align-items: center;
@@ -541,8 +546,8 @@ header {
 .card-body img {
     width: 100%;
     height: 250px;
-    padding: 10px 10px 10px 10px ;
-    margin-bottom: 100px;
+    padding: 10px;
+    /* margin-bottom: 100px; */
 }
 
 .dots_galleryTeam {
@@ -551,13 +556,11 @@ header {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 3rem 0 1.4rem;
-    margin-top: -10rem;
+    margin: 2rem 0 0;
 }
 
 .dot_galleryTeam {
     height: 10px;
-
     width: 10px;
     margin: 0 5px;
     border-radius: 50%;
@@ -581,7 +584,6 @@ footer {
     width: 100%;
     text-align: left;
     padding: 50px 50px 30px 50px;
-    margin-top: 80px;
 }
 
 .footer .footer-left,
