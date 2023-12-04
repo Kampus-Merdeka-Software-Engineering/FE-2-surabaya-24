@@ -233,147 +233,212 @@ header {
 }
 
 /* section profilecentre "About Us TeavoU" */
-/* .profilecentre{
-    background-color: #888;
-} */
-
 .profilecentre::after {
     content: "";
     display: table;
+    /* border: ;
+    border: 1px solid black;  */
     clear: both;
 }
-.leftcolumn{
-    float: left;
-    width: 50%;
-    /* background-color: #4A6409; */
-}
 
-.grid{
-    display: flex; 
-    gap: 10px;  
-    float: left;
+.grid-container {
+    display: grid;
+    gap: 20px;
+    /* background-color: #2196F3; */
+    padding: 10px;
 }
-.column{
-    display: flex;
-    float: right;
-    flex-direction: column;
-    gap: 17px;
+  
+.grid-item {
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    padding: 20px;
+    font-size: 30px;
 }
-
-.column-1 img{
-    border-radius: 5px;
-    float: left;
-    justify-content: flex-start;
-    margin-top: 10px;
-}
-
-.image-1 img{
-    width: 224.457px;
-    height: 267.818px;
-    flex-shrink: 0;
-    margin-top: 20px;
-}
-
-.image-2 img{
-    width: 198.951px;
-    height: 230.834px;
-    flex-shrink: 0;
-    margin-top: 15px;
-}
-
-.column-2 img{
-    border-radius: 5px;
-    float: left;
-    justify-content: flex-start;
-    margin-top: 30px;
-}
-
-.image-3 img{
-    width: 227.008px;
-    height: 279.934px;
-    flex-shrink: 0;
-    margin-top: 52px;
-}
-
-.image-4 img{
-    width: 224.457px;
-    height: 267.818px;
-    flex-shrink: 0;
-    margin-top: 18px;
-}
-
-/* rightcolumn section profilecentre */
-.rightcolumn{
-    float: left;
-    width: 50%;
-    background-color: #ffffff;
-    /* display: flex; */
-}
-
-.rightcolumn h3 {
-    font-size: 2rem;
-    color: var(--second-color);
-    padding-bottom: 1rem;
-}
-
-    /* ABOUT-CARD */
-    .about-card {
-        background: #C7FA89;
-        border-radius: 20px;
-        padding: 1.25rem;
-        margin: 1.25rem;
+  
+    .item1 {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+        float: left;
         width: 100%;
     }
+        .grid{
+            display: flex; 
+            gap: 10px;  
+            float: left;
+            width: 100%;
+        }
+        
+        .column{
+            display: flex;
+            float: right;
+            flex-direction: column;
+            gap: 17px;
+        }
+
+        .column-1 img{
+            border-radius: 5px;
+            float: left;
+            justify-content: flex-start;
+            margin-top: 10px;
+        }
+
+            .image-1 img{
+                width: 224.457px;
+                height: 267.818px;
+                flex-shrink: 0;
+                margin-top: 20px;
+            }
+
+            .image-2 img{
+                width: 198.951px;
+                height: 230.834px;
+                flex-shrink: 0;
+                margin-top: 15px;
+            }
+
+        .column-2 img{
+            border-radius: 5px;
+            float: left;
+            justify-content: flex-start;
+            margin-top: 30px;
+        }
+
+            .image-3 img{
+                width: 227.008px;
+                height: 279.934px;
+                flex-shrink: 0;
+                margin-top: 52px;
+            }
+
+            .image-4 img{
+                width: 224.457px;
+                height: 267.818px;
+                flex-shrink: 0;
+                margin-top: 18px;
+            }
+  
+  .item2 {
+    grid-column: 2;
+    grid-row: 1;
+
+    float: left;
+    width: 100%;
+  }
+
+    .grid-container h3 {
+        font-size: 2rem;
+        color: var(--second-color);
+        padding-bottom: 1rem;
+    }
+
+        /* ABOUT-CARD */
+        .about-card {
+            background: #C7FA89;
+            border-radius: 20px;
+            padding: 1.25rem;
+            margin: 3.5rem 1.25rem 0;
+            width: 80%;
+        }
+        
+        .about-card h3 > span {
+            color: var(--button-color);
+        }
+
+        .about-card p {
+            font-family: "inter";
+            font-size: 14px;
+            line-height: 2;
+            color: black;
+        }
+  
+  .item3 {
+    grid-column: 2;
+    grid-row: 2;
+
+    float: left;
+    width: 100%;
+    background-color: #ffffff;
+  }
+
+        /* VALUE-CARD */
+        .value-card {
+            padding: 0 1.25rem 1.25rem;
+            margin: 0 1.25rem 1.25rem;
+            width: 100%;
+        }
     
-    .about-card h3 > span {
+        .value-list {
+            display: inline-block;
+            align-items: center;
+        }
+    
+        .value-list div {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            line-height: 1.2;
+            gap: 20px;
+        }
+    
+        .value-list h5 {
+            text-align: center;
+            color:var(--button-color);
+            font-size: 60px;
+        } 
+    
+        .value-list h5 > span {
+            color: var(--second-color);
+        }
+    
+        .value-list p {
+            color: black;
+            font-size: 14px;
+            font-family: "inter";
+            word-spacing: 2px;
+            vertical-align: middle;
+        }
+  
+.bottomcolumn {
+    display: grid;
+    gap: 20px;
+    padding: 1.25rem 3.125rem;
+}
+        
+.item4 {
+    grid-column: 1 ;
+    grid-row: 1;
+}
+
+.item5 {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+    .visi-card,
+    .misi-card {
+        border: 3px solid #88BE00; 
+        border-radius: 10px;
+        min-height: 40vh;
+        width: 100%;
+    }
+
+    .bottomcolumn h3 {
+        font-size: 2rem;
+        color: var(--second-color);
+        padding: 1.5rem 0;
+        text-align: center;
+    }
+
+    .bottomcolumn h3 > span {
         color: var(--button-color);
     }
 
-    .about-card p {
+    .bottomcolumn p {
+        padding: 0 2rem;
         font-family: "inter";
-        font-size: 14px;
+        font-size: 16px;
         line-height: 2;
         color: black;
     }
-
-    /* VALUE-CARD */
-    .value-card {
-        padding: 1.25rem;
-        margin: 1.25rem;
-        width: 100%;
-    }
-
-    .value-list {
-        display: inline-block;
-        align-items: center;
-    }
-
-    .value-list div {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        line-height: 1.2;
-        gap: 20px;
-    }
-
-    .value-list h5 {
-        text-align: center;
-        color:var(--button-color);
-        font-size: 60px;
-    } 
-
-    .value-list h5 > span {
-        color: var(--second-color);
-    }
-
-    .value-list p {
-        color: black;
-        font-size: 14px;
-        font-family: "inter";
-        word-spacing: 2px;
-        vertical-align: middle;
-    }
-
 
 /* Section teavou team */
 .TeavoUTeam{
