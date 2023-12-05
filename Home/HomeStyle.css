@@ -744,7 +744,6 @@ header {
 
 .dot_spill {
     height: 10px;
-
     width: 10px;
     margin: 0 5px;
     border-radius: 50%;
@@ -792,7 +791,7 @@ header {
 
 /* FOOTER */
 footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
 }
 
@@ -905,7 +904,7 @@ footer {
 
 .footer .footer-center p span {
     color: var(--bg-color);
-    display: block;
+    display: flex;
     /* font-weight: normal; */
     font-size: 14px;
     line-height: 2;
@@ -941,55 +940,345 @@ footer {
     .footer .footer-left,
     .footer .footer-center,
     .footer .footer-right {
-        display: block;
+        display: flex;
         width: 100%;
         margin-bottom: 40px;
         text-align: left;
     }
 }
 
+.dropdown-menu{
+    position: absolute;
+    right: 0rem;
+    top: 10px;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
+}
+
+.dropdown-menu.open{
+    height: 240px;
+}
+
+.dropdown-menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'inter', sans-serif;
+    font-weight: bold;
+}
+
 /* Global styles remain unchanged */
 
-/* Media Query for Small Screens */
+/* ===================================== */
+/* Responsive Breakpoint Max Width 768px */
+/* ===================================== */
 @media only screen and (max-width: 768px) {
-    section {
-        padding: 30px;
+    section{
+        max-width: 768px;
     }
 
     header {
-        padding: 20px 0.5rem;
-    }
-
-    .navbar {
-        flex-direction: column;
-        text-align: center;
+        position: fixed;
+        width: 100%;
+        height: 40px;
+        top: 0;
+        right: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
         align-items: center;
+        padding: 35px 0.9rem;
+        background-color: #ffffff;
+    }
+  
+    .navbar{
+        display: none;
+    }
+  
+    #menu-icon {
+        color: var(--second-color);
+        cursor: pointer;
+        display: flex;
+        margin: 0 0 0 29rem;
+        padding: 0;
+        flex-grow: 1;
+        height: 20px;
     }
 
-    .navbar a {
-        padding: 8px 10px;
-        margin: 5px;
+    .home{
+        position: flex;
+        grid-template-columns: 1fr; /* Make it a single column on small screens */
+        text-align: center; /* Center-align text on small screens */
+        margin-top: -190px;
+        max-width: 768px;
     }
 
-    .home-img,
-    .BgHome,
-    .home-GreenTea {
+    .home-img img{
+        display: inline;
+        float: right;
+        justify-content: right;
+        width: 200px;
+        position: absolute;
+        top: -70px;
+        right: -70px;
+    }
+
+    .BgHome img, .home-GreenTea img{
         display: none;
     }
 
-    .home-text h1 {
-        font-size: 3rem;
+    .home h1, #Beckons{
+        display: absolute;
+        font-size: 32px;
+        text-align: justify;
+        margin-left: -60px;        
     }
 
-    /* Add more responsive styles as needed */
+    .home p{
+        text-align: justify;
+        font-size: 12px;
+        margin-left: -55px;
+        position: flex;
+        max-width: calc(50rem - 10px);
+    }
+
+    .dropdown-menu{
+        display: flex;
+    }
+
+    .best-product{
+        margin-top: -450px;
+    }
+
+    .text-best h2{
+        display: flex;
+        font-size: 24px;
+        text-align: center;
+        margin-top: 150px;
+    }
+
+    .item1{
+        display: flex;
+        width: 280px;
+        height: 190px;
+        flex-shrink: 0;
+        margin-left: -70px;
+    }
+
+    .item1 img{
+        display: flex;
+        align-items: center;
+    }
+
+    .item1 h3{
+        font-size: 15px;
+        margin-top: -75px;
+    }
+
+    .item1 p{
+        width: 130px;
+        height: 18.187px;
+        flex-shrink: 0;
+        font-size: 7px;
+        margin-left: -90px;
+        margin-top: 15px;
+        max-width: calc(50rem - 100px);
+    }
+
+    .item2, .item3{
+        display: none;
+    }
+
+    .label-best{
+        width: 70px;
+        height: 20px;
+        flex-shrink: 0;
+        font-size: 10px;
+        margin-left: -122px;
+        margin-top: 130px;
+    }
+
+    /* Buatkan Dots untuk Best Product */
+
+    /* Tea Festival */
+    .festival {
+        margin-top: 100px;
+    }
+    
+    .textFestival {
+        float: right;
+        width: 150px;
+        height: 20rem;
+        margin-right: 2rem;
+        margin-top: -26rem;
+    }
+    
+    .festival img {
+        width: 300px;
+        height: 210px;
+        flex-shrink: 0;
+        position: relative;
+        left: -70px;
+        top: 0;
+        margin-left: 10px;
+        margin-top: -110px;
+        border-radius: 5px 0 0 5px;
+        display: block;
+    }
+    
+    .textFestival h3{
+        font-size: 32px;
+        text-align: center;
+        margin-top: -200px;
+        margin-left: 30px;
+        width: 100%;
+    }
+    
+    .textFestival h5{
+        display: flex;
+        font-size: 15px;
+        margin-left: 35px;
+        width: 200px;
+    }
+    
+    .textFestival p {
+        width: 300px;
+        flex-shrink: 0;
+        font-size: 12px;
+        margin-top: 10px;
+        margin-left: -50px;
+        max-width: calc(50rem - 10px);
+    }
+
+    .quiz {
+        margin-top: -250px;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        padding-top: 150px; /* Adjust the value to move the quiz down */
+    }
+
+    .quiz h2 {
+        text-align: center; /* Center the text horizontally */
+        padding-bottom: 450px;
+        color: var(--main-color);
+        font-size: 35px;
+    }
+
+    .tab {
+        position: absolute;
+        right: 30px;
+        display: flex;
+        flex-direction: column; /* Stack buttons vertically */
+        margin-top: -420px;
+    }
+
+/* Button Tab */
+.tab button,
+.tab button img {
+    border-radius: 100%;
+    border: none;
+    outline: none;
+    width: 107px;
+    height: 107px;
+    margin-bottom: 40px; /* Adjust as needed to create vertical spacing */
+    display: block;
 }
 
-/* Media Query for Medium Screens */
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-    /* Add specific styles for medium screens */
+/* button on hover */
+.tab button:hover {
+    background-color:#95E8FF;
+    border: none;
+    outline: none;
 }
 
-/* Media Query for Large Screens */
-@media only screen and (min-width: 1025px) {
-    /* Add specific styles for large screens */
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #95E8FF;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative; /* Set position to relative */
+}
+
+.tab button.active::before {
+    content: ""; /* Add an empty content */
+    position: absolute; /* Set position to absolute */
+    top: 50%; /* Align to the middle vertically */
+    left: 50%; /* Align to the middle horizontally */
+    transform: translate(-50%, -50%); /* Center the background */
+    width: 110px; /* Cover the entire button */
+    height: 110px;
+    border-radius: 100%;
+    border: none;
+    outline: none;
+    box-shadow: 2px 2px 8px 2px #95E8FF;
+}
+
+/* tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+}
+
+.tabcontent img {
+    position: absolute;
+    height: 518px;
+    width: 533px;
+    left: -60px;
+    margin-top: -420px;
+    flex-direction: column; /* Stack buttons vertically */
+
+}
+
+.box {
+    transform: translateY(-50%);
+    text-align: center; /* Center the text horizontally */
+    font-size: 20px;
+    margin-top: -270px;
+}
+
+.box h4 {
+    font-style: initial;
+    font-size: 25px;
+    color: var(--button-color);
+    max-width: calc(100% - 224px); /* Ukuran gambar + padding yang diberikan (474px + 50px padding kiri) */
+    margin-right: 24px; /* Memberikan jarak dari tepi gambar */
+    text-align: center; /* Menjadikan teks menjadi justify content */
+
+}
+
+.box p {
+    font-family: 'inter', sans-serif;
+    font-style: initial;
+    font-size: 15px;
+    padding-left: 380px;
+    max-width: calc(100% - 124px); /* Ukuran gambar + padding yang diberikan (474px + 50px padding kiri) */
+    margin-right: 24px; /* Memberikan jarak dari tepi gambar */
+    text-align: justify; /* Menjadikan teks menjadi justify content */
+}
+
+.box button{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: var(--button-color);
+    outline: none;
+    border: none;
+    font-size: 17px;
+    font-display: center;
+    margin-left: 700px; 
+    margin-top: 100px;
+}
+    
 }
