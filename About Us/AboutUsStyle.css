@@ -234,216 +234,192 @@ header {
 
 /* section profilecentre "About Us TeavoU" */
 .profilecentre {
-    /* margin: 0; */
-    padding: 0;
-}
-
-.profilecentre::after {
-    content: "";
+    width: 100%;
     display: table;
-    /* border: ;
-    border: 1px solid black;  */
-    clear: both;
 }
 
-.grid-container {
-    display: grid;
-    gap: 20px;
-    /* background-color: #2196F3; */
-    padding: 0 10px 10px;
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
 }
-  
-.grid-item {
-    /* background-color: rgba(255, 255, 255, 0.8); */
+
+.flex-item-left {
+    /* background-color: #f1f1f1; */
+    padding: 5px;
+    flex: 50%;
+}
+
+.grid{
+    display: flex; 
+    gap: 10px;  
+    float: left;
+}
+
+.column{
+    display: table;
+    float: right;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.column-1 img{
+    border-radius: 5px;
+    float: left;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.image-1 img{
+    width: 224.457px;
+    height: 267.818px;
+    margin-top: 20px;
+}
+
+.image-2 img{
+    width: 198.951px;
+    height: 230.834px;
+    margin-top: 15px;
+    margin-left: 25px;
+}
+
+.column-2 img{
+    border-radius: 5px;
+    float: left;
+    justify-content: flex-start;
+    margin-top: 30px;
+}
+
+.image-3 img{
+    width: 227.008px;
+    height: 279.934px;
+    margin-top: 52px;
+}
+
+.image-4 img{
+    width: 224.457px;
+    height: 267.818px;
+    margin-top: 18px;
+}
+
+.flex-item-right {
+    padding: 10px;
+    flex: 50%;
+} 
+/* commitmentcard */
+.commitmentcard {
+    /* background:#804c88; */
+    background: #C7FA89;
+    border-radius: 15px;
+    padding: 1.25rem;
+    margin: 3.5rem 1.25rem 0;
+    width: 100%;
+}
+.commitmentcard h3{
+    align-items: flex-start;
+    font-size: 2rem;
+    color: var(--second-color);
+    letter-spacing: 2px;
+}
+.commitmentcard p{
+    padding-top: 10px;
+    font-family: "inter";
+    font-size: 16px;
+    line-height: 2;
+    color: black;
+}
+
+/* VALUE-CARD */
+.value-card {
+    /* padding: 0 1.25rem 1.25rem;
+    margin: 0 1.25rem 1.25rem;
+    width: 100%; */
+    
     padding: 20px;
-    font-size: 30px;
+    margin-left: 20px;
+    margin-top: 30px;
+    width: 100%;
 }
-  
-    .item1 {
-        grid-column: 1;
-        grid-row: 1 / span 2;
-        float: left;
-        width: 100%;
-    }
-        .grid{
-            display: flex; 
-            gap: 10px;  
-            float: left;
-            width: 100%;
-        }
-        
-        .column{
-            display: flex;
-            float: right;
-            flex-direction: column;
-            gap: 17px;
-        }
+.value-card h3{
+    align-items: flex-start;
+    font-size: 2rem;
+    color: var(--second-color);
+    letter-spacing: 2px;
+}
 
-        .column-1 img{
-            border-radius: 5px;
-            float: left;
-            justify-content: flex-start;
-            margin-top: 10px;
-        }
+.value-list {
+    display: inline-block;
+    align-items: center;
+}
 
-            .image-1 img{
-                width: 224.457px;
-                height: 267.818px;
-                flex-shrink: 0;
-                margin-top: 20px;
-            }
-
-            .image-2 img{
-                width: 198.951px;
-                height: 230.834px;
-                flex-shrink: 0;
-                margin-top: 15px;
-            }
-
-        .column-2 img{
-            border-radius: 5px;
-            float: left;
-            justify-content: flex-start;
-            margin-top: 30px;
-        }
-
-            .image-3 img{
-                width: 227.008px;
-                height: 279.934px;
-                flex-shrink: 0;
-                margin-top: 52px;
-            }
-
-            .image-4 img{
-                width: 224.457px;
-                height: 267.818px;
-                flex-shrink: 0;
-                margin-top: 18px;
-            }
-  
-  .item2 {
-    grid-column: 2;
-    grid-row: 1;
-
-    float: left;
-    width: 90%;
-  }
-
-    .grid-container h3 {
-        font-size: 2rem;
-        color: var(--second-color);
-        padding-bottom: 1rem;
-    }
-
-        /* ABOUT-CARD */
-        .about-card {
-            background: #C7FA89;
-            border-radius: 20px;
-            padding: 1.25rem;
-            margin: 3.5rem 1.25rem 0;
-            width: 80%;
-        }
-        
-        .about-card h3 > span {
-            color: var(--button-color);
-        }
-
-        .about-card p {
-            font-family: "inter";
-            font-size: 14px;
-            line-height: 2;
-            color: black;
-        }
-  
-  .item3 {
-    grid-column: 2;
-    grid-row: 2;
-
-    float: left;
-    width: 90%;
-    background-color: #ffffff;
-  }
-
-        /* VALUE-CARD */
-        .value-card {
-            padding: 0 1.25rem 1.25rem;
-            margin: 0 1.25rem 1.25rem;
-            width: 100%;
-        }
-    
-        .value-list {
-            display: inline-block;
-            align-items: center;
-        }
-    
-        .value-list div {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            line-height: 1.2;
-            gap: 20px;
-        }
-    
-        .value-list h5 {
-            text-align: center;
-            color:var(--button-color);
-            font-size: 60px;
-        } 
-    
-        .value-list h5 > span {
-            color: var(--second-color);
-        }
-    
-        .value-list p {
-            color: black;
-            font-size: 14px;
-            font-family: "inter";
-            word-spacing: 2px;
-            vertical-align: middle;
-        }
-  
-.bottomcolumn {
-    display: grid;
+.value-list div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    line-height: 1.2;
     gap: 20px;
-    padding: 1.25rem 3.125rem;
-}
-        
-.item4 {
-    grid-column: 1 ;
-    grid-row: 1;
 }
 
-.item5 {
-    grid-column: 2;
-    grid-row: 1;
+.value-list h5 {
+    text-align: center;
+    color:var(--button-color);
+    font-size: 60px;
+} 
+
+.value-list h5 > span {
+    color: var(--second-color);
 }
 
-    .visi-card,
-    .misi-card {
+.value-list p {
+    color: black;
+    font-size: 14px;
+    font-family: "inter";
+    word-spacing: 2px;
+    vertical-align: middle;
+}
+
+/* bottomcentre start */
+.bottomcentre {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+.bottomcentre-left {
+    /* background-color: #f1f1f1; */
+    padding: 20px;
+    flex: 50%;
+}
+.bottomcentre-right {
+    padding: 20px;
+    flex: 50%;
+} 
+
+.bottomcentre h3 {
+    font-size: 2rem;
+    color: var(--second-color);
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.bottomcentre h3 > span {
+    color: var(--button-color);
+}
+
+.bottomcentre p {
+    padding: 0 2rem;
+    font-family: "inter";
+    font-size: 16px;
+    line-height: 2;
+    color: black;
+}
+
+.visi-card,.misi-card {
         border: 3px solid #88BE00; 
         border-radius: 10px;
         min-height: 40vh;
         width: 100%;
     }
 
-    .bottomcolumn h3 {
-        font-size: 2rem;
-        color: var(--second-color);
-        padding: 1.5rem 0;
-        text-align: center;
-    }
-
-    .bottomcolumn h3 > span {
-        color: var(--button-color);
-    }
-
-    .bottomcolumn p {
-        padding: 0 2rem;
-        font-family: "inter";
-        font-size: 16px;
-        line-height: 2;
-        color: black;
-    }
 
 /* Section teavou team */
 .TeavoUTeam{
@@ -735,5 +711,11 @@ footer {
     .leftcolumn, .rightcolumn {   
     width: 100%;
     padding: 0;
+    }
+}
+@media (max-width:768px) {
+    .flex-item-right, .flex-item-left, .bottomcentre-left, .bottomcentre-right {
+    flex: 60%;
+      /* width: 50%; */
     }
 }
