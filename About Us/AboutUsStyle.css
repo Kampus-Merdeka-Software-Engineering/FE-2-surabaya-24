@@ -178,9 +178,8 @@ header {
 .profileupper-text h1{
     font-size: 3.4rem;
     color: var(--second-color);
-    text-transform: uppercase;
     letter-spacing: 2px;
-    margin-top: 5rem;
+    margin-top: 4.188rem;
     /* padding-top: 50px; */
 }
 
@@ -190,11 +189,11 @@ header {
 
 .profileupper-text p {
     width: auto;
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     color: black;
     margin: 1.25rem 0 1.4rem;
     font-family: 'inter';
-    max-width: 40rem;
+    max-width: max-content;
     text-align: justify;
     margin-right: 50px;
 }
@@ -312,7 +311,7 @@ header {
     border-radius: 15px;
     padding: 1.25rem;
     margin: 3.5rem 1.25rem 0;
-    width: 100%;
+    width: 80%;
 }
 .commitmentcard h3{
     align-items: flex-start;
@@ -337,7 +336,7 @@ header {
     padding: 20px;
     margin-left: 20px;
     margin-top: 30px;
-    width: 100%;
+    width: 80%;
 }
 .value-card h3{
     align-items: flex-start;
@@ -347,41 +346,44 @@ header {
 }
 
 .value-list {
-    display: inline-block;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
 }
 
 .value-list div {
-    flex: 1;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     line-height: 1.2;
-    gap: 20px;
+    gap: 5px 20px;
+    margin-bottom: 20px;
 }
+.value-list h6 {
+    text-align: center;
+    color:var(--button-color);
+    font-size: 25px;
+} 
 
+.value-list h6 > span {
+    color: var(--second-color);
+}
 .value-list h5 {
     text-align: center;
     color:var(--button-color);
-    font-size: 2rem;
+    font-size: 35px;
 } 
 
 .value-list h5 > span {
     color: var(--second-color);
 }
 
-.value-list h6 {
-    color: var(--button-color);
-    font-size: 1.25rem;
-}
-
-.value-list h6 > span {
-    color: var(--second-color)
-}
-
 .value-list p {
-    color:black, regular;
-    font-size: 16px;
-    font-family: Inter;
+    padding-left: 40px;
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "inter";
     word-spacing: 2px;
     vertical-align: middle;
 }
@@ -406,7 +408,7 @@ header {
 .bottomcentre h3 {
     font-size: 2rem;
     color: var(--second-color);
-    padding: 1.5rem 0;
+    padding-top: 1.5rem ;
     text-align: center;
 }
 
@@ -415,7 +417,7 @@ header {
 }
 
 .bottomcentre p {
-    padding: 0 2rem;
+    padding: 2rem;
     font-family: "inter";
     font-size: 16px;
     line-height: 2;
@@ -425,7 +427,7 @@ header {
 .visi-card,.misi-card {
         border: 3px solid #88BE00; 
         border-radius: 10px;
-        min-height: 25vh;
+        min-height: 40vh;
         width: 100%;
     }
 
@@ -761,6 +763,7 @@ footer {
     }
     .TeavoUTeamcard{
         width: 80%;
+        gap: 20px;
     }
     .TeavoUTeamcard-left, .TeavoUTeamcard-right{
         flex-wrap: wrap;
