@@ -114,13 +114,7 @@ header {
     background-color: var(--button-color);
 } */
 
-#menu-icon {
-    color: var(--second-color);
-    font-size: 24px;
-    z-index: 100001;
-    cursor: pointer;
-    display: none;
-}
+
 
 
 /* Home */
@@ -183,7 +177,7 @@ header {
     font-size: 0.938rem;
     color: black;
     margin: 0.5rem 0 1.4rem;
-    font-family: inter;
+    font-family: "inter";
     max-width: calc(100% - 724px); /* Ukuran gambar + padding yang diberikan (474px + 50px padding kiri) */
     margin-right: 24px; /* Memberikan jarak dari tepi gambar */
     text-align: justify; /* Menjadikan teks menjadi justify content */
@@ -422,7 +416,7 @@ header {
 }
 
 .textFestival h3{
-    font-family: inter;
+    font-family: 'inter';
     font-style: initial;
     font-size: 30px;
     color: var(--main-color);
@@ -946,48 +940,18 @@ footer {
     }
 }
 
-.dropdown-menu{
-    position: absolute;
-    right: 0rem;
-    top: 10px;
-    width: 300px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
-}
 
-.dropdown-menu.open{
-    height: 240px;
-}
-
-.dropdown-menu li{
-    padding: 0.7rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-family: 'inter', sans-serif;
-    font-weight: bold;
-}
 
 /* Global styles remain unchanged */
 
 /* ===================================== */
 /* Responsive Breakpoint Max Width 768px */
 /* ===================================== */
-@media only screen and (max-width: 768px) {
-    section{
-        max-width: 768px;
-    }
-
+@media only screen and (max-width: 767px) {
     header {
         position: fixed;
         width: 100%;
-        height: 40px;
+        height: 59px;
         top: 0;
         right: 0;
         z-index: 1000;
@@ -995,13 +959,13 @@ footer {
         justify-content: space-between;
         align-items: center;
         padding: 35px 0.9rem;
-        background-color: #ffffff;
+        background-color: #4A6409;
     }
-  
+    
     .navbar{
         display: none;
     }
-  
+    
     #menu-icon {
         color: var(--second-color);
         cursor: pointer;
@@ -1011,65 +975,77 @@ footer {
         flex-grow: 1;
         height: 20px;
     }
+    
+    .logo{
+        bottom: 20rem;
+    }
 
+    /* ===== HOME ===== */
     .home{
-        position: flex;
-        grid-template-columns: 1fr; /* Make it a single column on small screens */
-        text-align: center; /* Center-align text on small screens */
-        margin-top: -190px;
-        max-width: 768px;
+        background-position: center;
+        gap: 1.5rem;
+        position: relative;
     }
 
-    .home-img img{
-        display: inline;
-        float: right;
-        justify-content: right;
-        width: 200px;
+    .home-img{
+        display: inline-block;
+        width: 68%;
         position: absolute;
-        top: -70px;
-        right: -70px;
+        right: 0.2rem;
+        display: flexbox;
+        z-index: 2;
+        top: 1.8rem;
+        right: -1.7rem;
     }
 
-    .BgHome img, .home-GreenTea img{
+    .BgHome{
         display: none;
     }
 
+    .home-GreenTea{
+        position: absolute;
+        width: 17%;
+        left: 0.1rem;
+        top: 15rem;
+    }
+
     .home h1, #Beckons{
-        display: absolute;
-        font-size: 32px;
-        text-align: justify;
-        margin-left: -60px;        
+        font-size: 2.2rem;
+        text-align: left;
+        left: -4.5rem;
+        position: relative;   
+        top: -7rem;     
     }
 
-    .home p{
-        text-align: justify;
-        font-size: 12px;
-        margin-left: -55px;
-        position: flex;
-        max-width: calc(50rem - 10px);
+    .home-text p{
+        display: inline-block;
+        position: relative;
+        text-align: center;
+        max-width: 100%;
+        left: -2rem;
+        top: -6rem;
     }
 
-    .dropdown-menu{
-        display: flex;
-    }
-
+    /* ===== Best Product ===== */
     .best-product{
-        margin-top: -450px;
+        margin-top: -6rem;
     }
 
     .text-best h2{
         display: flex;
+        position: relative;
         font-size: 24px;
         text-align: center;
-        margin-top: 150px;
+        top: -8rem;
     }
 
     .item1{
         display: flex;
-        width: 280px;
-        height: 190px;
-        flex-shrink: 0;
-        margin-left: -70px;
+        position: relative;
+        width: 50%;
+        height: 40%;
+        margin-left: -5.5rem;
+        top: -9rem;
     }
 
     .item1 img{
@@ -1083,7 +1059,7 @@ footer {
     }
 
     .item1 p{
-        width: 130px;
+        width: 8.3rem;
         height: 18.187px;
         flex-shrink: 0;
         font-size: 7px;
@@ -1092,192 +1068,49 @@ footer {
         max-width: calc(50rem - 100px);
     }
 
-    .item2, .item3{
-        display: none;
-    }
-
     .label-best{
-        width: 70px;
-        height: 20px;
+        width: 5rem;
+        height: auto;
         flex-shrink: 0;
-        font-size: 10px;
+        font-size: 0.7rem;
         margin-left: -122px;
         margin-top: 130px;
     }
 
-    /* Buatkan Dots untuk Best Product */
+    .item2, .item3{
+        display: none;
+    }
+    
+    /* ===== Festival ==== */
+    .festival{
+    }
+    
+    .textFestival{
 
-    /* Tea Festival */
-    .festival {
-        margin-top: 100px;
     }
-    
-    .textFestival {
-        float: right;
-        width: 150px;
-        height: 20rem;
-        margin-right: 2rem;
-        margin-top: -26rem;
+
+    .festival img{
+        display: flex;
+        width: 200%;
+        height: auto;
+        align-items: center;  
+        right: 3rem;  
     }
-    
-    .festival img {
-        width: 300px;
-        height: 210px;
-        flex-shrink: 0;
+
+    .festival h3{
         position: relative;
-        left: -70px;
-        top: 0;
-        margin-left: 10px;
-        margin-top: -110px;
-        border-radius: 5px 0 0 5px;
-        display: block;
-    }
-    
-    .textFestival h3{
-        font-size: 32px;
+        display: flex;
+        max-width: 100%;
+        font-size: 2rem;
         text-align: center;
-        margin-top: -200px;
-        margin-left: 30px;
-        width: 100%;
-    }
-    
-    .textFestival h5{
-        display: flex;
-        font-size: 15px;
-        margin-left: 35px;
-        width: 200px;
-    }
-    
-    .textFestival p {
-        width: 300px;
-        flex-shrink: 0;
-        font-size: 12px;
-        margin-top: 10px;
-        margin-left: -50px;
-        max-width: calc(50rem - 10px);
+        left: -5rem;
     }
 
-    .quiz {
-        margin-top: -250px;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        padding-top: 150px; /* Adjust the value to move the quiz down */
+    .festival h5{
+
     }
 
-    .quiz h2 {
-        text-align: center; /* Center the text horizontally */
-        padding-bottom: 450px;
-        color: var(--main-color);
-        font-size: 35px;
+    .festival p{
+
     }
-
-    .tab {
-        position: absolute;
-        right: 30px;
-        display: flex;
-        flex-direction: column; /* Stack buttons vertically */
-        margin-top: -420px;
-    }
-
-/* Button Tab */
-.tab button,
-.tab button img {
-    border-radius: 100%;
-    border: none;
-    outline: none;
-    width: 107px;
-    height: 107px;
-    margin-bottom: 40px; /* Adjust as needed to create vertical spacing */
-    display: block;
-}
-
-/* button on hover */
-.tab button:hover {
-    background-color:#95E8FF;
-    border: none;
-    outline: none;
-}
-
-/* Create an active/current tablink class */
-.tab button.active {
-    background-color: #95E8FF;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    position: relative; /* Set position to relative */
-}
-
-.tab button.active::before {
-    content: ""; /* Add an empty content */
-    position: absolute; /* Set position to absolute */
-    top: 50%; /* Align to the middle vertically */
-    left: 50%; /* Align to the middle horizontally */
-    transform: translate(-50%, -50%); /* Center the background */
-    width: 110px; /* Cover the entire button */
-    height: 110px;
-    border-radius: 100%;
-    border: none;
-    outline: none;
-    box-shadow: 2px 2px 8px 2px #95E8FF;
-}
-
-/* tab content */
-.tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border-top: none;
-}
-
-.tabcontent img {
-    position: absolute;
-    height: 518px;
-    width: 533px;
-    left: -60px;
-    margin-top: -420px;
-    flex-direction: column; /* Stack buttons vertically */
-
-}
-
-.box {
-    transform: translateY(-50%);
-    text-align: center; /* Center the text horizontally */
-    font-size: 20px;
-    margin-top: -270px;
-}
-
-.box h4 {
-    font-style: initial;
-    font-size: 25px;
-    color: var(--button-color);
-    max-width: calc(100% - 224px); /* Ukuran gambar + padding yang diberikan (474px + 50px padding kiri) */
-    margin-right: 24px; /* Memberikan jarak dari tepi gambar */
-    text-align: center; /* Menjadikan teks menjadi justify content */
-
-}
-
-.box p {
-    font-family: 'inter', sans-serif;
-    font-style: initial;
-    font-size: 15px;
-    padding-left: 380px;
-    max-width: calc(100% - 124px); /* Ukuran gambar + padding yang diberikan (474px + 50px padding kiri) */
-    margin-right: 24px; /* Memberikan jarak dari tepi gambar */
-    text-align: justify; /* Menjadikan teks menjadi justify content */
-}
-
-.box button{
-    width: 100px;
-    height: 30px;
-    border-radius: 5px;
-    color: #ffffff;
-    background-color: var(--button-color);
-    outline: none;
-    border: none;
-    font-size: 17px;
-    font-display: center;
-    margin-left: 700px; 
-    margin-top: 100px;
-}
-    
 }
