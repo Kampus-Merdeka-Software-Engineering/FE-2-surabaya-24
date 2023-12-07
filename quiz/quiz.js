@@ -27,33 +27,28 @@ let questions = [
        answers: [
            {option: "matcha", answer: false},
            {option: "sado", answer: true},
-           {option: "chasen", answer: false},
-           {option: "mochi", answer: false},
        ]
    },
    {
-
-       question: "which European country that has an obsession with having tea in the afternoon?",
-       answers: [
-           {option: "Swedish", answer: false},
-           {option: "France", answer: false},
-           {option: "England", answer: true},
-           {option: "the Netherlands", answer: false}
-       ]
+        question: "which European country that has an obsession with having tea in the afternoon?",
+        answers: [
+            {option: "France", answer: false},
+            {option: "England", answer: true},
+        ]
+    },
+   {
+        question: "The tea brewed with various aromatic spices is called Pu-erh tea",
+        answers: [
+            {option: "True", answer: false},
+            {option: "False", answer: true},
+        ]
    },
    {
-    question: "The tea brewed with various aromatic spices is called Pu-erh tea",
-    answer: [
-        {option: "True", answer: false},
-        {option: "false", answer: true}
-    ]
-   },
-   {
-    question: "Genmaicha is a 'popcorn' tea from Japan",
-    answer: [
-        {option: "True", answer:true},
-        {option: "Falsa", answer:false}
-    ]
+        question: "Genmaicha is a 'popcorn' tea from Japan",
+        answers: [
+            {option: "True", answer: true},
+            {option: "False", answer: false},
+        ]
    }
 ]
 
@@ -71,12 +66,12 @@ function beginQuiz() {
     trueBtn.innerHTML = questions[currentQuestion].answers[0].option;
     trueBtn.onclick = () => {
         if(questions[currentQuestion].answers[0].answer) {
-            if(score < 3) {
+            if(score < 5) {
                 score++;
             }
         }
         userScore.innerHTML = score;
-        if(currentQuestion < 2) {
+        if(currentQuestion < 5) {
             next();
         }
     }
@@ -84,12 +79,12 @@ function beginQuiz() {
     falseBtn.innerHTML = questions[currentQuestion].answers[1].option;
     falseBtn.onclick = () => {
         if(questions[currentQuestion].answers[1].answer) {
-            if(score < 3) {
+            if(score < 5) {
                 score++;
             }
         }
         userScore.innerHTML = score;
-        if(currentQuestion < 2) {
+        if(currentQuestion < 5) {
             next();
         }
     }
@@ -115,7 +110,7 @@ function restart() {
 /*function next to jump next questions*/
 function next() {
     currentQuestion++;
-    if(currentQuestion >= 2) {
+    if(currentQuestion >= 4) {
         nextBtn.classList.add("hide");
         prevBtn.classList.remove("hide");
     }
@@ -123,12 +118,12 @@ function next() {
     trueBtn.innerHTML = questions[currentQuestion].answers[0].option;
     trueBtn.onclick = () => {
         if(questions[currentQuestion].answers[0].answer) {
-            if(score < 3) {
+            if(score < 5) {
                 score++;
             }
         }
         userScore.innerHTML = score;
-        if(currentQuestion < 2) {
+        if(currentQuestion < 4) {
             next();
         }
     }
@@ -136,13 +131,13 @@ function next() {
     falseBtn.innerHTML = questions[currentQuestion].answers[1].option;
     falseBtn.onclick = () => {
         if(questions[currentQuestion].answers[1].answer) {
-            if(score < 3) {
+            if(score < 5) {
                 score++;
             }
  
         }
         userScore.innerHTML = score;
-        if(currentQuestion < 2) {
+        if(currentQuestion < 4) {
             next();
         }
     }
@@ -161,12 +156,12 @@ function prev() {
     trueBtn.innerHTML = questions[currentQuestion].answers[0].option;
     trueBtn.onclick = () => {
         if(questions[currentQuestion].answers[0].answer) {
-            if(score < 3) {
+            if(score < 5) {
                 score++;
             }
         }
         userScore.innerHTML = score;
-        if(currentQuestion < 2) {
+        if(currentQuestion < 4) {
             next();
         }
     }
@@ -175,12 +170,12 @@ function prev() {
     falseBtn.innerHTML = questions[currentQuestion].answers[1].option;
     falseBtn.onclick = () => {
         if(questions[currentQuestion].answers[1].answer) {
-            if(score < 3) {
+            if(score < 5) {
                 score++;
             }
         }
         userScore.innerHTML = score;
-        if(currentQuestion < 2) {
+        if(currentQuestion < 4) {
             next();
         }
     }
@@ -195,6 +190,6 @@ function submit() {
     submitBtn.classList.add("hide");
     trueBtn.classList.add("hide");
     falseBtn.classList.add("hide");   
-    questionText.innerHTML ="Congratulations on enhancing your tea knowledge! Did you get it all right? if not go back to our History of Tea to learn more! Like the wise man has always says... let the creativi-tea flows~"
+    questionText.innerHTML ="Congratulations on enhancing your tea knowledge! Did you get it all right? if not go back to our Product page to learn more! Like the wise man has always says... let the creativi-tea flows~"
  }
 

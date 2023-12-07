@@ -4,7 +4,8 @@
 *{
     font-family: 'Grandstander', cursive;
     margin: 0;
-    padding: 0;
+    padding-left: 10px;
+    padding-right: 10px;
     box-sizing: border-box;
     scroll-padding-top: 4rem;
     scroll-behavior: smooth;
@@ -19,6 +20,79 @@
     --second-color:#4A6409;
     --bg-color:#FFFFFF;
 }
+
+
+header{
+    position: fixed;
+    width: 100%;
+    height: 59px;
+    top:0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 0.9rem;
+    background-color: #ffffff;
+  }
+  
+  .logo img{
+    width: 90px;
+  }
+
+
+  .navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+  }
+  
+  .navbar a {
+    padding: 8px 20px;
+    color: var(--second-color);
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'inter', sans-serif;
+    font-weight: bold;
+    margin: 0 10px;
+    position: relative;
+  }
+  
+  .navbar a:hover {
+    transition: 0.2s all linear;
+    border-bottom: 2px solid var(--button-color);
+    color: var(--button-color);
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar a:hover,
+  .active_nav {
+    transition: 0.2s all linear;
+    background-size: auto;
+    border-bottom: 2px solid var(--button-color);
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'inter', sans-serif;
+    font-weight: bold;
+    padding: 8px;
+    margin: 0 2rem;
+  }
+  
+  .active_nav a {
+    color: var(--button-color);
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background-size: auto;
+  }
+
 /*background*/
 body {
     background: linear-gradient(to bottom, #628900, #99BC43, #97C620);
@@ -34,7 +108,7 @@ body {
     width: 80vw;
     max-width: 80%;
     background-color: beige;
-    height: 60vh;
+    height: 50vh;
     box-shadow: 0 0 5px 4px;
     display: flex;
     flex-direction: column;
@@ -44,10 +118,18 @@ body {
     text-align: center;
 }
 
+#question-text {
+    padding-left: 50px;
+    padding-right: 50px;
+    
+}
+
 /*score view*/
 .score {
-    font-size: large;
+    font-size:xx-large;
     font-weight: bold;
+    padding-bottom:10px;
+    margin-top:50px;;
 }
  
 #user-score {
@@ -73,7 +155,7 @@ body {
 
 /*button control*/
 .button {
-    font-size: large;
+    font-size:small;
     font-weight: bold;
     box-shadow: 0 6px 12px -2px rgba(#628900, .15);
     background: #99BC43;
@@ -81,6 +163,7 @@ body {
     padding: 10px;
     color: rgb(52, 70, 22);
     margin: 6px;
+    margin-bottom: 50px;
     cursor: pointer;
 }
 
