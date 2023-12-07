@@ -157,7 +157,7 @@ header{
 /* Section Description "What is TeavoU?" START */
 .desc{
     width: 100%;
-    height: 117vh;
+    max-height: 117vh;
     background: white;
     background-repeat: no-repeat;
     background-size: cover;
@@ -310,7 +310,7 @@ header{
 .product{
     font-size: 28px;
     color: var(--main-color);
-    margin-top: 95px;
+    /* margin-top: 80px; */
 }
 
 /* .product-text h2{
@@ -681,7 +681,7 @@ header{
 
 /* FOOTER */
 footer {
-    position: fixed;
+    /* position: fixed; */
     bottom: 0;
 }
 
@@ -821,29 +821,10 @@ footer {
 /* RESPONSIVE */
 /* RESPONSIVE */
 /* RESPONSIVE */
-@media (max-height:800px) {
-    footer {
-        position: static;
-    }
 
-    header {
-        padding-top: 40px;
-    }
-}
 
-@media (max-width: 880px) {
-    
-    .footer .footer-left,
-    .footer .footer-center,
-    .footer .footer-right {
-        display: block;
-        width: 100%;
-        margin-bottom: 40px;
-        text-align: left;
-    }
-}
-
-@media only screen and (max-width: 768px){
+/* RESPONSIVE MOBILE */
+@media only screen and (max-width: 767px){
     header {
         position: fixed;
         width: 100%;
@@ -877,14 +858,13 @@ footer {
     }
 
 
-    /* -------------- */
+    /* main */
     .desc{
         max-width: 1280px;
-        max-height: 1500px;
+        max-height: 105vh;
         display: inline-block;
         flex-direction: column;
         padding: 60px 20px;
-        /* margin: auto; */
       }
 
     .grid {
@@ -893,26 +873,16 @@ footer {
         margin-left: 10px;
         z-index: 2;
         display: flexbox;
-        /* height: 100%; */
-        /* justify-content: center; */
-        /* margin: auto; */
-        /* margin-top: 200px; */
-        /* position: absolute */
     }
 
     .column img {
         width: 90%;
         height: 90%;
-        /* opacity: 1; */
     }
 
     .desc-text{
         width: 100%;
-        /* height: 100%; */
-        z-index: 1;
-        /* margin-top: 20px; */
-        /* position: absolute; */
-        
+        z-index: 1;      
     }
 
     .desc-text h2 {
@@ -920,15 +890,6 @@ footer {
         height: 30%;
         font-size: 10vw;
         vertical-align: middle;
-        /* padding: 20% 0; */
-        /* display: ; */
-        /* margin: auto 10px 50px; */
-        /* margin-bottom: 50px; */
-        /* position: absolute; */
-        /* position: relative; */
-        /* display: inline; */
-        /* height: 211px; */
-        /* margin-top: 0; */
     }
 
     .desc-text p {
@@ -937,50 +898,94 @@ footer {
         display: flex;
         padding: 20px 10px;
         margin-top: 20px;
-        text-justify: distribute-all-lines;
-        /* text-wrap: wrap; */
-        /* position: absolute; */
+        font-size: large;
     }
 
     .buttons {
         flex-direction: column;
         display: flex;
         justify-content: center;
-        /* transform: translate(0%, -5%); */
         gap : auto;
         text-align: center;
         margin: 10px 0 20px;
 
     }
 
-    /* ------------ */
+    /* product*/
     .product{
         max-width: 1280px;
-        /* max-height: 500px; */
-        /* display: inline-block; */
         display: flex;
         flex-direction: column;
         position: sticky;
         text-align: center;
-        /* margin: 0; */
         padding: 0 20px;
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
-    .product-text h2 {
-        /* margin-top: 80px; */
-        
-        font-size: 10vw;
+    .product-text h2 {      
+        font-size: 8vw;
     }
 
     .tab{
         margin: 20px 0;
+        flex-direction: column;
+        align-content: center;
     }
 
     .tab button{
         margin: 0;
     }
 
+    /* label diskon */
+    #discount {
+        width: 13rem;
+        margin: -3.5 rem -1.8rem;
+    }
+    
+    #DC {
+        margin-top: -10rem;
+        padding: 3.5rem;
+        float: left;
+    }
+
+    /* manfaat */
+    #grid {
+        padding: 50px 30px 50px 30px;
+    }
+
+    .item h4 {
+        font-size: larger;
+    }
+
+    .item p {
+        font-size: large;
+    }
+}
+
+/* RESPONSIVE TABLET */
+@media (min-width: 768px) and (max-width: 1024px){
+
+}
 
 
+@media (max-height:800px) {
+    footer {
+        position: static;
+    }
+
+    header {
+        padding-top: 40px;
+    }
+}
+
+@media (max-width: 880px) {
+    
+    .footer .footer-left,
+    .footer .footer-center,
+    .footer .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: left;
+    }
 }
