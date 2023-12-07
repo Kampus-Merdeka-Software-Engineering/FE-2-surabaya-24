@@ -15,8 +15,20 @@
         </a>
     
         <!-- Menu Icon -->
-        <i class="menu" id="menu-icon"><img src="Asset/menu.svg" alt=""></i>
-    
+        <!-- <i class="menu" id="menu-icon"><img src="Asset/menu.svg" alt=""></i> -->
+        
+        <!-- coba navbar dropdown -->
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">
+            <img src="Asset/menu.svg" alt="menubtn">
+            </button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="index.html">Home</a>
+                <a href="AboutUs.html">AboutUs</a>
+                <a href="Product.html">Product</a>
+            </div>
+        </div>
+
         <!-- Links -->
         <ul class="navbar">
             <li><a href="index.html">Home</a></li>
@@ -143,22 +155,25 @@
     <section class="TeavoUTeam" id="TeavoUTeam">
         <h4><span>TeavoU</span> Team</h4>
         <div class="TeavoUTeamcard">
-            <div><img src="Asset/team azzizah.png" alt="">
-                <div class="TeavoUTeamcard-text">
-                    <p>Nur Azzizah</p>
-                </div> 
+            <div class="TeavoUTeamcard-left">
+                <div><img src="Asset/team azzizah.png" alt="">
+                    <div class="TeavoUTeamcard-text">
+                        <p>Nur Azzizah</p>
+                    </div> 
+                </div>
+                <div><img src="Asset/team fadhel.png" alt="">
+                    <div class="TeavoUTeamcard-text">
+                        <p>Akhmad Fadhel</p>
+                    </div>                 
+                </div>
+                <div><img src="Asset/team nisrina.png"  alt="">
+                    <div class="TeavoUTeamcard-text">
+                    <p>Nisrina Nurhasna</p>
+                    </div> 
+                </div>
             </div>
-            <div><img src="Asset/team fadhel.png" alt="">
-                <div class="TeavoUTeamcard-text">
-                    <p>Akhmad Fadhel</p>
-                </div>                 
-            </div>
-            <div><img src="Asset/team nisrina.png"  alt="">
-                <div class="TeavoUTeamcard-text">
-                <p>Nisrina Nurhasna</p>
-                </div> 
-            </div>
-            <div><img src="Asset/team diah.png" alt="">
+            <div class="TeavoUTeamcard-right">
+                <div><img src="Asset/team diah.png" alt="">
                 <div class="TeavoUTeamcard-text">
                     <p>I Gusti Diah Arishma Okayani </p>
                 </div> 
