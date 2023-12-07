@@ -1,6 +1,6 @@
 /* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@400;500;700&family=Poppins:ital,wght@0,200;0,300;0,500;0,600;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 *{
     font-family: 'Grandstander', cursive;
     margin: 0;
@@ -180,7 +180,7 @@ header {
     color: var(--second-color);
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-top: 4.188rem;
+    margin-top: 5rem;
     /* padding-top: 50px; */
 }
 
@@ -194,7 +194,7 @@ header {
     color: black;
     margin: 1.25rem 0 1.4rem;
     font-family: 'inter';
-    max-width: max-content;
+    max-width: 40rem;
     text-align: justify;
     margin-right: 50px;
 }
@@ -362,17 +362,26 @@ header {
 .value-list h5 {
     text-align: center;
     color:var(--button-color);
-    font-size: 60px;
+    font-size: 2rem;
 } 
 
 .value-list h5 > span {
     color: var(--second-color);
 }
 
+.value-list h6 {
+    color: var(--button-color);
+    font-size: 1.25rem;
+}
+
+.value-list h6 > span {
+    color: var(--second-color)
+}
+
 .value-list p {
-    color: black;
-    font-size: 14px;
-    font-family: "inter";
+    color:black, regular;
+    font-size: 16px;
+    font-family: Inter;
     word-spacing: 2px;
     vertical-align: middle;
 }
@@ -416,7 +425,7 @@ header {
 .visi-card,.misi-card {
         border: 3px solid #88BE00; 
         border-radius: 10px;
-        min-height: 40vh;
+        min-height: 25vh;
         width: 100%;
     }
 
