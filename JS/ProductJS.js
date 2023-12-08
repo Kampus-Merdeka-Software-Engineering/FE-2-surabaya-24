@@ -8,11 +8,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const cardContainer = document.getElementById("OriginTeaMenu");
     const SweeteaCard = document.getElementById("SweeTeaMenu");
+    const TisaneCard = document.getElementById("TisaneMenu");
 
     if (productData.length > 0) {
       let cards = "";
 
-      for (let i = 0; i < 16; i++) {
+      for (let i = 0; i < 17; i++) {
         if (productData[i].CategoryName == "Origin Tea")
           cards += createCard(productData[i]);
       }
@@ -24,12 +25,22 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (productData.length > 0) {
       let cards = "";
 
-      for (let i = 0; i < 16; i++) {
+      for (let i = 0; i < 17; i++) {
         if (productData[i].CategoryName == "Sweet Tea")
           cards += createCard(productData[i]);
       }
 
       SweeteaCard.innerHTML = cards;
+    }
+    if (productData.length > 0) {
+      let cards = "";
+
+      for (let i = 0; i < 17; i++) {
+        if (productData[i].CategoryName == "Tisane")
+          cards += createCard(productData[i]);
+      }
+
+      TisaneCard.innerHTML = cards;
     } else {
       console.error("Data Product tidak ditemukan.");
     }
