@@ -947,10 +947,10 @@ footer {
 
 /* Global styles remain unchanged */
 
-/* ===================================== */
-/* Responsive Breakpoint Max Width 768px */
-/* ===================================== */
-@media only screen and (max-width: 768px) {
+/* ============================ */
+/* Responsive Breakpoint MOBILE */
+/* ============================ */
+@media only screen and (max-width: 767px) {
     .section{
         padding: 60px 20px;
     }
@@ -1404,10 +1404,10 @@ footer {
 
 
 
-/* ===================================== */
-/* Responsive Breakpoint Max Width 768px */
-/* ===================================== */
-@media only screen and (min-width: 768px) and (max-width: 1024px){
+/* ============================= */
+/* Responsive Breakpoint TABLET */
+/* =============================*/
+@media only screen and (min-width: 768px) and (max-width: 1023px){
     .section{
         padding: 60px 20px;
     }
@@ -1812,4 +1812,13 @@ footer {
         height: 3rem;
         top: 3rem;
     }
+}
+
+/* ==============================*/
+/* Responsive Breakpoint DESKTOP  */
+/* ============================== */
+@media only screen and (min-width: 1024px)  {
+    .dropbtn, .dropdown, .dropdown-content{
+        display: none;
+    }    
 }
