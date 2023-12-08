@@ -33,12 +33,11 @@ body{
     background-color: var(--bg-color);
 }
 
-/* Header */
-header {
+header{
     position: fixed;
     width: 100%;
     height: 59px;
-    top: 0;
+    top:0;
     right: 0;
     z-index: 1000;
     display: flex;
@@ -48,12 +47,8 @@ header {
     background-color: #ffffff;
 }
 
-.logo img {
+.logo img{
     width: 90px;
-}
-
-.dropdown{
-    display: none;
 }
 
 .navbar {
@@ -118,8 +113,13 @@ header {
     background-color: var(--button-color);
 } */
 
-
-
+#menu-icon {
+    color: var(--second-color);
+    font-size: 24px;
+    z-index: 100001;
+    cursor: pointer;
+    display: none;
+}
 
 /* Home */
 .home{
@@ -1303,8 +1303,10 @@ footer {
     .spill-text h2{
         display: flex;
         position: relative;
-        font-size: 2.5rem;
+        font-size: 3rem;
         top: -3rem;
+        left: 10rem;
+
     }
 
     .Bintang{
@@ -1319,9 +1321,9 @@ footer {
 
     .text-card{
         display: flex;
-        width: 17rem;
-        height: 21rem;
-        margin-top: -1.3rem;
+        position: relative;
+        width: 27rem;
+        margin-top: 16rem;
     }
 
     .text-card p{
@@ -1354,7 +1356,7 @@ footer {
     .dots_spill{
         display: flex;
         position: relative;
-        margin-top: -14rem;
+        margin-top: -54rem;
     }
 
 
@@ -1397,5 +1399,417 @@ footer {
         text-align: center;
         padding: 6px;
         font-size: 1rem;
+    }
+}
+
+
+
+/* ===================================== */
+/* Responsive Breakpoint Max Width 768px */
+/* ===================================== */
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    .section{
+        padding: 60px 20px;
+    }
+
+    header {
+        position: fixed;
+        width: 100%;
+        height: 59px;
+        top: 0;
+        right: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 35px 0.9rem;
+        background-color: #FFFFFF;
+    }
+    
+    .navbar{
+        display: none;
+    }
+    
+    #menu-icon {
+        color: var(--second-color);
+        cursor: pointer;
+        display: flex;
+        margin: 0 0 0 29rem;
+        padding: 0;
+        flex-grow: 1;
+        height: 20px;
+    }
+    
+    .logo{
+        bottom: 20rem;
+    }
+
+    /* ===== HOME ===== */
+    .home{  /* section */
+        max-width: 1280px;
+        max-height: 1500px;
+        padding: 20px 60px;
+    }
+
+    .home-img{
+        display: flex;
+        width: 70%;
+        position: absolute;
+        right: 0.2rem;
+        display: flexbox;
+        margin-top: -12rem;
+        right: -5rem;
+    }
+
+    .BgHome{
+        display: none;
+    }
+
+    .home-GreenTea{
+        display: flex;
+        position: absolute;
+        width: 17%;
+        left: 0.1rem;
+        top: 22rem;
+    }
+
+    .home h1, #Beckons{
+        font-size: 5rem;
+        text-align: left;
+        left: -2rem;
+        position: relative;   
+        top: -13rem;     
+        padding-left: 20px;
+    }
+
+    .home-text p{
+        display: block;
+        position: relative;
+        text-align: left;
+        max-width: 57%;
+        left: -0.5rem;
+        top: -13rem;
+        font-size: 1.5rem;
+    }
+
+    /* ===== Best Product ===== */
+    .best-product{
+        max-width: 1280px;
+        max-height: 1500px;
+        padding: 20px 60px;        
+    }
+
+    .text-best h2{
+        display: flex;
+        position: relative;
+        font-size: 3rem;
+        text-align: center;
+        margin-top: -50rem;
+    }
+
+    .item1{
+        display: flex;
+        position: relative;
+        width: 100%;
+        height: 85%;
+        margin-left:0.3rem;
+        margin-top: -24rem;
+    }
+
+    .item1 img{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        margin-top: -19rem;
+        margin-left: 20rem;
+    }
+
+    .item1 h3{
+        font-size: 2rem;
+        margin-top: -75px;
+    }
+
+    .item1 p{
+        width: 13rem;
+        height: 18.187px;
+        font-size: 1rem;
+        margin-left:-120px;
+        margin-top: 4rem;
+        max-width: calc(50rem - 100px);
+    }
+
+    .label-best{
+        width: 7rem;
+        height: auto;
+        flex-shrink: 0;
+        font-size: 1rem;
+        margin-left: -225px;
+        margin-top: 340px;
+        height: 2rem;
+    }
+
+    .item2, .item3{
+        display: none;
+    }
+    
+    /* ===== Festival ==== */
+    .festival {
+        max-width: 1280px;
+        max-height: 1500px;
+        padding: 20px 60px;    
+    }
+    
+    .textFestival {
+        width: 150px;
+        height: 20rem;
+        margin-right: 2rem;
+        margin-top: -26rem;
+    }
+    
+    .festival img {
+        width: 31rem;
+        height: auto;
+        top: -20rem;
+        border-radius: 5px 0 0 5px;
+        display: flex;
+        justify-content: center;
+        left: 5rem;
+    }
+    
+    .textFestival h3{
+        position: relative;
+        display: flex;
+        text-align: left;
+        margin-top: -22rem;
+        max-width: 10rem;
+        white-space: nowrap;
+        left: -27rem;
+        font-size: 3rem;
+    }
+    
+    .textFestival h5{
+        display: flex;
+        position: relative;
+        font-size: 1.9rem;
+        width: 450px;
+        left: -21rem;
+        text-align: left;
+        white-space: nowrap;
+        margin-top: 25rem;
+    }
+    
+    .textFestival p {
+        flex-shrink: 0;
+        font-size: 1.7rem;
+        margin-top: 0.1rem;
+        width: 40rem;
+        margin-left: -28rem;
+    }
+
+    /* === Quiz === */
+    .quiz{
+        max-width: 1280px;
+        max-height: 1500px;
+        padding: 20px 60px;
+    }
+
+    .quiz h2{
+        font-size: 2.8rem;
+        text-align: center;
+        /* left: -3.5rem; */
+        position: relative;   
+        top: 1rem;     
+        padding-left: 20px;
+    }
+
+    .tab{
+        flex-direction: row;
+        gap: 1rem;
+        margin-top: -25rem;
+        left: 1.9rem;
+        justify-content: center;
+    }
+
+    .tabcontent img{
+        justify-content: center;
+        position: relative;
+        display: flex;
+        width: 25rem;
+        left: 5rem;
+        margin-top: -13rem;
+    }
+
+    .box{
+        font-size: 20px;
+        margin-top: -70px;
+        left: -4rem;
+    }
+
+    .box h4{
+        font-size: 1.7rem;
+        margin-top: 3rem;
+        text-align: center;
+        display: flex;
+        position: absolute;
+        left: 15rem;
+    }
+
+    .box p {
+        font-size: 1.7rem;
+        display: flex;
+        position: relative;
+        top: 7rem;
+        margin-top: 25rem;
+        margin-right: 2rem;
+        white-space: normal; /* Use 'normal' to allow wrapping */
+        max-width: 200rem;
+    }
+    
+
+    .box button{
+        display: flex;
+        position: relative;
+        text-align: center;
+        top: -12rem;
+        display: flex;
+        justify-content: center;
+        gap : auto;
+        text-align: center;
+        padding: 6px;
+        left: -28rem;
+        width: 7rem;
+        height: 2rem;
+        font-size: 1.4rem;
+    }
+
+    .FestivalBooking{
+        display: flex;
+        position: relative;
+        left: 1.5rem;
+        top: -2.5rem;
+        font-size: 1.5rem;
+    }
+
+     /* === they spill the tea === */
+     .spill{
+        max-width: 1280px;
+        max-height: 1500px;
+        padding: 20px 60px;
+    }
+
+    .spill-text{
+        display: flex;
+        position: relative;
+    }
+
+    .spill-text h2{
+        display: flex;
+        position: relative;
+        font-size: 2.5rem;
+        top: -2rem;
+    }
+
+    .Bintang{
+        justify-content: center;
+        display: block;
+        position: relative;
+        padding: 0px 15rem;
+        width: max-content;
+
+    }
+
+    /* = bintang = */
+
+    .text-card{
+        display: flex;
+        position: relative;
+        margin-top: -0.5rem;
+        width: 550px;
+        height: 300px;
+        left: 1rem;
+    }
+
+    .text-card p{
+        font-size: 1.3rem;
+    }
+
+    .card-body{
+        display: block;
+        position: relative;
+        align-items: center;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        padding: 20px;
+        height: 35rem;
+    }
+
+    .card-body img{
+        padding: 2px;
+        justify-content: center;
+        margin: 0 auto;
+        display: flex;
+        left: 2rem;
+    }
+
+    .card-body h6{
+        display: flex;
+        position: relative;
+        font-size: 1.2rem;
+        justify-content: center;
+        left: -5rem;
+        top: 0.7rem;
+        margin-bottom: 2rem;
+    }
+
+    .dots_spill{
+        display: flex;
+        position: relative;
+        margin-top: -23rem;
+    }
+
+
+    /* === feedback === */
+
+    #fedbacks{
+        position: relative;
+        display: flex;
+        width: 40rem;
+        top: -5rem;
+        left: 22rem;
+        gap: 1rem;
+    }
+
+    #fedbacks h4{
+        display: flex;
+        position: relative;
+        font-size: 3rem;
+        width: 400px;
+        white-space: wrap;
+        top: 5rem;
+    }
+
+    #fedbacks p{
+        display: flex;
+        position: relative;
+        white-space: wrap;
+        width: 500px;
+        text-align: justify;
+        margin-top: 7rem;
+        font-size: 1.7rem;
+    }
+
+    #fedbacks button{
+        display: flex;
+        position: relative;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        gap : auto;
+        text-align: center;
+        padding: 6px;
+        font-size: 1.6rem;
+        width: 10rem;
+        height: 3rem;
+        top: 3rem;
     }
 }
