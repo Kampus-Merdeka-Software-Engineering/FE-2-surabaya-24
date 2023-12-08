@@ -1,92 +1,41 @@
-// ketika tombol What is TeavoU di klik, maka lakukan scroll keatas halaman
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
+// // Connecting FE BE
+import { getProduct } from "../JS/API/products.js";
+import { createCard } from "../JS/script.js";
 
-// ketika tombol TeavoU Product di klik, maka lakukan scroll kebawah halaman (menu Teh)
-function bottomFunction() {
-  document.body.scrollTop = 750;
-  document.documentElement.scrollTop = 750;
-}
+document.addEventListener("DOMContentLoaded", async () => {
+  try {
+    const productData = await getProduct();
 
-// Mengubah fungsi openTea menjadi fungsi Menu
-function initMenu() {
-  // Semua menu disembunyikan terlebih dahulu
-  var allMenus = document.getElementsByClassName("menu");
-  for (var i = 0; i < allMenus.length; i++) {
-    allMenus[i].style.display = "none";
-  }
+    const cardContainer = document.getElementById("OriginTeaMenu");
+    const SweeteaCard = document.getElementById("SweeTeaMenu");
+     const dessertsGrid = document.getElementById("grid");
 
-  // Semua tablinks kehilangan class "active"
-  var allTabLinks = document.getElementsByClassName("tablinks");
-  for (var i = 0; i < allTabLinks.length; i++) {
-    allTabLinks[i].classList.remove("active");
-  }
+    if (productData.length > 0) {
+      let cards = "";
 
-  // Tampilkan menu "OriginTeaMenu"
-  var defaultMenu = document.getElementById("OriginTeaMenu");
-  defaultMenu.style.display = "block";
+      for (let i = 0; i < 16; i++) {
+        if (productData[i].CategoryName == "Origin Tea")
+          cards += createCard(productData[i]);
+      }
 
-  // Beri class "active" pada tombol "OriginTea"
-  var defaultTabLink = document.querySelector(".tablinks");
-  defaultTabLink.classList.add("active");
-}
+      cardContainer.innerHTML = cards;
 
-// Tab Content pada Menu Product
-function openMenu(evt, menuName) {
-  var i, menuContent, tablinks;
+      console.log("product", productData[0].nameProduct);
+    } if (productData.length > 0) {
+      let cards = "";
 
-  menuContent = document.getElementsByClassName("menu");
-  for (i = 0; i < menuContent.length; i++) {
-    menuContent[i].style.display = "none";
-  }
+      for (let i = 0; i < 16; i++) {
+        if (productData[i].CategoryName == "Sweet Tea")
+          cards += createCard(productData[i]);
+      }
 
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].classList.remove("active");
-  }
-
-  document.getElementById(menuName + "Menu").style.display = "block";
-  evt.currentTarget.classList.add("active");
-}
-
-// Panggil fungsi initMenu ketika halaman dimuat
-document.addEventListener("DOMContentLoaded", function () {
-  initMenu();
-});
-
-
-
-
-// feedback
-const allStars = document.querySelectorAll('.star');
-console.log(allStars);
-let current_star_level = 0;
-
-document.addEventListener('click', function (event) {
-    const isStar = event.target.classList.contains('star');
-
-    if (!isStar) {
-        // Clicked outside the stars, reset to zero
-        current_star_level = 0;
-        updateStarRatings();
+      SweeteaCard.innerHTML = cards;
+      
+    } else {
+      console.error("Data Product tidak ditemukan.");
     }
+  } catch (error) {
+    console.error("Error:", error);
+  }
+  
 });
-
-allStars.forEach((star, i) => {
-    star.onclick = function () {
-        current_star_level = i + 1;
-        updateStarRatings();
-    };
-});
-
-function updateStarRatings() {
-    allStars.forEach((star, j) => {
-        if (current_star_level >= j + 1) {
-            star.innerHTML = '★';
-        } else {
-            star.innerHTML = '☆';
-        }
-    });
-}
