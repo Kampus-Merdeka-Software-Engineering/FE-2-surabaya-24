@@ -790,64 +790,64 @@ header {
 footer {
     position: relative;
     bottom: 0;
-}
-
-.footer {
+  }
+  
+  .footer {
     background-color: var(--main-color);
     box-sizing: border-box;
     width: 100%;
     text-align: left;
     padding: 50px 50px 30px 50px;
     margin-top: 80px;
-}
-
-.footer .footer-left,
-.footer .footer-center,
-.footer .footer-right {
+  }
+  
+  .footer .footer-left,
+  .footer .footer-center,
+  .footer .footer-right {
     display: inline-block;
     vertical-align: top;
-}
-
-/* Navbar bawah */
-.line{
+  }
+  
+  /* Navbar bawah */
+  .line{
     background-color: #FFFFFF;
     height: 1px;
     width: 75rem;
     margin-top: 35px;
-}
-
-/* copyright */
-#copyright {
+  }
+  
+  /* copyright */
+  #copyright {
     text-align: center;
     width: 100%;
     padding: 30px 0px 0px 0px;
     color: var(--bg-color);
-}
-
-@media (max-height:800px) {
+  }
+  
+  @media (max-height:800px) {
     footer {
         position: static;
     }
-
+  
     header {
         padding-top: 40px;
     }
-}
-
-.footer .footer-left {
+  }
+  
+  .footer .footer-left {
     width: 30%;
-}
-
-.footer .footer-left img {
+  }
+  
+  .footer .footer-left img {
     width: 45%;
     vertical-align: middle;
-}
-
-.footer .footer-media {
+  }
+  
+  .footer .footer-media {
     margin-top: 25px;
-}
-
-.footer .footer-media a {
+  }
+  
+  .footer .footer-media a {
     display: inline-block;
     width: 40px;
     height: 40px;
@@ -855,89 +855,89 @@ footer {
     line-height: 50px;
     margin-right: 3px;
     margin-bottom: 5px;
-}
-
-.footer .footer-media img {
+  }
+  
+  .footer .footer-media img {
     color: #FFFFFF;
     width: 30px;
     height: 30px;
     padding-bottom: 5px;
-}
-
-.footer .footer-media a:hover {
+  }
+  
+  .footer .footer-media a:hover {
     background-color: var(--button-color);
     border-radius: 50%;
     cursor: pointer;
-}
-
-.footer .footer-left .credit-cards {
+  }
+  
+  .footer .footer-left .credit-cards {
     width: 100%;
-}
-
-.footer .footer-center {
+  }
+  
+  .footer .footer-center {
     width: 35%;
-}
-
-/* penambahan */
-.footer-center .location,
-.footer-center .phone,
-.footer-center .mail {
+  }
+  
+  /* penambahan */
+  .footer-center .location,
+  .footer-center .phone,
+  .footer-center .mail {
     padding-bottom: 10px;
-}
-
-.footer .footer-center img {
+  }
+  
+  .footer .footer-center img {
     height: 45px;
     width: 45px;
     vertical-align: middle;
     padding-right: 3%;
-}
-
-.footer .footer-center p {
+  }
+  
+  .footer .footer-center p {
     display: inline-block;
     color: #ffffff;
     vertical-align: middle;
     margin: 0px;
-}
-
-.footer .footer-center p span {
+  }
+  
+  .footer .footer-center p span {
     color: var(--bg-color);
-    display: flex;
+    display: block;
     /* font-weight: normal; */
     font-size: 14px;
     line-height: 2;
-}
-
-.footer .footer-center p a {
+  }
+  
+  .footer .footer-center p a {
     color: var(--bg-color);
     text-decoration: none;
-}
-
-.footer .footer-right {
+  }
+  
+  .footer .footer-right {
     width: 30%;
-}
-
-.footer .footer-about {
+  }
+  
+  .footer .footer-about {
     line-height: 20px;
     color: var(--bg-color);
     font-size: 13px;
     font-weight: normal;
     margin: 0px;
-}
-
-.footer .footer-about span {
+  }
+  
+  .footer .footer-about span {
     display: block;
     color: #ffffff;
     font-size: 25px;
     font-weight: bold;
     margin-bottom: 20px;
-}
-
-@media (max-width: 880px) {
+  }
+  
+  @media (max-width: 880px) {
     
     .footer .footer-left,
     .footer .footer-center,
     .footer .footer-right {
-        display: flex;
+        display: block;
         width: 100%;
         margin-bottom: 40px;
         text-align: left;
@@ -945,15 +945,14 @@ footer {
 }
 
 
-
 /* Global styles remain unchanged */
 
 /* ===================================== */
-/* Responsive Breakpoint Max Width 768px */
+/* Responsive Breakpoint Max Width 767px */
 /* ===================================== */
-@media only screen and (max-width: 768px) {
-    section{
-        max-width: 768px;
+@media only screen and (max-width: 767px) {
+    .section{
+        padding: 60px 20px;
     }
 
     header {
@@ -967,7 +966,7 @@ footer {
         justify-content: space-between;
         align-items: center;
         padding: 35px 0.9rem;
-        background-color: #ffffff;
+        background-color: #4A6409;
     }
     
     .navbar{
@@ -988,61 +987,21 @@ footer {
         bottom: 20rem;
     }
 
-    /* navbar dropdown */
-.dropbtn {
-    background-color: #607e13;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    }
-    .dropbtn:hover, .dropbtn:focus {
-    background-color: var(--button-color);
-    }
-    .dropdown {
-    position: relative;
-    display: inline-block;
-    }
-    .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    right: 0;
-    z-index: 1;
-    }
-    .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    }
-    .dropdown a:hover {
-    background-color: var(--button-color);
-    }
-    .show {
-        display: block;
-    }
-
     /* ===== HOME ===== */
-    .home{
-        background-position: center;
-        gap: 1.5rem;
-        position: relative;
+    .home{  /* section */
+        max-width: 1280px;
+        max-height: 1500px;
+        padding: 20px 60px;
     }
 
     .home-img{
-        display: inline-block;
+        display: flex;
         width: 68%;
         position: absolute;
         right: 0.2rem;
         display: flexbox;
-        z-index: 2;
-        top: 1.8rem;
-        right: -1.7rem;
+        margin-top: -14rem;
+        right: -4rem;
     }
 
     .BgHome{
@@ -1050,40 +1009,44 @@ footer {
     }
 
     .home-GreenTea{
+        display: flex;
         position: absolute;
         width: 17%;
         left: 0.1rem;
-        top: 15rem;
+        top: 14rem;
     }
 
     .home h1, #Beckons{
-        font-size: 2.2rem;
+        font-size: 2.7rem;
         text-align: left;
-        left: -4.5rem;
+        left: -3.5rem;
         position: relative;   
-        top: -7rem;     
+        top: -9rem;     
+        padding-left: 20px;
     }
 
     .home-text p{
-        display: inline-block;
+        display: block;
         position: relative;
-        text-align: center;
-        max-width: 100%;
+        text-align: left;
+        max-width: 69%;
         left: -2rem;
-        top: -6rem;
+        top: -9rem;
     }
 
     /* ===== Best Product ===== */
     .best-product{
-        margin-top: -6rem;
+        max-width: 1280px;
+        max-height: 1500px;
+        padding: 20px 60px;        
     }
 
     .text-best h2{
         display: flex;
         position: relative;
-        font-size: 24px;
+        font-size: 2.4rem;
         text-align: center;
-        top: -8rem;
+        margin-top: -35rem;
     }
 
     .item1{
@@ -1091,17 +1054,19 @@ footer {
         position: relative;
         width: 50%;
         height: 40%;
-        margin-left: -5.5rem;
-        top: -9rem;
+        margin-left: -2.6rem;
+        margin-top: -16rem;
     }
 
     .item1 img{
         display: flex;
         align-items: center;
+        position: absolute;
+        margin-top: -19rem;
     }
 
     .item1 h3{
-        font-size: 15px;
+        font-size: 1rem;
         margin-top: -75px;
     }
 
@@ -1129,35 +1094,255 @@ footer {
     }
     
     /* ===== Festival ==== */
-    .festival{
+    .festival {
+        max-width: 1280px;
+        max-height: 1500px;
+        padding: 20px 60px;    
     }
     
-    .textFestival{
 
+    .textFestival {
+        width: 150px;
+        height: 20rem;
+        margin-right: 2rem;
+        margin-top: -26rem;
     }
-
-    .festival img{
-        display: flex;
-        width: 200%;
+    
+    .festival img {
+        width: 20rem;
         height: auto;
-        align-items: center;  
-        right: 3rem;  
+        top: -30rem;
+        border-radius: 5px 0 0 5px;
+        display: flex;
+        justify-content: center;
+        left: -2rem;
     }
-
-    .festival h3{
+    
+    .textFestival h3{
         position: relative;
         display: flex;
-        max-width: 100%;
-        font-size: 2rem;
+        text-align: left;
+        margin-top: -22rem;
+        max-width: 10rem;
+        white-space: nowrap;
+        left: -8rem;
+        
+    }
+    
+    .textFestival h5{
+        display: flex;
+        position: relative;
+        font-size: 1.4rem;
+        width: 450px;
+        margin-top: 17rem;
+        left: -7rem;
+        text-align: left;
+        white-space: nowrap;
+    }
+    
+    .textFestival p {
+        width: 10rem;
+        flex-shrink: 0;
+        font-size: 1.2rem;
+        margin-top: 0.1rem;
+        width: 18rem;
+        margin-left: -6rem;
+    }
+
+    /* === Quiz === */
+    .quiz{
+        max-width: 1280px;
+        max-height: 1500px;
+        padding: 20px 60px;
+    }
+
+    .quiz h2{
+        font-size: 2.8rem;
         text-align: center;
+        /* left: -3.5rem; */
+        position: relative;   
+        top: -17rem;     
+        padding-left: 20px;
+    }
+
+    .tab{
+        flex-direction: row;
+        gap: 1rem;
+        margin-top: -42rem;
+        left: 1.9rem;
+        justify-content: center;
+    }
+
+    .tabcontent img{
+        width: 30%;
+        height: 30%;
+        justify-content: center;
+        position: relative;
+        display: flex;
+        width: 23rem;
+        height: auto;
+        left: -3.5rem;
+        margin-top: -28rem;
+    }
+
+    .box{
+        font-size: 20px;
+        margin-top: -270px;
+        left: -4rem;
+    }
+
+    .box h4{
+        font-size: 1.7rem;
+        margin-top: 5rem;
+        text-align: center;
+        display: flex;
+        position: absolute;
+        left: 4rem;
+    }
+
+    .box p{
+        font-size: 1.3rem;
+        display: flex;
+        position: relative;
+        margin-left: -25rem;
+        top: 32rem;
+        text-align: justify;
+        height: 20rem;
+        margin-top: 20px;
+        left: 1.7rem;
+        white-space: wrap;
+        max-width: 50rem;
+    }
+
+    .box button{
+        display: flex;
+        position: relative;
+        left: -39rem;
+        text-align: center;
+        top: 17rem;
+        display: flex;
+        justify-content: center;
+        gap : auto;
+        text-align: center;
+        padding: 6px;
+    }
+
+    .FestivalBooking{
+        display: flex;
+        position: relative;
+        left: -0.6rem;
+        top: -10rem;
+        font-size: 1.2rem;
+    }
+
+    /* === they spill the tea === */
+    .spill{
+        max-width: 1280px;
+        max-height: 1500px;
+        padding: 20px 60px;
+    }
+
+    .spill-text{
+        display: flex;
+        position: relative;
+    }
+
+    .spill-text h2{
+        display: flex;
+        position: relative;
+        font-size: 2.5rem;
+        top: -3rem;
+    }
+
+    .Bintang{
+        justify-content: center;
+        display: block;
+        position: relative;
+        padding: 0px 10px 10px 80px;
+
+    }
+
+    /* = bintang = */
+
+    .text-card{
+        display: flex;
+        width: 17rem;
+        height: 21rem;
+        margin-top: -1.3rem;
+    }
+
+    .text-card p{
+        font-size: 1rem;
+    }
+
+    .card-body{
+        display: block;
+        position: relative;
+        align-items: center;
+    }
+
+    .card-body img{
+        padding: 2px;
+        justify-content: center;
+        margin: 0 auto;
+        display: flex;
+        left: 2rem;
+    }
+
+    .card-body h6{
+        display: flex;
+        position: relative;
+        font-size: 1.3rem;
+        justify-content: center;
         left: -5rem;
+        top: 0.7rem;
     }
 
-    .festival h5{
-
+    .dots_spill{
+        display: flex;
+        position: relative;
+        margin-top: -14rem;
     }
 
-    .festival p{
 
+    /* === feedback === */
+
+    #fedbacks{
+        position: relative;
+        display: flex;
+        width: 20rem;
+        top: 10rem;
+        left: 10rem;
+    }
+
+    #fedbacks h4{
+        display: flex;
+        position: relative;
+        font-size: 2rem;
+        width: 250px;
+        white-space: wrap;
+        top: -4rem;
+    }
+
+    #fedbacks p{
+        display: flex;
+        position: relative;
+        white-space: wrap;
+        width: 250px;
+        text-align: justify;
+        margin-top: -2rem;
+        font-size: 1.2rem;
+    }
+
+    #fedbacks button{
+        display: flex;
+        position: relative;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        gap : auto;
+        text-align: center;
+        padding: 6px;
+        font-size: 1rem;
     }
 }
