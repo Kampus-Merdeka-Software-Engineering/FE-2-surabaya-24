@@ -1283,6 +1283,10 @@ footer {
         top: -10rem;
         font-size: 1.2rem;
     }
+    .FestivalBooking a:hover, a:active {
+        background-color: var(--main-color);
+
+    }
 
     /* === they spill the tea === */
     .spill{
