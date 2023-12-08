@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const cardContainer = document.getElementById("OriginTeaMenu");
     const SweeteaCard = document.getElementById("SweeTeaMenu");
-    const dessertsGrid = document.getElementById("grid");
 
     if (productData.length > 0) {
       let cards = "";

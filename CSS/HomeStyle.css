@@ -232,7 +232,7 @@ header{
   
   .item1 {
     grid-row: 3 / 1;
-    background-image: url(/Asset/originTea.png);
+    background-image: url(/asset/originTea.png);
     background-size: cover;
   }
 
@@ -328,7 +328,7 @@ header{
   /* Best 3 */
 
   .item3 {
-    background-image: url(/Asset/BlueThaiTea.svg);
+    background-image: url(/asset/tea2.png);
     background-size: cover;
   }
 

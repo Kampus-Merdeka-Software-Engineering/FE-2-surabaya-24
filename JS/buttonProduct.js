@@ -57,13 +57,13 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // DROPDOWN NAVBAR
-const toogleBtn = document.querySelector(".toogle_btn");
-const toogleBtnIcon = document.querySelector(".toogle_btn i");
-const dropDdownMenu = document.querySelector(".dropdown_menu");
+// const toogleBtn = document.querySelector(".toogle_btn");
+// const toogleBtnIcon = document.querySelector(".toogle_btn i");
+// const dropDdownMenu = document.querySelector(".dropdown_menu");
 
-tooogleBtn.onclick = function () {
-  dropDdownMenu.classList.toogle("open");
-  const isOpen = dropDdownMenu.classList.contains("open");
+// tooogleBtn.onclick = function () {
+//   dropDdownMenu.classList.toogle("open");
+//   const isOpen = dropDdownMenu.classList.contains("open");
 
-  toogleBtnIcon.classList = isOpen ? "Asset/menu.svg" : "Asset/menu.svg";
-};
+//   toogleBtnIcon.classList = isOpen ? "Asset/menu.svg" : "Asset/menu.svg";
+// };
