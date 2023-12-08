@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>JS Quiz Format 1</title>
-   <link rel="stylesheet" href="quiz/quiz.css">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JS Quiz Format 1</title>
+<link rel="stylesheet" href="quiz/quiz.css">
 </head>
 <body>
     <!-- NavBar Start -->
@@ -14,18 +14,30 @@
         <a href="#" class="logo">
             <img src="Asset/Logo.png" alt="logo">
         </a>
-  
+        
+        <!-- coba navbar dropdown -->
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">
+            <img src="Asset/menu.svg" alt="menubtn">
+            </button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="index.html">Home</a>
+                <a href="AboutUs.html">AboutUs</a>
+                <a href="Product.html">Product</a>
+            </div>
+        </div>
+
         <!-- navbar links -->
         <ul class="navbar">
             <li><a href="Index.html">Home</a></li>
             <li><a href="AboutUs.html">About Us</a></li>
             <li><a href="Product.html">Product</a></li>
         </ul>
-       </header>
+    </header>
         <!-- NavBar END -->
 
- <!-- Questions Container-->     
-   <div class="container">
+<!-- Questions Container-->     
+<div class="container">
     <div class="score">
         <span id="user-score">0</span>
     <span> / </span>
@@ -44,7 +56,7 @@
         <button class="button btn-next" id="next">Next</button>
         <button class="button btn-submit" id="submit">Submit</button>
     </div>
-       <script src="quiz/quiz.js"></script>
 </div>
+<script src="quiz/quiz.js"></script>
 </body>
 </html>

@@ -775,7 +775,7 @@ footer {
         }
 /* navbar dropdown */
 .dropbtn {
-background-color: #04AA6D;
+background-color: #607e13;
 color: white;
 padding: 16px;
 font-size: 16px;
@@ -784,7 +784,7 @@ cursor: pointer;
 }
 
 .dropbtn:hover, .dropbtn:focus {
-background-color: #3e8e41;
+background-color: var(--button-color);
 }
 
 .dropdown {
@@ -811,7 +811,7 @@ display: block;
 }
 
 .dropdown a:hover {
-    background-color: #ddd;
+    background-color: var(--button-color);
 }
 
 .show {
