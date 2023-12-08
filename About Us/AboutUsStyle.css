@@ -1,6 +1,6 @@
 /* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@400;500;700&family=Poppins:ital,wght@0,200;0,300;0,500;0,600;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 *{
     font-family: 'Grandstander', cursive;
     margin: 0;
@@ -21,7 +21,7 @@
 }
 
 section{
-    padding: 50px 100px;
+    padding: 50px 30px 50px 100px;
 }
 
 img{
@@ -54,6 +54,10 @@ header {
 
 .logo img{
     width: 90px;
+}
+
+.dropdown{
+    display: none;
 }
 
 .navbar {
@@ -118,13 +122,6 @@ header {
     background-color: var(--button-color);
 } */
 
-#menu-icon{
-    color: var(--second-color);
-    font-size: 24px;
-    z-index: 100001;
-    cursor: pointer;
-    display: none;
-}
 
 /* section profileupper "About Us TeavoU" */
 .profileupper{
@@ -138,7 +135,7 @@ header {
     grid-template-columns: repeat(auto-fit,minmax(25rem,auto));
     align-items: stretch;
     gap: 1.5rem;
-    background-image: url(/Asset/bgprofilupper.png);
+    background-image: url(https://iili.io/JIr7Kqg.png);
     /* background-color: #4A6409; */
 }
 
@@ -181,7 +178,6 @@ header {
 .profileupper-text h1{
     font-size: 3.4rem;
     color: var(--second-color);
-    text-transform: uppercase;
     letter-spacing: 2px;
     margin-top: 4.188rem;
     /* padding-top: 50px; */
@@ -193,7 +189,7 @@ header {
 
 .profileupper-text p {
     width: auto;
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     color: black;
     margin: 1.25rem 0 1.4rem;
     font-family: 'inter';
@@ -234,8 +230,11 @@ header {
 
 /* section profilecentre "About Us TeavoU" */
 .profilecentre {
-    width: 100%;
-    display: table;
+    display: inline-flex;
+    padding: 44px 81px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
 }
 
 .flex-container {
@@ -312,7 +311,7 @@ header {
     border-radius: 15px;
     padding: 1.25rem;
     margin: 3.5rem 1.25rem 0;
-    width: 100%;
+    width: 80%;
 }
 .commitmentcard h3{
     align-items: flex-start;
@@ -337,7 +336,7 @@ header {
     padding: 20px;
     margin-left: 20px;
     margin-top: 30px;
-    width: 100%;
+    width: 80%;
 }
 .value-card h3{
     align-items: flex-start;
@@ -347,22 +346,32 @@ header {
 }
 
 .value-list {
-    display: inline-block;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
 }
 
 .value-list div {
-    flex: 1;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     line-height: 1.2;
-    gap: 20px;
+    gap: 5px 20px;
+    margin-bottom: 20px;
 }
+.value-list h6 {
+    text-align: center;
+    color:var(--button-color);
+    font-size: 25px;
+} 
 
+.value-list h6 > span {
+    color: var(--second-color);
+}
 .value-list h5 {
     text-align: center;
     color:var(--button-color);
-    font-size: 60px;
+    font-size: 35px;
 } 
 
 .value-list h5 > span {
@@ -370,8 +379,10 @@ header {
 }
 
 .value-list p {
+    padding-left: 40px;
     color: black;
     font-size: 14px;
+    font-weight: 600;
     font-family: "inter";
     word-spacing: 2px;
     vertical-align: middle;
@@ -397,7 +408,7 @@ header {
 .bottomcentre h3 {
     font-size: 2rem;
     color: var(--second-color);
-    padding: 1.5rem 0;
+    padding-top: 1.5rem ;
     text-align: center;
 }
 
@@ -406,7 +417,7 @@ header {
 }
 
 .bottomcentre p {
-    padding: 0 2rem;
+    padding: 2rem;
     font-family: "inter";
     font-size: 16px;
     line-height: 2;
@@ -434,9 +445,23 @@ header {
 }
 
 .TeavoUTeamcard {
-    display: flex;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
     width: 100%;
 }
+.TeavoUTeamcard-left{
+    display: flex;
+    flex: 50%;
+}
+
+.TeavoUTeamcard-right{
+    display: flex;
+    flex-direction: row;
+    flex: 50%;
+}
+
 .TeavoUTeamcard-text{
     color: black;
     font-size: small;
@@ -448,7 +473,13 @@ header {
     /* background-color: #f1f1f1; */
     padding: 1.3rem;
 }
-.TeavoUTeamcard > div:hover{
+.TeavoUTeamcard-left > div:hover{
+    background: var(--main-color);
+    color: #FFFF;
+    border-radius: 0.2rem;
+    transition: 0.2 all linear;
+}
+.TeavoUTeamcard-right > div:hover{
     background: var(--main-color);
     color: #FFFF;
     border-radius: 0.2rem;
@@ -706,16 +737,84 @@ footer {
 }
 
    /* Footer Styling */
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 768px) {
-    .leftcolumn, .rightcolumn {   
-    width: 100%;
-    padding: 0;
+
+/* Responsive layout - when the screen is less than 768px wide, make the two columns stack on top of each other instead of next to each other */
+@media only screen and (max-width: 768px) {
+    section{
+        max-width: 768px;
     }
-}
-@media (max-width:768px) {
+
+    header {
+        position: fixed;
+        width: 100%;
+        height: 40px;
+        top: 0;
+        right: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 35px 0.9rem;
+        background-color: #ffffff;
+    }
+
+    .navbar{
+        display: none;
+    }
+    .TeavoUTeamcard{
+        width: 80%;
+        gap: 20px;
+    }
+    .TeavoUTeamcard-left, .TeavoUTeamcard-right{
+        flex-wrap: wrap;
+        flex: 10%;
+    }
     .flex-item-right, .flex-item-left, .bottomcentre-left, .bottomcentre-right {
-    flex: 60%;
-      /* width: 50%; */
-    }
+        flex: 100%;
+          /* width: 50%; */
+        }
+/* navbar dropdown */
+.dropbtn {
+background-color: #607e13;
+color: white;
+padding: 16px;
+font-size: 16px;
+border: none;
+cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+background-color: var(--button-color);
+}
+
+.dropdown {
+position: relative;
+display: inline-block;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f1f1f1;
+min-width: 160px;
+overflow: auto;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+right: 0;
+z-index: 1;
+}
+
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+
+.dropdown a:hover {
+    background-color: var(--button-color);
+}
+
+.show {
+    display: block;
+}
 }

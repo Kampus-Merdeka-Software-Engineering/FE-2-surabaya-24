@@ -32,6 +32,8 @@ section{
 }
 
 
+
+
 /* Header */
 header{
   position: fixed;
@@ -49,6 +51,10 @@ header{
 
 .logo img{
   width: 90px;
+}
+
+.dropdown{
+  display: none;
 }
 
 .navbar {
@@ -513,6 +519,9 @@ footer {
 /* Responsive Breakpoint Min Width 768px */
 /* ===================================== */
 @media only screen and (max-width: 768px) {
+  section{
+    max-width: 768px;
+  }
   header {
       position: fixed;
       width: 100%;
@@ -530,6 +539,45 @@ footer {
   .navbar{
       display: none;
   }
+  /* navbar dropdown */
+  .dropbtn {
+      background-color: #607e13;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+  }
+  .dropbtn:hover, .dropbtn:focus {
+      background-color: var(--button-color);
+  }
+  .dropdown {
+      position: relative;
+      display: inline-block;
+  }
+  .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      overflow: auto;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      right: 0;
+      z-index: 1;
+  }
+  .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+  }
+  .dropdown a:hover {
+      background-color: var(--button-color);
+  }
+  .show {
+      display: block;
+  }
+  
 
   #menu-icon {
       color: var(--second-color);
@@ -650,4 +698,4 @@ footer {
     opacity: 0;
     transition: opacity 1s ease-in-out;
   }
-  
+}

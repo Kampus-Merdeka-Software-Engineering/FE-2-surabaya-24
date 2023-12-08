@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const cardContainer = document.getElementById("OriginTeaMenu");
     const SweeteaCard = document.getElementById("SweeTeaMenu");
-     const dessertsGrid = document.getElementById("grid");
+    const dessertsGrid = document.getElementById("grid");
 
     if (productData.length > 0) {
       let cards = "";
@@ -21,7 +21,8 @@ document.addEventListener("DOMContentLoaded", async () => {
       cardContainer.innerHTML = cards;
 
       console.log("product", productData[0].nameProduct);
-    } if (productData.length > 0) {
+    }
+    if (productData.length > 0) {
       let cards = "";
 
       for (let i = 0; i < 16; i++) {
@@ -30,12 +31,13 @@ document.addEventListener("DOMContentLoaded", async () => {
       }
 
       SweeteaCard.innerHTML = cards;
-      
     } else {
       console.error("Data Product tidak ditemukan.");
     }
   } catch (error) {
     console.error("Error:", error);
   }
-  
 });
+
+
+

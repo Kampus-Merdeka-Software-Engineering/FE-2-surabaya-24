@@ -120,17 +120,52 @@ header{
     cursor: pointer;
     display: none;
 }
+
+/* DROPDOWN NAVBAR */
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 15%;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* backdrop-filter: blur(15px); */
+}
+
+.dropdown_menu.open {
+    height: 240px;
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu a {
+    color: #FFFFFF;
+}
+
 /* NavBar END */
 
 
 /* Section Description "What is TeavoU?" START */
 .desc{
     width: 100%;
-    height: 117vh;
+    max-height: 117vh;
     background: white;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+.desc-text {
+    width: 50%;
 }
 
 .desc-text h2{
@@ -146,7 +181,7 @@ header{
 }
 
 .desc-text p{
-    width: 599px;
+    width: 100%;
     color: black;
     text-align: justify;
     font-family: 'Inter';
@@ -156,27 +191,7 @@ header{
     margin-top: 20px;
 }
 
-.desc-more>button{
-    margin-top: 62px;
-    font-family: 'grandstander';
-    font-size: 24px;
-    color: white;
-    background: var(--button-color);
-    width: 125px;
-    height: 45px;
-    border-radius: 12px;
-    flex-shrink: 0;
-    border: none;
-    padding: 0;
-}
-
-.desc-more>button:hover{
-    background: var(--second-color);
-    color: var(var(--bg-color));
-    transition: 0.2 all linear;
-}
-
-/* tutor yutub */
+/* GRID */
 .grid{
     display: flex; 
     gap: 7px;  
@@ -295,6 +310,7 @@ header{
 .product{
     font-size: 28px;
     color: var(--main-color);
+    /* margin-top: 80px; */
 }
 
 /* .product-text h2{
@@ -325,7 +341,6 @@ header{
     text-align: center;
     color: #96AD39;
     margin-right: 50px;
-
     background: var(--bg-color);
     border-color: var(--bg-color);
     border-radius: 20px;
@@ -666,7 +681,7 @@ header{
 
 /* FOOTER */
 footer {
-    position: fixed;
+    /* position: fixed; */
     bottom: 0;
 }
 
@@ -702,15 +717,6 @@ footer {
     color: var(--bg-color);
 }
 
-@media (max-height:800px) {
-    footer {
-        position: static;
-    }
-
-    header {
-        padding-top: 40px;
-    }
-}
 
 .footer .footer-left {
     width: 30%;
@@ -810,8 +816,152 @@ footer {
     margin-bottom: 20px;
 }
 
-@media (max-width: 880px) {
+
+
+/* RESPONSIVE */
+/* RESPONSIVE */
+/* RESPONSIVE */
+
+
+/* RESPONSIVE MOBILE */
+@media only screen and (max-width: 767px){
+    header {
+        position: fixed;
+        width: 100%;
+        height: 59px;
+        top: 0;
+        right: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 35px 0.9rem;
+        background-color: #ffffff;
+    }
     
+    .navbar{
+        display: none;
+    }
+    
+    #menu-icon {
+        color: var(--second-color);
+        cursor: pointer;
+        display: flex;
+        margin: 0 0 0 29rem;
+        padding: 0;
+        flex-grow: 1;
+        height: 20px;
+    }
+    
+    .logo{
+        bottom: 20rem;
+    }
+
+
+    /* main */
+    .desc{
+        max-width: 1280px;
+        max-height: 105vh;
+        display: inline-block;
+        flex-direction: column;
+        padding: 60px 20px;
+      }
+
+    .grid {
+        width: 50%;
+        height: auto;
+        margin-left: 10px;
+        z-index: 2;
+        display: flexbox;
+    }
+
+    .column img {
+        width: 90%;
+        height: 90%;
+    }
+
+    .desc-text{
+        width: 100%;
+        z-index: 1;      
+    }
+
+    .desc-text h2 {
+        width: 50%;
+        height: 30%;
+        font-size: 10vw;
+        vertical-align: middle;
+    }
+
+    .desc-text p {
+        width: 100%;
+        max-height: 300px;
+        display: flex;
+        padding: 20px 10px;
+        margin-top: 20px;
+        font-size: large;
+    }
+
+    .buttons {
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        gap : auto;
+        text-align: center;
+        margin: 10px 0 20px;
+
+    }
+
+    /* product*/
+    .product{
+        max-width: 1280px;
+        display: flex;
+        flex-direction: column;
+        position: sticky;
+        text-align: center;
+        padding: 0 20px;
+        margin-top: 30px;
+    }
+
+    .product-text h2 {      
+        font-size: 8vw;
+    }
+
+    .tab{
+        margin: 20px 0;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .tab button{
+        margin: 0;
+    }
+
+    /* label diskon */
+    #discount {
+        width: 13rem;
+        margin: -3.5 rem -1.8rem;
+    }
+    
+    #DC {
+        margin-top: -10rem;
+        padding: 3.5rem;
+        float: left;
+    }
+
+    /* manfaat */
+    #grid {
+        padding: 50px 30px 50px 30px;
+    }
+
+    .item h4 {
+        font-size: larger;
+    }
+
+    .item p {
+        font-size: large;
+    }
+
+    /* FOOTER */
     .footer .footer-left,
     .footer .footer-center,
     .footer .footer-right {
@@ -819,5 +969,176 @@ footer {
         width: 100%;
         margin-bottom: 40px;
         text-align: left;
+        font-size: larger;
     }
+
+    .line {
+        width: 100%;
+    }
+}
+
+
+
+/* RESPONSIVE TABLET */
+@media (min-width: 768px) and (max-width: 1024px){
+    header {
+        position: fixed;
+        width: 100%;
+        height: 59px;
+        top: 0;
+        right: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 35px 0.9rem;
+        background-color: #ffffff;
+    }
+    
+    .navbar{
+        display: none;
+    }
+    
+    #menu-icon {
+        color: var(--second-color);
+        cursor: pointer;
+        display: flex;
+        margin: 0 0 0 29rem;
+        padding: 0;
+        flex-grow: 1;
+        height: 20px;
+    }
+    
+    .logo{
+        bottom: 20rem;
+    }
+    
+    /* MAIN */
+    .desc{
+        max-width: 1280px;
+        max-height: 105vh;
+        display: inline-block;
+        flex-direction: column;
+        padding: 5% 4%;
+    }
+    
+    .grid {
+        width: 50%;
+        height: auto;
+        margin-left: 10px;
+        z-index: 2;
+        display: flexbox;
+    }
+    
+    .column img {
+        width: 90%;
+        height: 90%;
+    }
+    
+    .desc-text{
+        width: 100%;
+        z-index: 1;      
+    }
+    
+    .desc-text h2 {
+        width: 50%;
+        height: 60%;
+        font-size: 10vw;
+        vertical-align: middle;
+    }
+    
+    .desc-text p {
+        width: 100%;
+        max-height: 300px;
+        display: flex;
+        padding: 20px 10px;
+        margin-top: 20px;
+        font-size: large;
+    }
+    
+    .buttons {
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        gap : auto;
+        text-align: center;
+        margin: 10px 0 0;
+    }
+    
+    /* product*/
+    .product{
+        max-width: 1280px;
+        display: flex;
+        flex-direction: column;
+        position: sticky;
+        text-align: center;
+        padding: 0 20px;
+        margin-top: 30px;
+    }
+    
+    .product-text h2 {      
+        font-size: 8vw;
+    }
+    
+    .tab{
+        margin: 5% 0;
+        flex-direction: row;
+        align-content: center;
+    }
+    
+    .tab button{
+        margin: 0;
+    }
+    
+    /* label diskon */
+    #discount {
+        width: 13rem;
+        margin: -3.5 rem -1.8rem;
+    }
+    
+    #DC {
+        margin-top: -10rem;
+        padding: 3.5rem;
+        float: left;
+    }
+    
+    /* manfaat */
+    #grid {
+        padding: 50px 30px 50px 30px;
+    }
+    
+    .item h4 {
+        font-size: larger;
+    }
+    
+    .item p {
+        font-size: large;
+    }
+    
+    /* FOOTER */
+    .footer .footer-left,
+    .footer .footer-center,
+    .footer .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: left;
+        font-size: larger;
+    }
+    
+    .line {
+        width: 100%;
+    }
+}
+
+
+@media (max-height:800px) {
+    footer {
+        position: static;
+    }
+
+    header {
+        padding-top: 40px;
+    }
+    
 }
