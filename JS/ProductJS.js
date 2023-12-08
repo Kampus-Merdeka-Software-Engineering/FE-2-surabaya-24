@@ -1,6 +1,6 @@
 // // Connecting FE BE
-import { getProduct } from "../JS/API/products.js";
-import { createCard } from "../JS/script.js";
+import { getProduct } from "./API/products.js";
+import { createCard } from "./script.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
   try {
