@@ -1,12 +1,12 @@
 function submitForm() {
-  var nameInput = document.getElementById("name");
-  var emailInput = document.getElementById("email");
-  var feedbackInput = document.getElementById("feedback");
-  var previewImage = document.getElementById("preview-image");
+  let nameInput = document.getElementById("name");
+  let emailInput = document.getElementById("email");
+  let feedbackInput = document.getElementById("feedback");
+  let previewImage = document.getElementById("preview-image");
 
-  var name = nameInput.value;
-  var email = emailInput.value;
-  var feedback = feedbackInput.value;
+  let name = nameInput.value;
+  let email = emailInput.value;
+  let feedback = feedbackInput.value;
 
   // Perform further actions (e.g., sending data to server) with the collected information
   // For now, we'll just show a simple alert
