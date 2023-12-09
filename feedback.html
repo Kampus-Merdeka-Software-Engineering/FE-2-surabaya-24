@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Feedback Form</title>
-    <link rel="stylesheet" href="CSS/feedback.css">
-</head>
-<body>
+    <link rel="stylesheet" href="CSS/feedback.css" />
+  </head>
+  <body>
+    <div id="feedback-form">
+      <h2>Feedback Form</h2>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
 
-<div id="feedback-form">
-    <h2>Feedback Form</h2>
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
+      <label for="photo">Photo:</label>
+      <input
+        type="file"
+        id="photo"
+        name="photo"
+        accept="image/*"
+        onchange="previewImage()"
+      />
 
-    <label for="photo">Photo:</label>
-    <input type="file" id="photo" name="photo" accept="image/*" onchange="previewImage()">
+      <img id="preview-image" src="#" alt="Preview" style="display: none" />
 
-    <img id="preview-image" src="#" alt="Preview" style="display: none;">
+      <label for="feedback">Feedback:</label>
+      <textarea id="feedback" name="feedback" rows="4" required></textarea>
 
-    <label for="feedback">Feedback:</label>
-    <textarea id="feedback" name="feedback" rows="4" required></textarea>
+      <button onclick="submitForm()">Submit Feedback</button>
+    </div>
 
-    <button onclick="submitForm()">Submit Feedback</button>
-</div>
-
-<script src="JS/feedback.js"></script>
-<script src="JS/APIFeedback.js"></script>
-
-</body>
+    <script src="JS/feedback.js"></script>
+    <script src="JS/APIFeedback.js"></script>
+  </body>
 </html>

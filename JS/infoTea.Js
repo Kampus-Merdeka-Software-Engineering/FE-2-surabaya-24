@@ -1,15 +1,22 @@
 function submitForm() {
   // Get form values
-  var namaProduct = document.getElementById("namaProduct").value;
-  var namaUser = document.getElementById("namaUser").value;
-  var email = document.getElementById("email").value;
-  var jmlOrder = document.getElementById("jmlOrder").value;
+  let namaProduct = document.getElementById("namaProduct").value;
+  let namaUser = document.getElementById("namaUser").value;
+  let email = document.getElementById("email").value;
+  let jmlOrder = document.getElementById("jmlOrder").value;
 
-  // You can perform further validation or processing here
-
-  // Display the values (for demonstration purposes)
+  // Validate form fields
+  if (
+    namaProduct === "" ||
+    namaUser === "" ||
+    email === "" ||
+    jmlOrder === ""
+  ) {
+    alert("Semua form harus terisi.");
+    return;
+  }
   alert(
-      "\nNama Product: " +
+    "\nNama Product: " +
       namaProduct +
       "\nNama User: " +
       namaUser +
@@ -19,5 +26,11 @@ function submitForm() {
       jmlOrder
   );
 
-  // You can also send the data to the server using AJAX or other methods
+   // Clear the form fields
+ document.getElementById("namaProduct").value = "";
+ document.getElementById("namaUser").value = "";
+ document.getElementById("email").value = "";
+ document.getElementById("jmlOrder").value = "";
 }
+
+

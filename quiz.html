@@ -1,62 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS Quiz Format 1</title>
-    <link rel="stylesheet" href="CSS/quiz.css">
-</head>
-<body>
+    <link rel="stylesheet" href="CSS/quiz.css" />
+  </head>
+  <body>
     <!-- NavBar Start -->
     <header>
-        <!-- insert logo -->
-        <a href="#" class="logo">
-            <img src="https://iili.io/JIrTgwX.png" alt="logo">
-        </a>
-        
-        <!-- coba navbar dropdown -->
-        <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">
-                <img src="https://iili.io/JIrR1a4.png" alt="menubtn">
-            </button>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="index.html">Home</a>
-                <a href="AboutUs.html">AboutUs</a>
-                <a href="Product.html">Product</a>
-            </div>
+      <!-- insert logo -->
+      <a href="#" class="logo">
+        <img src="https://iili.io/JIrTgwX.png" alt="logo" />
+      </a>
+
+      <!-- coba navbar dropdown -->
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">
+          <img src="https://iili.io/JIrR1a4.png" alt="menubtn" />
+        </button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="index.html">Home</a>
+          <a href="AboutUs.html">AboutUs</a>
+          <a href="Product.html">Product</a>
         </div>
+      </div>
 
-        <!-- navbar links -->
-        <ul class="navbar">
-            <li><a href="Index.html">Home</a></li>
-            <li><a href="AboutUs.html">About Us</a></li>
-            <li><a href="Product.html">Product</a></li>
-        </ul>
+      <!-- navbar links -->
+      <ul class="navbar">
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="AboutUs.html">About Us</a></li>
+        <li><a href="Product.html">Product</a></li>
+      </ul>
     </header>
-        <!-- NavBar END -->
+    <!-- NavBar END -->
 
-<!-- Questions Container-->     
-<div class="container">
-    <div class="score">
+    <!-- Questions Container-->
+    <div class="container">
+      <div class="score">
         <span id="user-score">0</span>
-    <span> / </span>
+        <span> / </span>
         <span id="total-score">0</span>
-    </div>
-    <div class="content" id="question-area">
+      </div>
+      <div class="content" id="question-area">
         <div id="question-text"></div>
         <div class="options">
-            <button class="btn btn-option" id="True">True</button>
-            <button class="btn btn-option" id="False">False</button>
+          <button class="btn btn-option" id="True">True</button>
+          <button class="btn btn-option" id="False">False</button>
         </div>
-    </div>
-    <div class="controls">
+      </div>
+      <div class="controls">
         <button class="button btn-restart" id="restart">Restart</button>
         <button class="button btn-prev" id="prev">Prev</button>
         <button class="button btn-next" id="next">Next</button>
         <button class="button btn-submit" id="submit">Submit</button>
+      </div>
     </div>
-</div>
-<script src="JS/quiz.js"></script>
-</body>
+    <script src="JS/quiz.js"></script>
+  </body>
 </html>
