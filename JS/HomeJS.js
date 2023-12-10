@@ -194,77 +194,77 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Play Quiz
-const questions = [
-  {
-    question: "Apa ibu kota Indonesia?",
-    options: ["Jakarta", "Bandung", "Surabaya", "Medan"],
-    correctAnswer: "Jakarta",
-  },
-  {
-    question: "Berapa hasil dari 5 + 3?",
-    options: ["8", "10", "12", "15"],
-    correctAnswer: "8",
-  },
-];
+// const questions = [
+//   {
+//     question: "Apa ibu kota Indonesia?",
+//     options: ["Jakarta", "Bandung", "Surabaya", "Medan"],
+//     correctAnswer: "Jakarta",
+//   },
+//   {
+//     question: "Berapa hasil dari 5 + 3?",
+//     options: ["8", "10", "12", "15"],
+//     correctAnswer: "8",
+//   },
+// ];
 
-let currentQuestion = 0;
-let score = 0;
+// let currentQuestion = 0;
+// let score = 0;
 
-function startQuiz() {
-  showModal();
-  showQuestion();
-}
+// function startQuiz() {
+//   showModal();
+//   showQuestion();
+// }
 
-function showModal() {
-  document.getElementById("quiz-modal").style.display = "block";
-}
+// function showModal() {
+//   document.getElementById("quiz-modal").style.display = "block";
+// }
 
-function closeModal() {
-  document.getElementById("quiz-modal").style.display = "none";
-}
+// function closeModal() {
+//   document.getElementById("quiz-modal").style.display = "none";
+// }
 
-function showQuestion() {
-  const questionContainer = document.getElementById("question-container");
-  const currentQuestionObj = questions[currentQuestion];
+// function showQuestion() {
+//   const questionContainer = document.getElementById("question-container");
+//   const currentQuestionObj = questions[currentQuestion];
 
-  questionContainer.innerHTML = `
-        <h3>${currentQuestionObj.question}</h3>
-        <ul>
-            ${currentQuestionObj.options
-              .map((option) => `<li>${option}</li>`)
-              .join("")}
-        </ul>
-    `;
-}
+//   questionContainer.innerHTML = `
+//         <h3>${currentQuestionObj.question}</h3>
+//         <ul>
+//             ${currentQuestionObj.options
+//               .map((option) => `<li>${option}</li>`)
+//               .join("")}
+//         </ul>
+//     `;
+// }
 
-function checkAnswer() {
-  const userAnswer = document.querySelector('input[name="answer"]:checked');
+// function checkAnswer() {
+//   const userAnswer = document.querySelector('input[name="answer"]:checked');
 
-  if (userAnswer) {
-    if (userAnswer.value === questions[currentQuestion].correctAnswer) {
-      score++;
-    }
+//   if (userAnswer) {
+//     if (userAnswer.value === questions[currentQuestion].correctAnswer) {
+//       score++;
+//     }
 
-    currentQuestion++;
-    userAnswer.checked = false;
+//     currentQuestion++;
+//     userAnswer.checked = false;
 
-    if (currentQuestion < questions.length) {
-      showQuestion();
-    } else {
-      displayResult();
-    }
-  } else {
-    alert("Silakan pilih jawaban terlebih dahulu.");
-  }
-}
+//     if (currentQuestion < questions.length) {
+//       showQuestion();
+//     } else {
+//       displayResult();
+//     }
+//   } else {
+//     alert("Silakan pilih jawaban terlebih dahulu.");
+//   }
+// }
 
-function displayResult() {
-  closeModal();
-  alert(`Quiz selesai!\nSkor Anda: ${score} dari ${questions.length}`);
-  resetQuiz();
-}
+// function displayResult() {
+//   closeModal();
+//   alert(`Quiz selesai!\nSkor Anda: ${score} dari ${questions.length}`);
+//   resetQuiz();
+// }
 
-function resetQuiz() {
-  currentQuestion = 0;
-  score = 0;
-}
+// function resetQuiz() {
+//   currentQuestion = 0;
+//   score = 0;
+// }
