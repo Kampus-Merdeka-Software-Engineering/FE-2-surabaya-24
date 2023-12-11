@@ -405,7 +405,7 @@ header{
     width: 40rem;
     height: 20rem;
     margin-right: 2rem;
-    margin-top: -26rem;
+    margin-top: 50px;
 }
 
 .festival img {
@@ -1154,7 +1154,7 @@ footer {
         width: 150px;
         height: 20rem;
         margin-right: 2rem;
-        margin-top: -26rem;
+        margin-top: -16rem;
     }
     
     .festival img {

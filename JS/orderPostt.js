@@ -1,53 +1,53 @@
-import { Order } from "./order";
-import { createordering as createOrderingAPI } from "./POST";
+// JS/feedback.js
+import { createordering } from "./API/OrderAPI";
 
-export function createordering(order) {
-  const cardOrder = `
-    <section id="formOrder">
-      <div class="container">
-        <form id="orderForm">
-          <label for="namaProduct">${order.NamaProduct}</label>
-          <input type="text" id="namaProduct" name="namaProduct" required>
+document.addEventListener("DOMContentLoaded", () => {
+  document
+    .getElementById("orderForm")
+    .addEventListener("submit", async (event) => {
+      event.preventDefault();
 
-          <label for="namaUser">${order.NamaUser}</label>
-          <input type="text" id="namaUser" name="namaUser" required>
+      const OrderNameProduck = document.getElementById("namaProduct");
+      const OrderNameUser = document.getElementById("namaUser");
+      const OrderEmail = document.getElementById("email");
+      const OrderjmlOrder = document.getElementById("jmlOrder");
 
-          <label for="email">${order.Email}</label>
-          <input type="email" id="email" name="email" required>
+      const DataOrder = {
+        OrderNameProduck: OrderNameProduck.value,
+        OrderNameUser: OrderNameUser.value,
+        OrderEmail: OrderEmail.value,
+        JumlahOrder: OrderjmlOrder.value,
+      };
 
-          <label for="jmlOrder">${order.JmlOrder}</label>
-          <input type="number" id="jmlOrder" name="jmlOrder" required>
+      try {
+        // Check if the form is complete
+        if (
+          !DataOrder.OrderNameProduck ||
+          !DataOrder.OrderNameUser ||
+          !DataOrder.OrderEmail ||
+          !DataOrder.JumlahOrder
+        ) {
+          // If not, show an alert to complete the form
+          alert("Please complete all fields before submitting the form.");
+          return; // Stop further execution
+        }
 
-          <button type="submit">Submit</button>
-        </form>
-      </div>
-    </section>`;
+        console.log("Submitting feedback...", DataOrder);
 
-  return order;
-}
+        const response = await createordering(DataOrder);
 
-document.getElementById("orderForm").addEventListener("submit", submitForm);
+        // Show success message
+        alert("Order successfully submitted. Thank you!");
 
-function submitForm(event) {
-  event.preventDefault();
+        // Clear form fields
+        OrderNameProduck.value = "";
+        OrderNameUser.value = "";
+        OrderEmail.value = "";
+        OrderjmlOrder.value = "";
 
-  const namaProduct = document.getElementById("namaProduct").value;
-  const namaUser = document.getElementById("namaUser").value;
-  const email = document.getElementById("email").value;
-  const jmlOrder = document.getElementById("jmlOrder").value;
-
-  Order.create({
-    namaProduct,
-    namaUser,
-    email,
-    jmlOrder,
-  })
-    .then((response) => {
-      console.log(response);
-      alert("Order berhasil dikirim");
-    })
-    .catch((error) => {
-      console.log(error);
-      alert("Terjadi kesalahan saat mengirim order");
+        console.log("Order successfully submitted. Thank you!", response);
+      } catch (error) {
+        console.error("Error submitting order:", error);
+      }
     });
-}
+});

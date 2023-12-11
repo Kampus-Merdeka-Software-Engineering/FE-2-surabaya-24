@@ -217,46 +217,6 @@ header {
     font-family: 'Inter';
 }
 
- /* VALUE-CARD */
- .value-card {
-     padding: 0 1.25rem 1.25rem;
-     margin: 0 1.25rem 1.25rem;
-     width: 100%;
- }
-
- .value-list {
-     display: inline-block;
-     align-items: center;
-     padding-top: 1rem;
- }
-
- .value-list div {
-     flex: 1;
-     display: flex;
-     align-items: center;
-     line-height: 1.2;
-     gap: 20px;
- }
-
- .value-list h5 {
-     text-align: center;
-     color: var(--button-color);
-     font-size: 40px;
- }
-
- .value-list h5>span {
-     color: var(--second-color);
- }
-
-.value-list p {
-    color: black;
-    font-size: 14px;
-    font-family: "inter";
-    word-spacing: 2px;
-    vertical-align: middle;
-    max-width: calc(50rem - 100px);
-}
-
 /* Desserts */
 #Desserts{
     font-family: 'Inter';
@@ -384,15 +344,20 @@ header {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    
+    width: 30rem;
+    margin-top: -3rem;
+    margin-left: -6rem;
 }
 form {
     display: grid;
     grid-gap: 10px;
+    border-radius: 50px;
 }
 
 label {
     font-weight: bold;
+    color: var(--main-color);
+
 }
 
 input {
@@ -401,19 +366,24 @@ input {
     box-sizing: border-box;
     margin-top: 4px;
     margin-bottom: 8px;
+    border-radius: 5px;
+    border-color: #628900;
 }
 
 button {
-    background-color: #007BFF;
+    background-color: var(--button-color);
     color: #fff;
     padding: 10px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    width: 100px;
+    margin-left: 10rem;
+    margin-top: 1rem;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #ff8c00;
 }
 
 /* Responsive Design */
