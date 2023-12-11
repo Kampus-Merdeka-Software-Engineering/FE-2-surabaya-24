@@ -1,424 +1,155 @@
-/* Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@400;500;700&family=Poppins:ital,wght@0,200;0,300;0,500;0,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Grandstander:wght@400;500;700&family=Poppins:ital,wght@0,200;0,300;0,500;0,600;1,700&display=swap");
 
 * {
-    font-family: 'Grandstander', cursive;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-padding-top: 4rem;
-    scroll-behavior: smooth;
-    list-style: none;
-    text-decoration: none;
+  font-family: "Grandstander", cursive;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-padding-top: 4rem;
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
 }
 
-/* Variables */
 :root {
-    --main-color: #96AD39;
-    --button-color: #D0862D;
-    --second-color: #4A6409;
-    --bg-color: #FFFFFF;
+  --main-color: #96ad39;
+  --button-color: #d0862d;
+  --second-color: #4a6409;
+  --bg-color: #ffffff;
 }
 
 section {
-    padding: 100px 100px;
+  padding: 100px 100px;
 }
 
 img {
-    width: 441px;
+  width: 441px;
 }
 
 body {
-    color: black;
-    background-color: var(--bg-color);
+  color: black;
+  background-color: var(--bg-color);
 }
 
-/* Header */
 header {
-    position: fixed;
-    width: 100%;
-    height: 59px;
-    top: 0;
-    right: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 35px 0.9rem;
-    background-color: #ffffff;
+  position: fixed;
+  width: 100%;
+  height: 59px;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 0.9rem;
+  background-color: #ffffff;
 }
 
 .logo img {
-    width: 90px;
+  width: 90px;
 }
 
 .navbar {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
 }
 
 .navbar a {
-    padding: 8px 20px;
-    color: var(--second-color);
-    font-size: 1rem;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-family: 'inter', sans-serif;
-    font-weight: bold;
-    margin: 0 10px;
-    position: relative;
+  padding: 8px 20px;
+  color: var(--second-color);
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: "inter", sans-serif;
+  font-weight: bold;
+  margin: 0 10px;
+  position: relative;
 }
 
 .navbar a:hover {
-    transition: 0.2s all linear;
-    border-bottom: 2px solid var(--button-color);
-    color: var(--button-color);
-    padding: 0;
-    margin: 0;
+  transition: 0.2s all linear;
+  border-bottom: 2px solid var(--button-color);
+  color: var(--button-color);
+  padding: 0;
+  margin: 0;
 }
 
 .navbar a:hover,
 .active_nav {
-    transition: 0.2s all linear;
-    background-size: auto;
-    border-bottom: 2px solid var(--button-color);
-    font-size: 1rem;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-family: 'inter', sans-serif;
-    font-weight: bold;
-    padding: 8px;
-    margin: 0 2rem;
+  transition: 0.2s all linear;
+  background-size: auto;
+  border-bottom: 2px solid var(--button-color);
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: "inter", sans-serif;
+  font-weight: bold;
+  padding: 8px;
+  margin: 0 2rem;
 }
 
 .active_nav a {
-    color: var(--button-color);
-    position: relative;
-    margin: 0;
-    padding: 0;
-    background-size: auto;
+  color: var(--button-color);
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-size: auto;
 }
 
 #menu-icon {
-    color: var(--second-color);
-    font-size: 24px;
-    z-index: 100001;
-    cursor: pointer;
-    display: none;
+  color: var(--second-color);
+  font-size: 24px;
+  z-index: 100001;
+  cursor: pointer;
+  display: none;
 }
 
-/* Info Tea */
-/* .InfoTea{
-
-} */
-
-#MenuTea{
-    font-weight: bold;
-    color: #D0862D;
-    font-family: 'Inter';
-    font-size: 25px;
-}
-
-.DeskripsiTea{
-    font-family: 'Inter';
-}
-
-#namaTea{
-    color: #4A6409;
-    font-size: 40px;
-    margin-top: 20px;
-}
-
-#price{
-     font-weight: bold;
-     color: #FF8B00;
-     font-family: 'Inter';
-     font-size: 20px;
-     margin-top: 10px;
-}
-
-#ParagraphTea {
-    font-family: 'Inter';
-    font-size: 15px;
-    margin-top: 10px;
-    max-width: calc(50rem - 200px);
-    text-align: justify;
-}
-
-#ImgInfo {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-top: 5.5rem;
-    margin-right: 2rem;
-    padding: 10px;
-}
-
-#Ingredients{
-    font-weight: bold;
-    color: #D0862D;
-    font-family: 'Inter';
-    font-size: 20px;
-    margin-top: 50px;
-}
-
-#in{
-    color: #96AD39;
-}
-
-#TextMenu{
-    color: #4A6409;
-    font-family: 'Inter';
-}
-
-#TabIngredient{
-    background-color: #C7FA89;
-    width: 289px;
-    height: 374px;
-    border-color: #88BE00;
-    border-style: dashed;
-    border-radius: 20px;
-    margin-top: 20px;
-}
-
-#listIngredient{
-    font-family: 'Inter';
-    font-size: 15px;
-    margin-top: 10px;
-    text-align: justify;
-    padding: 20px 20px 20px 20px;
-}
-
-
-.value {
-    margin-top: -25rem;
-    margin-left: 17rem;
-}
-
-#textValue {
-    font-weight: bold;
-    color: #D0862D;
-    font-family: 'Inter';
-    font-size: 30px;
-    margin-top: 50px;
-}
-
-#in {
-    color: #96AD39;
-}
-
-#spanValue {
-    color: #4A6409;
-    font-family: 'Inter';
-}
-
-/* Desserts */
-#Desserts{
-    font-family: 'Inter';
-    padding-top: -10rem;
-    margin-top: -15rem;
-    padding-left: 68rem;
-    font-family: 'Inter';
-    height: 15rem;
-}
-
-#textDesserts {
-    font-weight: bold;
-    color: #D0862D;
-    font-family: 'Inter';
-    font-size: 25px;
-    margin-top: 50px;
-    margin-left: -10rem;
-}
-
-#in {
-    color: #96AD39;
-}
-
-#spanDesserts {
-    color: #4A6409;
-    font-family: 'Inter';
-}
-
-#DessertsList {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(159px, 2fr));
-    gap: 10px;
-    justify-content: center;
-    width: 20rem;
-}
-
-
-#Desserts1 {
-    color: #ffffff;
-    background-color: #98D500;
-    font-size: 13px;
-    font-family: 'Inter';
-    display: inline-block;
-    padding: 10px;
-    border-radius: 50px;
-    margin-left: -14rem;
-    margin-top: 2rem;
-}
-
-#Desserts2 {
-    color: #ffffff;
-    background-color: #628900;
-    font-size: 13px;
-    font-family: 'Inter';
-    display: inline-block;
-    padding: 10px;
-    border-radius: 50px;
-    margin-left: 1rem;
-    margin-top: 2rem;
-}
-
-#Desserts3 {
-    color: #ffffff;
-    background-color: #99BC43;
-    font-size: 13px;
-    font-family: 'Inter';
-    display: inline-block;
-    padding: 10px;
-    border-radius: 50px;
-    margin-left: 1rem;
-    margin-top: -10rem;
-}
-
-#Desserts4 {
-    color: #ffffff;
-    background-color: #99BC43;
-    font-size: 13px;
-    font-family: 'Inter';
-    display: inline-block;
-    padding: 10px;
-    border-radius: 50px;
-    margin-left: -3rem;
-    margin-top: 1rem;
-}
-
-#Desserts5 {
-    color: #ffffff;
-    background-color: #98D500;
-    font-size: 13px;
-    font-family: 'Inter';
-    display: inline-block;
-    padding: 10px;
-    border-radius: 50px;
-    margin-left: 1rem;
-    margin-top: -4rem;
-}
-
-#Desserts6 {
-    color: #ffffff;
-    background-color: #98D500;
-    font-size: 13px;
-    font-family: 'Inter';
-    display: inline-block;
-    padding: 10px;
-    border-radius: 50px;
-    margin-left: -24rem;
-    margin-top:-20rem;
-}
-
-#Desserts7 {
-    color: #ffffff;
-    background-color: #4A6409;
-    font-size: 13px;
-    font-family: 'Inter';
-    display: inline-block;
-    padding: 10px;
-    border-radius: 50px;
-    margin-left: -2rem;
-    margin-top: 1rem;
-}
-
-/* Form Order */
 .container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 30rem;
-    margin-top: -3rem;
-    margin-left: -6rem;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 30rem;
 }
+
 form {
-    display: grid;
-    grid-gap: 10px;
-    border-radius: 50px;
+  display: grid;
+  grid-gap: 10px;
+  border-radius: 50px;
 }
 
 label {
-    font-weight: bold;
-    color: var(--main-color);
-
+  font-weight: bold;
+  color: var(--main-color);
 }
 
 input {
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
-    margin-top: 4px;
-    margin-bottom: 8px;
-    border-radius: 5px;
-    border-color: #628900;
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  border-color: #628900;
 }
 
 button {
-    background-color: var(--button-color);
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100px;
-    margin-left: 10rem;
-    margin-top: 1rem;
+  background-color: var(--button-color);
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100px;
+  margin-left: 10rem;
+  margin-top: 1rem;
 }
 
 button:hover {
-    background-color: #ff8c00;
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-    #Desserts {
-        padding-left: 48rem;
-    }
-}
-
-@media (max-width: 768px) {
-    #Desserts {
-        padding-left: 36rem;
-    }
-}
-
-@media (max-width: 576px) {
-    #Desserts {
-        padding-left: 24rem;
-    }
-}
-
-@media (max-width: 425px) {
-    #Desserts {
-        padding-left: 12rem;
-    }
-}
-
-@media (max-width: 375px) {
-    #Desserts {
-        padding-left: 6rem;
-    }
-}
-
-@media (max-width: 320px) {
-    #Desserts {
-        padding-left: 2rem;
-    }
+  background-color: #ff8c00;
 }
