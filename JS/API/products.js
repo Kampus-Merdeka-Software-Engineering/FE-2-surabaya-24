@@ -1,14 +1,11 @@
 export async function getProduct() {
   try {
-    const response = await fetch(
-      "https://kind-jade-jay-gown.cyclic.app/product",
-      {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
+    const response = await fetch("be-2-surabaya-24-production.up.railway.app/product", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
     const { data } = await response.json();
     console.log(data);
     return data;
@@ -17,3 +14,4 @@ export async function getProduct() {
     return null;
   }
 }
+
