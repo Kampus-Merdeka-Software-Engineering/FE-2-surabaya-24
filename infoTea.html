@@ -7,16 +7,25 @@
     <title>Info Tea</title>
 </head>
 <body>
-        <header>
+    <header>
         <a href="#" class="logo">
             <img src="Asset/Logo.png" alt="">
         </a>
 
-        <i class="menu" id="menu-icon"><img src="Asset/menu.svg" alt=""></i>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">
+            <img src="https://iili.io/JIrR1a4.png" alt="menubtn">
+            </button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="index.html">Home</a>
+                <a href="AboutUs.html">AboutUs</a>
+                <a href="Product.html">Product</a>
+            </div>
+        </div>
 
         <ul class="navbar">
             <li><a href="index.html">Home</a></li>
-            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="#">About Us</a></li>
             <li><a href="Product.html">Product</a></li>
         </ul>
     </header>
@@ -24,6 +33,11 @@
 <section id="formOrder">
 <div class="container">
     <form id="orderForm">
+        <div class="head-form">
+            <img src="asset/Logo.png">
+            <h3>Ticket Order Form</p>
+        </div>
+
         <label for="namaProduct">Nama Product:</label>
         <input type="text" id="namaProduct" name="namaProduct" required>
 
@@ -42,7 +56,7 @@
     
 </section>
 
-    <script src="JS/feedback.js"></script>
+    <script src="JS/infoTea.Js"></script>
     <script type="module" src="JS/GetFeed.js"></script>
     <script type="module" src="JS/orderPostt.js"></script>
 </body>
