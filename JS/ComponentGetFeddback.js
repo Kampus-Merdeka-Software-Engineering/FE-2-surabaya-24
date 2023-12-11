@@ -1,4 +1,3 @@
-// // Component Origin Tea
 export function createFeed(Order) {
   const cardFeed = `
         <div class="card-spill" id="feedback-form">

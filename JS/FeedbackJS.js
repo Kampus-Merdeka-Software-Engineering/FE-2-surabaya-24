@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document
     .getElementById("FromFeed")
     .addEventListener("submit", async (event) => {
-      event.preventDefault(); // Prevent the default form submission behavior
+      event.preventDefault();
 
       const feedbackName = document.getElementById("name").value;
       const feedbackEmail = document.getElementById("email").value;

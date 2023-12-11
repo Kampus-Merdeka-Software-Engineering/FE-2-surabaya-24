@@ -1,10 +1,7 @@
-// navbar dropdown click
-/* Saat pengguna mengklik tombol, beralih antara menyembunyikan dan menampilkan konten dropdown */
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
 
-// Tutup dropdown jika pengguna mengklik di luarnya sisi buttonnya
 window.onclick = function (event) {
   if (!event.target.matches(".dropbtn")) {
     var dropdowns = document.getElementsByClassName("dropdown-content");
@@ -18,8 +15,6 @@ window.onclick = function (event) {
   }
 };
 
-// They galleryTeam the tea
-
 const slides_galleryTeam = document.querySelectorAll(".slide_galleryTeam");
 const dots_galleryTeam = document.querySelectorAll(".dot_galleryTeam");
 
@@ -31,13 +26,13 @@ function showSlide_galleryTeam(n) {
   );
   dots_galleryTeam.forEach((dot_galleryTeam) =>
     dot_galleryTeam.classList.remove("active-dot")
-  ); // Perbaikan penamaan kelas di sini
+  );
   currentSlidegalleryTeamProduct =
     (n + slides_galleryTeam.length) % slides_galleryTeam.length;
   slides_galleryTeam[currentSlidegalleryTeamProduct].classList.add(
     "active-galleryTeam"
   );
-  dots_galleryTeam[currentSlidegalleryTeamProduct].classList.add("active-dot"); // Perbaikan penamaan kelas di sini
+  dots_galleryTeam[currentSlidegalleryTeamProduct].classList.add("active-dot");
 }
 
 showSlide_galleryTeam(currentSlidegalleryTeamProduct);

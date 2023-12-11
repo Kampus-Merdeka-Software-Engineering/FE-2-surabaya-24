@@ -1,4 +1,3 @@
-// JS/feedback.js
 import { postfeed } from "./API/APIFeedback.js";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -20,15 +19,13 @@ document.addEventListener("DOMContentLoaded", () => {
       };
 
       try {
-        // Check if the form is complete
         if (
           !DataFeedback.feedbackName ||
           !DataFeedback.feedbackEmail ||
           !DataFeedback.feedbackComment
         ) {
-          // If not, show an alert to complete the form
           alert("Please complete all fields before submitting the form.");
-          return; // Stop further execution
+          return;
         }
 
         console.log("Submitting feedback...", DataFeedback);
@@ -46,14 +43,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const response = await postfeed(DataFeedback);
 
-        // Show success message
         alert("Feedback successfully submitted. Thank you!");
 
-        // Clear form fields and hide preview image
         feedbackName.value = "";
         feedbackEmail.value = "";
         feedbackComment.value = "";
-        photoInput.value = ""; // Clear the file input
+        photoInput.value = "";
         previewImage.src = "";
         previewImage.style.display = "none";
 

@@ -1,9 +1,6 @@
-// navbar dropdown click
-/* Saat pengguna mengklik tombol, beralih antara menyembunyikan dan menampilkan konten dropdown */
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
-// Tutup dropdown jika pengguna mengklik di luarnya sisi buttonnya
 window.onclick = function (event) {
   if (!event.target.matches(".dropbtn")) {
     {

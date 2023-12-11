@@ -1,4 +1,3 @@
-// JS/feedback.js
 import { createordering } from "./API/OrderAPI";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -20,26 +19,21 @@ document.addEventListener("DOMContentLoaded", () => {
       };
 
       try {
-        // Check if the form is complete
         if (
           !DataOrder.OrderNameProduck ||
           !DataOrder.OrderNameUser ||
           !DataOrder.OrderEmail ||
           !DataOrder.JumlahOrder
         ) {
-          // If not, show an alert to complete the form
           alert("Please complete all fields before submitting the form.");
-          return; // Stop further execution
+          return;
         }
 
         console.log("Submitting feedback...", DataOrder);
 
         const response = await createordering(DataOrder);
 
-        // Show success message
         alert("Order successfully submitted. Thank you!");
-
-        // Clear form fields
         OrderNameProduck.value = "";
         OrderNameUser.value = "";
         OrderEmail.value = "";

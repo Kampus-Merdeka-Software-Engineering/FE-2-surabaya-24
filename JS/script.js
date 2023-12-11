@@ -1,4 +1,3 @@
-// // Component Origin Tea
 export function createCard(product) {
   const discountView = product.Discount
     ? `<div id="discount">

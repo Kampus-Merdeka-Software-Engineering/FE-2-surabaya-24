@@ -1,9 +1,6 @@
-// navbar dropdown click
-/* Saat pengguna mengklik tombol, beralih antara menyembunyikan dan menampilkan konten dropdown */
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
-// Tutup dropdown jika pengguna mengklik di luarnya sisi buttonnya
 window.onclick = function (event) {
   if (!event.target.matches(".dropbtn")) {
     {
@@ -19,7 +16,6 @@ window.onclick = function (event) {
   }
 };
 
-/*create letiables by element*/
 const restartBtn = document.getElementById("restart");
 const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
@@ -30,11 +26,9 @@ const userScore = document.getElementById("user-score");
 const totalScore = document.getElementById("total-score");
 const questionText = document.getElementById("question-text");
 
-/*counter for current questions and score */
 let currentQuestion = 0;
 let score = 0;
 
-/*array of questions */
 let questions = [
   {
     question:
@@ -77,13 +71,11 @@ let questions = [
   },
 ];
 
-/*add on click events to button */
 restartBtn.addEventListener("click", restart);
 prevBtn.addEventListener("click", prev);
 nextBtn.addEventListener("click", next);
 submitBtn.addEventListener("click", submit);
 
-/*function beginQuiz */
 function beginQuiz() {
   currentQuestion = 0;
   totalScore.innerHTML = questions.length;
@@ -119,7 +111,6 @@ function beginQuiz() {
 
 beginQuiz();
 
-/*function restart quiz for reset score */
 function restart() {
   currentQuestion = 0;
   prevBtn.classList.remove("hide");
@@ -132,7 +123,6 @@ function restart() {
   beginQuiz();
 }
 
-/*function next to jump next questions*/
 function next() {
   currentQuestion++;
   if (currentQuestion >= 4) {
@@ -169,7 +159,6 @@ function next() {
   prevBtn.classList.remove("hide");
 }
 
-/*function previous to go back to previous questions*/
 function prev() {
   currentQuestion--;
   if (currentQuestion <= 0) {
@@ -206,7 +195,6 @@ function prev() {
   nextBtn.classList.remove("hide");
 }
 
-/*submit button */
 function submit() {
   prevBtn.classList.add("hide");
   nextBtn.classList.add("hide");
