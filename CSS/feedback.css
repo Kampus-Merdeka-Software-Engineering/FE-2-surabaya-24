@@ -1,3 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@400;500;700&family=Poppins:ital,wght@0,200;0,300;0,500;0,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+*{
+    font-family: 'Grandstander', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 4rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    --main-color: #96AD39;
+    --button-color:#D0862D;
+    --second-color:#4A6409;
+    --bg-color:#FFFFFF;
+}
+
+section{
+    padding: 50px 30px 50px 100px;
+}
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -9,12 +32,91 @@ body {
     height: 100vh;
 }
 
+header {
+    position: fixed;
+    width: 100%;
+    height: 59px;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 0.9rem;
+    background-color: #fff;
+}
+
+.logo img{
+    width: 90px;
+}
+
+.dropdown{
+    display: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+}
+
+.navbar a {
+    padding: 8px 20px;
+    color: var(--second-color);
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'inter', sans-serif;
+    font-weight: bold;
+    margin: 0 10px;
+    position: relative;
+}
+
+.navbar a:hover {
+    transition: 0.2s all linear;
+    border-bottom: 2px solid var(--button-color);
+    color: var(--button-color);
+    padding: 0;
+    margin: 0;
+}
+
+.navbar a:hover,
+.active_nav {
+    transition: 0.2s all linear;
+    background-size: auto;
+    border-bottom: 2px solid var(--button-color);
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'inter', sans-serif;
+    font-weight: bold;
+    padding: 8px;
+    margin: 0 2rem;
+}
+
+.active_nav a {
+    color: var(--button-color);
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background-size: auto;
+}
+
 #feedback-form {
-    width: 400px;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
+    background: rgba(72, 188, 75, 0.5);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-image: url();
+}
+
+#feedback-form h2{
+    color: #e78d07;
 }
 
 label {
@@ -36,7 +138,7 @@ input, textarea {
 }
 
 button {
-    background-color: #4caf50;
+    background-color: #D0862D;
     color: #fff;
     padding: 10px;
     border: none;
@@ -45,5 +147,74 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #b76706;
 }
+
+@media only screen and (max-width: 768px) {
+    section{
+        max-width: 768px;
+    }
+
+    header {
+        position: fixed;
+        width: 100%;
+        height: 40px;
+        top: 0;
+        right: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 35px 0.9rem;
+        background-color: #ffffff;
+    }
+
+    .navbar{
+        display: none;
+    }
+    .dropbtn {
+        background-color: #607e13;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        }
+        
+        .dropbtn:hover, .dropbtn:focus {
+        background-color: var(--button-color);
+        }
+        
+        .dropdown {
+        position: relative;
+        display: inline-block;
+        }
+        
+        .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        right: 0;
+        z-index: 1;
+        }
+        
+        .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        }
+        
+        .dropdown a:hover {
+            background-color: var(--button-color);
+        }
+        
+        .show {
+            display: block;
+        }
+        }
+
+

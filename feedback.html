@@ -5,30 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedback Form</title>
     <link rel="stylesheet" href="CSS/feedback.css">
+    <link rel="icon" href="https://iili.io/JIrTgwX.png" type="image/x-icon">
 </head>
 <body>
+    <header>
+        <a href="#" class="logo">
+            <img src="https://iili.io/JIrTgwX.png" alt="logo">
+        </a>
+            
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">
+            <img src="https://iili.io/JIrR1a4.png" alt="menubtn">
+            </button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="index.html">Home</a>
+                <a href="AboutUs.html">AboutUs</a>
+                <a href="Product.html">Product</a>
+            </div>
+        </div>
 
-   <form action="" id="FromFeed" autocomplete="on">
-    <div id="feedback-form">
-        <h2>Feedback Form</h2>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" autocomplete="name" required>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li></li><a href="#">About Us</a></li>
+            <li><a href="Product.html">Product</a></li>
+        </ul>
+    </header>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" autocomplete="email" required>
 
-        <label for="feedback">Feedback:</label>
-        <textarea id="feedback" name="feedback" rows="4" required></textarea>
+    <form action="" id="FromFeed" autocomplete="on">
+        <div class="formcard">
+            <div id="feedback-form">
+                <h2>Feedback Form</h2><br>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" autocomplete="name" required>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+        
+                <label for="feedback">Feedback:</label>
+                <textarea id="feedback" name="feedback" rows="4" required></textarea>
+        
+        
+                <button type="submit">Submit Feedback</button>
+            </div>
+        </div>
+        
+    </form>
 
-        <label for="photo">Upload Photo:</label>
-        <input type="file" id="photo" name="photo" accept="image/*">
-
-        <img id="previewImage" alt="Preview Image" style="max-width: 100%; max-height: 200px; margin-top: 10px; display: none;">
-
-        <button type="submit">Submit Feedback</button>
-    </div>
-</form>
-
+    <script src="JS/buttonnavbar.js"></script>
     <script type="module" src="JS/feedback.js"></script>
 
 </body>
