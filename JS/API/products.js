@@ -1,7 +1,7 @@
 export async function getProduct() {
   try {
     const response = await fetch(
-      "be-2-surabaya-24-production.up.railway.app/product",
+      "https://kind-jade-jay-gown.cyclic.app/product",
       {
         method: "GET",
         headers: {
