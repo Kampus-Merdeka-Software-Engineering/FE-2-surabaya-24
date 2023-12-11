@@ -1,4 +1,3 @@
-/* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@400;500;700&family=Poppins:ital,wght@0,200;0,300;0,500;0,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 *{
@@ -12,7 +11,6 @@
     text-decoration: none;
 }
 
-/* Variables */
 :root{
     --main-color: #96AD39;
     --button-color:#D0862D;
@@ -37,7 +35,6 @@ span{
     color: var(--button-color);
 }
 
-/* Header */
 header {
     position: fixed;
     width: 100%;
@@ -112,18 +109,6 @@ header {
     background-size: auto;
 }
 
-/* .active_nav a:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -5rem;
-    height: 2px;
-    background-color: var(--button-color);
-} */
-
-
-/* section profileupper "About Us TeavoU" */
 .profileupper{
     width: 100%;
     min-height: 100vh;
@@ -136,20 +121,16 @@ header {
     align-items: stretch;
     gap: 1.5rem;
     background-image: url(https://iili.io/JIr7Kqg.png);
-    /* background-color: #4A6409; */
 }
 
 .upperleftcolumn{
     float: left;
     width: 100%;
-    /* background-color: #888; */
 }
 
 .upperrightcolumn{
-    margin-left: 70px;
     float: right;
     width: 100%;
-    /* background-color: brown; */
 }
 
 .uppercolumn{
@@ -157,22 +138,17 @@ header {
     float: right;
     flex-direction: column;
     gap: 17px;
-    /* background-color: yellowgreen; */
 }
 
 .uppercolumn-1 img{
     float: left;
     justify-content: flex-start;
-    /* background: #000; */
-    /* background-color: #888; */
 }
 
 .uppercolumn-2 img{
     float: left;
     justify-content: flex-start;
     margin-top: 200px;
-    /* margin-left: -10px; */
-    /* background-color: #4A6409; */
 }
 
 .profileupper-text h1{
@@ -180,7 +156,6 @@ header {
     color: var(--second-color);
     letter-spacing: 2px;
     margin-top: 4.188rem;
-    /* padding-top: 50px; */
 }
 
 .profileupper-text h1> span{
@@ -199,10 +174,8 @@ header {
 }
 
 .profileupper-img-1{
-    /* background-color: aqua; */
     height: 150px;
     width: 200px;
-    /* position: absolute; */
     top: 600px;
     right: 10px;
     flex-shrink: 0;
@@ -212,7 +185,6 @@ header {
 .profileupper-img-2{
     height: 150px;
     width: 200px;
-    /* position: absolute; */
     bottom: 200px;
     right: 180px;
     flex-shrink: 0;
@@ -228,7 +200,6 @@ header {
     height: 140px;
 }
 
-/* section profilecentre "About Us TeavoU" */
 .profilecentre {
     display: inline-flex;
     padding: 44px 81px;
@@ -243,7 +214,6 @@ header {
 }
 
 .flex-item-left {
-    /* background-color: #f1f1f1; */
     padding: 5px;
     flex: 50%;
 }
@@ -327,12 +297,7 @@ header {
     color: black;
 }
 
-/* VALUE-CARD */
 .value-card {
-    /* padding: 0 1.25rem 1.25rem;
-    margin: 0 1.25rem 1.25rem;
-    width: 100%; */
-    
     padding: 20px;
     margin-left: 20px;
     margin-top: 30px;
@@ -388,7 +353,6 @@ header {
     vertical-align: middle;
 }
 
-/* bottomcentre start */
 .bottomcentre {
     display: flex;
     flex-wrap: wrap;
@@ -396,7 +360,6 @@ header {
 }
 
 .bottomcentre-left {
-    /* background-color: #f1f1f1; */
     padding: 20px;
     flex: 50%;
 }
@@ -432,18 +395,13 @@ header {
     }
 
 
-/* Section teavou team */
 .TeavoUTeam{
     content: "";
     display: table;
     clear: both;
     font-size: 2rem;
     color: var(--second-color);
-    /* letter-spacing: 2px; */
-    /* padding: 20px; */
-    /* margin-top: 20px    */
 }
-
 .TeavoUTeamcard {
     display: inline-flex;
     flex-direction: row;
@@ -470,7 +428,6 @@ header {
     font-weight: bold;
 }
 .TeavoUTeamcard > div img{
-    /* background-color: #f1f1f1; */
     padding: 1.3rem;
 }
 .TeavoUTeamcard-left > div:hover{
@@ -486,7 +443,6 @@ header {
     transition: 0.2 all linear;
 }
 
-/* Section teavou gallery */
 .column{
     float: left;
     width: 50%;
@@ -521,7 +477,6 @@ header {
     margin: 0 0 1.4rem;
 }
 
-/* Styles for showSlide_galleryTeam */
 .showSlide_galleryTeam {
     display: flex;
     overflow: hidden;
@@ -531,7 +486,7 @@ header {
 .slide_galleryTeam {
     display: none;
     width: 100%;
-    height: 260px; /*masih testing*/
+    height: 260px; 
 }
 
 .active-galleryTeam { 
@@ -554,7 +509,6 @@ header {
     width: 100%;
     height: 250px;
     padding: 10px;
-    /* margin-bottom: 100px; */
 }
 
 .dots_galleryTeam {
@@ -600,7 +554,6 @@ footer {
     vertical-align: top;
 }
 
-/* Navbar bawah */
 .line{
     background-color: #FFFFFF;
     height: 1px;
@@ -608,7 +561,6 @@ footer {
     margin-top: 35px;
 }
 
-/* copyright */
 #copyright {
     text-align: center;
     width: 100%;
@@ -670,7 +622,6 @@ footer {
     width: 35%;
 }
 
-/* penambahan */
 .footer-center .location,
 .footer-center .phone,
 .footer-center .mail {
@@ -694,7 +645,6 @@ footer {
 .footer .footer-center p span {
     display: block;
     color: var(--bg-color);
-    /* font-weight: normal; */
     font-size: 14px;
     line-height: 2;
 }
@@ -736,9 +686,7 @@ footer {
     }
 }
 
-   /* Footer Styling */
 
-/* Responsive layout - when the screen is less than 768px wide, make the two columns stack on top of each other instead of next to each other */
 @media only screen and (max-width: 768px) {
     section{
         max-width: 768px;
@@ -771,9 +719,7 @@ footer {
     }
     .flex-item-right, .flex-item-left, .bottomcentre-left, .bottomcentre-right {
         flex: 100%;
-          /* width: 50%; */
         }
-/* navbar dropdown */
 .dropbtn {
 background-color: #607e13;
 color: white;
