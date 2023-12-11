@@ -261,7 +261,7 @@ header{
     align-items: center;
 }
 
-.button:hover{
+.buttons button:hover{
     background: #96AD39;
     color: var(--bg-color);
     transition: 0.2 all linear;
