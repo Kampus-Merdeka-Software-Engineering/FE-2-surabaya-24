@@ -1,6 +1,5 @@
-// feedbackForm.js
 import { getFeedback } from "./API/APIFeedback.js";
-import { createFeed } from "./ComponentGetFeddback.js"; // Corrected the import
+import { createFeed } from "./ComponentGetFeddback.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
   try {
@@ -14,7 +13,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       let feedbacksCards = "";
 
       for (let i = 0; i < 9; i++) {
-        feedbacksCards += createFeed(DataFeed[i]); // Corrected variable name
+        feedbacksCards += createFeed(DataFeed[i]);
       }
 
       feedbacksCard.innerHTML = feedbacksCards;
@@ -23,25 +22,25 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     if (DataFeed.length > 0) {
-      let feedbacksCards1 = ""; // Corrected variable name
+      let feedbacksCards1 = "";
 
       for (let i = 0; i < 9; i++) {
-        feedbacksCards1 += createFeed(DataFeed[i]); // Corrected variable name
+        feedbacksCards1 += createFeed(DataFeed[i]);
       }
 
-      feedbacksCard1.innerHTML = feedbacksCards1; // Corrected variable name
+      feedbacksCard1.innerHTML = feedbacksCards1;
 
       console.log("Feedback", DataFeed[0].feedbackName);
     }
 
     if (DataFeed.length > 0) {
-      let feedbacksCards2 = ""; // Corrected variable name
+      let feedbacksCards2 = "";
 
       for (let i = 0; i < 3; i++) {
-        feedbacksCards2 += createFeed(DataFeed[i]); // Corrected variable name
+        feedbacksCards2 += createFeed(DataFeed[i]);
       }
 
-      feedbacksCard2.innerHTML = feedbacksCards2; // Corrected variable name
+      feedbacksCard2.innerHTML = feedbacksCards2;
 
       console.log("Feedback", DataFeed[0].feedbackName);
     } else {
