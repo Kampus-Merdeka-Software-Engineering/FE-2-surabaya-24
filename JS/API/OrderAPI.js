@@ -1,5 +1,5 @@
 export async function postOrder(DataOrder) {
-  const response = await fetch("http://localhost:3000/submitOrder", {
+  const response = await fetch("be-2-surabaya-24-production.up.railway.app/submitOrder", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -11,7 +11,7 @@ export async function postOrder(DataOrder) {
 
 export async function getOrderDetail() {
   try {
-    const response = await fetch("http://localhost:3000/OrderGet", {
+    const response = await fetch("be-2-surabaya-24-production.up.railway.app/OrderGet", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
