@@ -57,10 +57,6 @@ header {
   width: 90px;
 }
 
-.dropdown{
-  display: none;
-}
-
 .navbar {
   display: flex;
   justify-content: flex-end;
@@ -113,13 +109,6 @@ header {
   background-size: auto;
 }
 
-#menu-icon {
-  color: var(--second-color);
-  font-size: 24px;
-  z-index: 100001;
-  cursor: pointer;
-  display: none;
-}
 
 .container {
   background-color: #fff;
@@ -207,9 +196,6 @@ button:hover {
     background: none;
   }
 
-  .navbar {
-    display: none;
-  }
 
   .container {
     width: 100%; 
@@ -260,28 +246,6 @@ button:hover {
   header {
     padding: 20px 0.5rem; 
   }
-
-  .navbar {
-    flex-direction: column; 
-    align-items: center;
-    text-align: center;
-    display: block; 
-  }
-
-  .navbar a {
-    margin: 10px 0; 
-  }
-
-  #menu-icon {
-    display: block; 
-  }
-
-  /* NAVBAR START */
-  .dropdown,
-  .navbar {
-    display: none; 
-  }
-  /* NAVBAR END */
 
   .container {
     width: 100%; 

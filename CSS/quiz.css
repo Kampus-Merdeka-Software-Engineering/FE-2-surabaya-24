@@ -208,13 +208,12 @@ body {
     }
 /* navbar dropdown */
 .dropbtn {
-  background-color: #607e13;
-  color: white;
+  background-color: #FFFF;
   padding: 16px;
   font-size: 16px;
   border: none;
   cursor: pointer;
-  }
+  }  
   .dropbtn:hover, .dropbtn:focus {
   background-color: var(--button-color);
   }

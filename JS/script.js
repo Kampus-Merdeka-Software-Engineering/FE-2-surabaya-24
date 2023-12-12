@@ -12,7 +12,7 @@ export function createCard(product) {
             <img src="${product.ProductImg}" alt="">
             <h5 id="Green">${product.nameProduct}</h5>
             <p class="truncate">${product.DescProduct}</p>
-            <a class="read" href="infoTea.html" >Read More</a>
+            <a class="read" href="infoTea.html" >Order Now</a>
             <h5 id="price">$${product.priceProduct}</h5>
         </div>
     `;
