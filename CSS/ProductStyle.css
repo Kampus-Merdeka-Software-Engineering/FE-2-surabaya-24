@@ -107,7 +107,6 @@ header{
 
 
 
-/* Section Description "What is TeavoU?" START */
 .desc{
     width: 100%;
     max-height: 117vh;
@@ -286,18 +285,10 @@ header{
     flex-shrink: 0;
 }
 
-/* Section TeavoU Product START */
-/* Button Product */
 .product{
     font-size: 28px;
     color: var(--main-color);
-    /* margin-top: 80px; */
 }
-
-/* .product-text h2{
-    margin-top: 83px;
-} */
-
 
 .product-text h2>span{
     color: var(--button-color);
@@ -337,13 +328,11 @@ header{
     transition: 0.2 all linear;
 }
 
-/* Create an active/current tablink class */
 .tab button.active {
     background: var(--button-color);
     color: #FFFFFF;
 }
 
-/* menu tehnya */
 .menu{
     display: flex;
     flex-wrap: wrap;
@@ -351,9 +340,6 @@ header{
     justify-content: center;
     align-items: center;
     justify-content: space-around;
-    /* margin-top: 50px; */
-    /* margin-bottom: 100px; */
-    /* padding: 10px;  */
 }
 
 #discount {
@@ -364,7 +350,6 @@ header{
     margin-top:-3.5rem;
     margin-left: -1.8rem;
     padding-left: -4rem;
-    /* padding-top: -3rem; */
 }
 
 #DC{
@@ -399,7 +384,7 @@ header{
     position: relative;
     z-index: 0;
 }
- 
+
 .tabcontent img{
     align-items: center;
     width: 100%;
@@ -415,7 +400,7 @@ header{
 }
 
 .tabcontent.expanded {
-    height: auto; /* Mengatur tinggi otomatis saat kartu diperpanjang */
+    height: auto; 
 }
 
 .tabcontent p{
@@ -430,28 +415,13 @@ header{
     color: #000000;
     font-size: 12px;
     text-align: center;
-    /* word-wrap: normal; */
-    /* word-wrap: break-word; */
-    /* word-break: keep-all; */
-    /* word-break: break-all; */
-
-    /* white-space: pre-line; */
-    /* white-space: nowrap; */
-    /* white-space: pre; */
-    /* white-space: pre-wrap; */
-    /* white-space: break-spaces; */
-    
-    /* overflow: scroll; */
-    /* overflow: visible; */
-
-    /* text-overflow: clip; */
 }
 
 .tabcontent p.truncate {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 10; /* Menampilkan maksimal 3 baris */
+    -webkit-line-clamp: 10; 
     -webkit-box-orient: vertical;
 }
 
@@ -467,11 +437,8 @@ header{
     padding: 10px;
     text-align: center;
     margin: 30px 20px 20px auto;
-    /* auto pada margin-right akan menggeser ke kanan */
     display: flex;
-    /* Menambahkan display: flex agar align-items bekerja */
     align-items: center;
-    /* Memastikan align-items bekerja dengan baik */
 }
 
 #price {
@@ -485,130 +452,14 @@ header{
 }
 
 .text-wrapper {
-    max-height: 100px; /* Set a maximum height for the truncated text */
+    max-height: 100px; 
     overflow: hidden;
 }
 
 .tabcontent.expanded .text-wrapper {
-    max-height: none; /* Remove the maximum height when expanded */
+    max-height: none; 
 }
 
-/* .tabcontent button:hover{
-    background: var(--main-color);
-    color: var(--bg-color);
-    transition: 0.2 all linear;
-} */
-
-/* Feedback */
-/* .feedback{  
-    width: 1100px;
-    height: 247px;
-    border-radius: 20px;
-    margin: auto;
-    background: #AFBF67;
-    padding: 20px;
-    position: center;
-    margin-top: 900px;
-    margin-bottom: 100px;
-}
-
-.feedback-header { 
-    color: #FFF;
-    text-align: center;
-    font-family: 'Inter';
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    margin-top: -20px;
-}
-
-.feedback-header > p{
-    margin-left: 140px;
-    margin-right: 150px;
-    margin-top: -80px;
-}
-
-.feedback img{
-    width: 130px;
-    height: 160px;
-    margin-top: 20px;
-}
-
-.form{ 
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    margin-top: -70px;
-    margin-bottom: 23px;
-}
-
-.input-feedback{
-    width: 656px;
-    height: 48px;
-    flex-shrink: 0;
-    border-radius: 10px;
-    background: #FFF;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    margin-top: -10px;
-}
-
-
-.input-feedback [type=text]{
-    width: 500px;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: content-box;
-    border: none;
-}
-
-.input-feedback [type=submit]{
-    margin-left: 5px;
-    border-radius: 10px;
-    width: 93px;
-    height: 33px;
-    font-size: 16px;
-    flex-shrink: 0;
-    font-weight: bold;
-    border-style: none;
-    background: #D0862D;
-    color: var(--bg-color);
-    font-family: 'Inter';
-}
-
-.input-feedback [type=submit]:hover{
-    cursor: pointer;
-    background: var(--second-color);
-    color: var(--bg-color);
-    transition: 0.2 all linear;
-}
-
-.star-rating{
-    user-select: none;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-}
-
-.star{
-    font-size: 37px;
-    color: #FFF;
-    align-items: center;
-    background-color: unset;
-    border:none;
-}
-
-.star:hover{
-    cursor: pointer;
-    color: #FFFFFF;
-} */
-
-/* Content */
 #grid {
     columns: 18rem;
     gap: 1rem;
@@ -626,7 +477,6 @@ header{
     padding: 1rem;
     border-radius: 0.75rem;
     position: relative;
-    /* Add position relative for absolute positioning */
 }
 
 .item:nth-child(3n) {
@@ -660,9 +510,7 @@ header{
 }
 
 
-/* FOOTER */
 footer {
-    /* position: fixed; */
     bottom: 0;
 }
 
@@ -682,7 +530,6 @@ footer {
     vertical-align: top;
 }
 
-/* Navbar bawah */
 .line{
     background-color: #FFFFFF;
     height: 1px;
@@ -690,7 +537,6 @@ footer {
     margin-top: 35px;
 }
 
-/* copyright */
 #copyright {
     text-align: center;
     width: 100%;
@@ -743,7 +589,6 @@ footer {
     width: 35%;
 }
 
-/* penambahan */
 .footer-center .location,
 .footer-center .phone,
 .footer-center .mail {
@@ -767,7 +612,6 @@ footer {
 .footer .footer-center p span {
     color: var(--bg-color);
     display: block;
-    /* font-weight: normal; */
     font-size: 14px;
     line-height: 2;
 }
@@ -799,7 +643,6 @@ footer {
 
 
 
-/* RESPONSIVE MOBILE */
 @media only screen and (max-width: 767px){
     section{
         max-width: 768px;
@@ -824,14 +667,13 @@ footer {
     }
     
     .dropbtn {
-        background-color: #607e13;
-        color: white;
+        background-color: #FFFF;
         padding: 16px;
         font-size: 16px;
         border: none;
         cursor: pointer;
         }
-        
+                
         .dropbtn:hover, .dropbtn:focus {
         background-color: var(--button-color);
         }
@@ -872,14 +714,13 @@ footer {
     }
 
 
-    /* main */
     .desc{
         max-width: 1280px;
         max-height: 105vh;
         display: inline-block;
         flex-direction: column;
         padding: 60px 20px;
-      }
+    }
 
     .grid {
         width: 50%;
@@ -925,7 +766,6 @@ footer {
 
     }
 
-    /* product*/
     .product{
         max-width: 1280px;
         display: flex;
@@ -950,7 +790,6 @@ footer {
         margin: 0;
     }
 
-    /* label diskon */
     #discount {
         width: 13rem;
         margin: -3.5 rem -1.8rem;
@@ -962,7 +801,6 @@ footer {
         float: left;
     }
 
-    /* manfaat */
     #grid {
         padding: 50px 30px 50px 30px;
     }
@@ -975,7 +813,6 @@ footer {
         font-size: large;
     }
 
-    /* FOOTER */
     .footer .footer-left,
     .footer .footer-center,
     .footer .footer-right {
@@ -993,7 +830,6 @@ footer {
 
 
 
-/* RESPONSIVE TABLET */
 @media (min-width: 768px) and (max-width: 1024px){
     header {
         position: fixed;
@@ -1014,14 +850,13 @@ footer {
     }
     
     .dropbtn {
-        background-color: #607e13;
-        color: white;
+        background-color: #FFFF;
         padding: 16px;
         font-size: 16px;
         border: none;
         cursor: pointer;
         }
-        
+                
         .dropbtn:hover, .dropbtn:focus {
         background-color: var(--button-color);
         }
@@ -1061,7 +896,6 @@ footer {
         bottom: 20rem;
     }
     
-    /* MAIN */
     .desc{
         max-width: 1280px;
         max-height: 105vh;
@@ -1113,7 +947,6 @@ footer {
         margin: 10px 0 0;
     }
     
-    /* product*/
     .product{
         max-width: 1280px;
         display: flex;
@@ -1138,7 +971,6 @@ footer {
         margin: 0;
     }
     
-    /* label diskon */
     #discount {
         width: 13rem;
         margin: -3.5 rem -1.8rem;
@@ -1150,7 +982,6 @@ footer {
         float: left;
     }
     
-    /* manfaat */
     #grid {
         padding: 50px 30px 50px 30px;
     }
@@ -1163,7 +994,6 @@ footer {
         font-size: large;
     }
     
-    /* FOOTER */
     .footer .footer-left,
     .footer .footer-center,
     .footer .footer-right {
