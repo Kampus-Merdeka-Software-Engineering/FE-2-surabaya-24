@@ -1,6 +1,6 @@
 export async function getProduct() {
   try {
-    const response = await fetch("https://kind-jade-jay-gown.cyclic.app/product", {
+    const response = await fetch("kind-jade-jay-gownCyclicDB/product", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
