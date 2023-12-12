@@ -231,13 +231,20 @@ header{
   }
     #imgBest{
     position: relative;
-    margin-top: -30rem;
+    margin-top: -13rem;
     z-index: 2;
   }
   
   .item1 {
     grid-row: 3 / 1;
-    background-size: cover;
+        background-size: cover;
+
+  }
+
+  .item1 img{
+    display: flex;
+    position: relative;
+    top: -14rem;
   }
 
   .item1 h3 {
@@ -287,6 +294,15 @@ header{
     background-size: cover;
   }
 
+  .item2 img{
+    display: flex;
+    position: relative;
+    width: 461px;
+    height: 237px;
+    flex-shrink: 0;
+    top: 2.2rem;
+  }
+
   .item2 h3 {
     color: #CCFF00;
     font-size: 30px;
@@ -333,6 +349,15 @@ header{
 
   .item3 {
     background-size: cover;
+  }
+
+  .item3 img{
+    display: flex;
+    position: relative;
+    top: 3rem;
+    width: 461px;
+    height: 237px;
+    flex-shrink: 0;
   }
 
   .item3 h3 {
@@ -392,7 +417,7 @@ header{
     width: 40rem;
     height: 20rem;
     margin-right: 2rem;
-    margin-top: 50px;
+    margin-top: -30rem;
 }
 
 .festival img {
@@ -1104,6 +1129,7 @@ footer {
         height: 40%;
         margin-left: -2.6rem;
         margin-top: -16rem;
+        background-size: cover;
     }
 
     .item1 img{
@@ -1170,7 +1196,7 @@ footer {
         position: relative;
         display: flex;
         text-align: left;
-        margin-top: -22rem;
+        margin-top: -32rem;
         max-width: 10rem;
         white-space: nowrap;
         left: -8rem;
@@ -1315,10 +1341,8 @@ footer {
     .spill-text h2{
         display: flex;
         position: relative;
-        font-size: 3rem;
+        font-size: 2rem;
         top: -3rem;
-        left: 10rem;
-
     }
 
     .Bintang{
@@ -1767,6 +1791,7 @@ footer {
         position: relative;
         font-size: 2.5rem;
         top: -2rem;
+        left: 8.5rem;
     }
 
     .Bintang{
