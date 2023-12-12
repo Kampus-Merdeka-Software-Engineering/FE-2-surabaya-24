@@ -1,5 +1,5 @@
 export async function postfeed(DataFeedback) {
-  const response = await fetch("be-2-surabaya-24-production.up.railway.app/submitFeedback", {
+  const response = await fetch("https://kind-jade-jay-gown.cyclic.app/submitFeedback", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -12,7 +12,7 @@ export async function postfeed(DataFeedback) {
 export async function getFeedback() {
   try {
     const response = await fetch(
-      "be-2-surabaya-24-production.up.railway.app/feedback",
+      "https://kind-jade-jay-gown.cyclic.app/feedback",
       {
         method: "GET",
         headers: {
