@@ -1,5 +1,5 @@
 export async function postOrder(DataOrder) {
-  const response = await fetch("kind-jade-jay-gownCyclicDB/submitOrder", {
+  const response = await fetch("https://kind-jade-jay-gown.cyclic.app/submitOrder", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -11,7 +11,7 @@ export async function postOrder(DataOrder) {
 
 export async function getOrderDetail() {
   try {
-    const response = await fetch("kind-jade-jay-gownCyclicDB/OrderGet", {
+    const response = await fetch("https://kind-jade-jay-gown.cyclic.app/OrderGet", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
