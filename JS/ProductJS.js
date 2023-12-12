@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       let sweetTeaCards = "";
       let tisaneCards = "";
 
-      for (let i = 0; i < 23; i++) {
+      for (let i = 0; i < 24; i++) {
         if (productData[i].CategoryName == "Origin Tea")
           originTeaCards += createCard(productData[i]);
         else if (productData[i].CategoryName == "Sweet Tea")
