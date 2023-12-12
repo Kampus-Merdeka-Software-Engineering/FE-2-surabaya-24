@@ -229,10 +229,14 @@ header{
     text-align: center;
     padding: 20px 0;
   }
+    #imgBest{
+    position: relative;
+    margin-top: -30rem;
+    z-index: 2;
+  }
   
   .item1 {
     grid-row: 3 / 1;
-    background-image: url(/asset/originTea.png);
     background-size: cover;
   }
 
@@ -280,7 +284,6 @@ header{
   /* Best 2 */
 
   .item2 {
-    background-image: url(/Asset/GreanTea.svg);
     background-size: cover;
   }
 
@@ -327,8 +330,8 @@ header{
 
   /* Best 3 */
 
+
   .item3 {
-    background-image: url(/asset/tea2.png);
     background-size: cover;
   }
 
@@ -377,22 +380,6 @@ header{
   .best{
     display: none;
 }
-
-/* .best-text {
-    display: grid;
-    place-items: center;
-    text-align: center;
-    height: 100%;
-}
-
-.best-text h2{
-    color: var(--main-color);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 2rem;
-    margin: 10rem 0 1.4rem;
-} */
-
 
 /* Festival */
 .festival {
